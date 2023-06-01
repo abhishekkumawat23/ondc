@@ -33,7 +33,7 @@ paths:
                     entity:
                       gst:
                         legal_entity_name: ABC Incorporates
-                        business_address: "examplerade World , Mansarpur, Coorg, Karnataka\
+                        business_address: "Trade World, Mansarpur, Coorg, Karnataka\
                           \ 333333"
                         city_code:
                         - std:080
@@ -572,7 +572,7 @@ components:
           path: path
           code: code
           type: CONTEXT-ERROR
-          message: message111
+          message: message
     subscriber_url_on_subscribe_body:
       type: object
       properties:
