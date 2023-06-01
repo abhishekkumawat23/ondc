@@ -14,14 +14,13 @@ module.exports.lookupPOST = function lookupPOST (req, res, next, body) {
 };
 
 module.exports.subscribePOST = function subscribePOST (req, res, next, body) {
-  utils.writeJson(res, {name: "Hello"});
-  // ONDCNetworkParticipantOnboarding.subscribePOST(body)
-  //   .then(function (response) {
-  //     utils.writeJson(res, response);
-  //   })
-  //   .catch(function (response) {
-  //     utils.writeJson(res, response);
-  //   });
+  ONDCNetworkParticipantOnboarding.subscribePOST(body)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
 };
 
 module.exports.subscriber_urlOn_subscribePOST = function subscriber_urlOn_subscribePOST (req, res, next, body) {

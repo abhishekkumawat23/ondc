@@ -4,7 +4,7 @@ info:
   description: ONDC Participant Management API
   version: 2.0.5
 servers:
-- url: https://virtserver.swaggerhub.com/ONDC/ONDC-Registry-Onboarding/2.0.5
+- url: http://localhost:8080/ONDC/ONDC-Registry-Onboarding/2.0.5
   description: SwaggerHub API Auto Mocking
 tags:
 - name: ONDC Network Participant Onboarding
@@ -28,6 +28,7 @@ paths:
                   context:
                     operation:
                       ops_no: 1
+                  message:
                     request_id: 27baa06d-f90a-486c-85e5-cc621b787f04
                     timestamp: 2022-07-08T13:44:54.101Z
                     entity:
@@ -41,12 +42,12 @@ paths:
                       pan:
                         name_as_per_pan: ABC Incorporates
                         pan_no: ASDFP7657Q
-                        date_of_incorporation: 23/06/1982
+                        date_of_incorporation: "1982-06-23"
                       name_of_authorised_signatory: Anand Sharma
                       address_of_authorised Signatory: "405, Pinnacle House, Kandiwali,\
                         \ Mumbai 400001"
                       email_id: anand.sharma@abc.com
-                      mobile_no: 9912332199
+                      mobile_no: "9912332199"
                       country: IND
                       subscriber_id: sit.grab.in
                       unique_key_id: 27baa06d-f90a-486c-85e5-cc621b787f04
@@ -60,7 +61,7 @@ paths:
                     - subscriber_url: /bapl
                       domain: nic2004:52110
                       type: buyerApp
-                      msn: false
+                      msn: "false"
                       city_code:
                       - std:080
               ops_no_2:
@@ -82,12 +83,12 @@ paths:
                       pan:
                         name_as_per_pan: ABC Incorporates
                         pan_no: ASDFP7657Q
-                        date_of_incorporation: 23/06/1982
+                        date_of_incorporation: "1982-06-23"
                       name_of_authorised_signatory: Anand Sharma
                       address_of_authorised Signatory: "405, Pinnacle House, Kandiwali,\
                         \ Mumbai 400001"
                       email_id: anand.sharma@abc.com
-                      mobile_no: 9912332199
+                      mobile_no: "9912332199"
                       country: IND
                       subscriber_id: sit.grab.in
                       unique_key_id: 27baa06d-f90a-486c-85e5-cc621b787f04
@@ -101,7 +102,7 @@ paths:
                     - subscriber_url: /bapl
                       domain: nic2004:52110
                       type: sellerApp
-                      msn: false
+                      msn: "false"
                       city_code:
                       - std:080
               ops_no_3:
@@ -123,12 +124,12 @@ paths:
                       pan:
                         name_as_per_pan: ABC Incorporates
                         pan_no: ASDFP7657Q
-                        date_of_incorporation: 23/06/1982
+                        date_of_incorporation: "1982-06-23"
                       name_of_authorised_signatory: Anand Sharma
                       address_of_authorised Signatory: "405, Pinnacle House, Kandiwali,\
                         \ Mumbai 400001"
                       email_id: anand.sharma@abc.com
-                      mobile_no: 9912332199
+                      mobile_no: "9912332199"
                       country: IND
                       subscriber_id: sit.grab.in
                       unique_key_id: 27baa06d-f90a-486c-85e5-cc621b787f04
@@ -142,7 +143,7 @@ paths:
                       subscriber_url: /bapl
                       domain: nic2004:52110
                       type: sellerApp
-                      msn: true
+                      msn: "true"
                       city_code:
                       - std:080
                       seller_on_record:
@@ -173,12 +174,12 @@ paths:
                       pan:
                         name_as_per_pan: ABC Incorporates
                         pan_no: ASDFP7657Q
-                        date_of_incorporation: 23/06/1982
+                        date_of_incorporation: "1982-06-23"
                       name_of_authorised_signatory: Anand Sharma
                       address_of_authorised Signatory: "405, Pinnacle House, Kandiwali,\
                         \ Mumbai 400001"
                       email_id: anand.sharma@abc.com
-                      mobile_no: 9912332199
+                      mobile_no: "9912332199"
                       country: IND
                       subscriber_id: sit.grab.in
                       unique_key_id: 27baa06d-f90a-486c-85e5-cc621b787f04
@@ -192,13 +193,13 @@ paths:
                     - subscriber_url: /buyerAppl
                       domain: nic2004:52110
                       type: buyerApp
-                      msn: false
+                      msn: "false"
                       city_code:
                       - std:080
                     - subscriber_url: /sellerAppl
                       domain: nic2004:52110
                       type: sellerApp
-                      msn: false
+                      msn: "false"
                       city_code:
                       - std:080
               ops_no_5:
@@ -220,12 +221,12 @@ paths:
                       pan:
                         name_as_per_pan: ABC Incorporates
                         pan_no: ASDFP7657Q
-                        date_of_incorporation: 23/06/1982
+                        date_of_incorporation: "1982-06-23"
                       name_of_authorised_signatory: Anand Sharma
                       address_of_authorised Signatory: "405, Pinnacle House, Kandiwali,\
                         \ Mumbai 400001"
                       email_id: anand.sharma@abc.com
-                      mobile_no: 9912332199
+                      mobile_no: "9912332199"
                       country: IND
                       subscriber_id: sit.grab.in
                       unique_key_id: 27baa06d-f90a-486c-85e5-cc621b787f04
@@ -239,13 +240,13 @@ paths:
                     - subscriber_url: /buyerApp1
                       domain: nic2004:52110
                       type: buyerApp
-                      msn: false
+                      msn: "false"
                       city_code:
                       - std:080
                     - subscriber_url: /sellerApp1
                       domain: nic2004:52110
                       type: sellerApp
-                      msn: true
+                      msn: "true"
                       city_code:
                       - std:080
                       seller_on_record:
@@ -839,7 +840,7 @@ components:
           city_code: std:080
         subscriber_url: /test4
         domain: nic2004:52110
-        msn: true
+        msn: "true"
         city_code: std:080
         type: sellerApp
     inline_response_200_3:
@@ -922,7 +923,7 @@ components:
             city_code: std:080
           subscriber_url: /test4
           domain: nic2004:52110
-          msn: true
+          msn: "true"
           city_code: std:080
           type: sellerApp
         - seller_on_record:
@@ -942,7 +943,7 @@ components:
             city_code: std:080
           subscriber_url: /test4
           domain: nic2004:52110
-          msn: true
+          msn: "true"
           city_code: std:080
           type: sellerApp
     Entity_gst:
@@ -976,7 +977,7 @@ components:
           example: ASDFP7657Q
         date_of_incorporation:
           type: string
-          description: DD/MM/YYYY format
+          description: yyyy-mm-dd format
           format: date
     inline_response_200_message:
       required:
