@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  *
  */
-import {ApiClient} from "../ApiClient";
+import {ApiClient} from "../ApiClient.js";
 import {InlineResponse200} from '../model/InlineResponse200';
 import {InlineResponse2001} from '../model/InlineResponse2001';
 import {InlineResponse2002} from '../model/InlineResponse2002';

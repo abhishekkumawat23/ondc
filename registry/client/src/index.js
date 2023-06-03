@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  *
  */
-import {ApiClient} from './ApiClient';
+import {ApiClient} from './ApiClient.js';
 import {Ack} from './model/Ack';
 import {City} from './model/City';
 import {Context} from './model/Context';
@@ -72,7 +72,7 @@ import {ONDCNetworkParticipantOnboardingApi} from './api/ONDCNetworkParticipantO
 * @module index
 * @version 2.0.5
 */
-export {
+export default {
     /**
      * The ApiClient constructor.
      * @property {module:ApiClient}

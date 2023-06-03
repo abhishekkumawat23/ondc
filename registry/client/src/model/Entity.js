@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  *
  */
-import {ApiClient} from '../ApiClient';
+import {ApiClient} from '../ApiClient.js';
 import {EntityGst} from './EntityGst';
 import {EntityPan} from './EntityPan';
 import {KeyPair} from './KeyPair';
