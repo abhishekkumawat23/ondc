@@ -33,7 +33,7 @@ export class SubscribeMessage {
   constructor(timestamp, entity, networkParticipant) {
     this.timestamp = timestamp;
     this.entity = entity;
-    this.networkParticipant = networkParticipant;
+    this.network_participant = networkParticipant;
   }
 
   /**
