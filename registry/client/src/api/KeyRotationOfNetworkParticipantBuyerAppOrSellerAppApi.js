@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  *
  */
-import {ApiClient} from "../ApiClient";
+import {ApiClient} from "../ApiClient.js";
 import {InlineResponse2003} from '../model/InlineResponse2003';
 import {VlookupBody} from '../model/VlookupBody';
 
