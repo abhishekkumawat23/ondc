@@ -4,9 +4,7 @@ info:
   contact: {}
   version: "1.0"
 servers:
-- url: https://buyer-app.ondc.org/
-security:
-- bearer: []
+- url: http://localhost:9090/
 tags:
 - name: search
 - name: quote order
@@ -2286,7 +2284,7 @@ components:
           maximum_value: 0
           value: ""
         '@ondc/org/month_year_of_manufacture_packing_import': '@ondc/org/month_year_of_manufacture_packing_import'
-        id: ""
+        id: "1234"
         ProviderID: ProviderID
         '@ondc/org/cancellable': true
         bpp_details:
