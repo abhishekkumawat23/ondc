@@ -8,7 +8,12 @@ apiClient.authentications = {
 }
 
 var searchApi = new BuyerApp.SearchApi(apiClient);
-var body = new BuyerApp.Searchbyproductrequest();
+let context = new BuyerApp.Context('testdomain');
+let searchString = "coffee";
+let deliveryLocation = "12.974002,77.613458";
+let criteria = new BuyerApp.Criteria(searchString, deliveryLocation);
+let message = new BuyerApp.Message(criteria);
+var body = new BuyerApp.Searchbyproductrequest(context, message);
 
 var callback = function(error, data, response) {
   if (error) {
