@@ -3,7 +3,8 @@ import BuyerApp from './index.js';
 var apiClient = new BuyerApp.ApiClient();
 apiClient.authentications = {
     "bearer": {
-        "type": "basic"
+        "type": "oauth2",
+        "accessToken": "1234qwer"
     }
 }
 
@@ -19,7 +20,7 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully. Returned data: ' + JSON.stringify(data));
   }
 };
 searchApi.searchbyproduct(body, callback);

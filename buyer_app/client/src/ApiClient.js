@@ -320,7 +320,9 @@ export class ApiClient {
 
                     break;
                 case 'oauth2':
+                    console.log("Hello I am in oauth2 - 1");
                     if (auth.accessToken) {
+                        console.log("Hello I am in oauth2 - 2");
                         request.set({'Authorization': 'Bearer ' + auth.accessToken});
                     }
 
@@ -386,7 +388,6 @@ export class ApiClient {
         returnType, callback) {
 
         var url = this.buildUrl(path, pathParams);
-        console.log("Hello: " + url);
         var request = superagent(httpMethod, url);
 
         // apply authentications

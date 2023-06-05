@@ -5,7 +5,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var apiClient = new _index["default"].ApiClient();
 apiClient.authentications = {
   "bearer": {
-    "type": "basic"
+    "type": "oauth2",
+    "accessToken": "1234qwer"
   }
 };
 var searchApi = new _index["default"].SearchApi(apiClient);
@@ -19,7 +20,7 @@ var callback = function callback(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully. Returned data: ' + JSON.stringify(data));
   }
 };
 searchApi.searchbyproduct(body, callback);
