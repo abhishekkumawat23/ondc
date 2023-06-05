@@ -307,7 +307,9 @@ var ApiClient = /*#__PURE__*/function () {
             }
             break;
           case 'oauth2':
+            console.log("Hello I am in oauth2 - 1");
             if (auth.accessToken) {
+              console.log("Hello I am in oauth2 - 2");
               request.set({
                 'Authorization': 'Bearer ' + auth.accessToken
               });
@@ -375,7 +377,6 @@ var ApiClient = /*#__PURE__*/function () {
     value: function callApi(path, httpMethod, pathParams, queryParams, headerParams, formParams, bodyParam, authNames, contentTypes, accepts, returnType, callback) {
       var _this3 = this;
       var url = this.buildUrl(path, pathParams);
-      console.log("Hello: " + url);
       var request = (0, _superagent["default"])(httpMethod, url);
 
       // apply authentications

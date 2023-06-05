@@ -5,6 +5,8 @@ info:
   version: "1.0"
 servers:
 - url: http://localhost:9090/
+security:
+  - bearer: []
 tags:
 - name: search
 - name: quote order
