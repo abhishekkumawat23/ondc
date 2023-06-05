@@ -9,7 +9,12 @@ apiClient.authentications = {
   }
 };
 var searchApi = new _index["default"].SearchApi(apiClient);
-var body = new _index["default"].Searchbyproductrequest();
+var context = new _index["default"].Context('testdomain');
+var searchString = "coffee";
+var deliveryLocation = "12.974002,77.613458";
+var criteria = new _index["default"].Criteria(searchString, deliveryLocation);
+var message = new _index["default"].Message(criteria);
+var body = new _index["default"].Searchbyproductrequest(context, message);
 var callback = function callback(error, data, response) {
   if (error) {
     console.error(error);

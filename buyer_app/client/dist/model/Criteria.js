@@ -39,8 +39,8 @@ var Criteria = /*#__PURE__*/function () {
    */
   function Criteria(searchString, deliveryLocation) {
     _classCallCheck(this, Criteria);
-    this.searchString = searchString;
-    this.deliveryLocation = deliveryLocation;
+    this.search_string = searchString;
+    this.delivery_location = deliveryLocation;
   }
 
   /**

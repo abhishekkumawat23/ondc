@@ -1,0 +1,20 @@
+{
+  "name": "ondc-protocol-api-for-logistics",
+  "version": "1.0.9",
+  "description": "ONDC Protocol Core API specification. This is an adaptation of Beckn Core version 0.9.3",
+  "main": "index.js",
+  "scripts": {
+	"prestart": "npm install",
+	"start": "node index.js"
+  },
+  "keywords": [
+    "swagger"
+  ],
+  "license": "Unlicense",
+  "private": true,
+  "dependencies": {
+    "connect": "^3.2.0",
+    "js-yaml": "^3.3.0",
+    "oas3-tools": "^2.2.3"
+  }
+}

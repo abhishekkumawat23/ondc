@@ -28,8 +28,8 @@ export class Criteria {
    * @param deliveryLocation {String} 
    */
   constructor(searchString, deliveryLocation) {
-    this.searchString = searchString;
-    this.deliveryLocation = deliveryLocation;
+    this.search_string = searchString;
+    this.delivery_location = deliveryLocation;
   }
 
   /**
