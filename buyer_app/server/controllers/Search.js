@@ -24,6 +24,7 @@ module.exports.onsearch = function onsearch (req, res, next, messageId) {
 };
 
 module.exports.searchbyproduct = function searchbyproduct (req, res, next, body) {
+  console.log(`request` + JSON.stringify(req.body));
   Search.searchbyproduct(body)
     .then(function (response) {
       utils.writeJson(res, response);
