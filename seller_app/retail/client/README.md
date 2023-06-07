@@ -302,3 +302,15 @@ Class | Method | HTTP request | Description
 - **API key parameter name**: Authorization
 - **Location**: HTTP header
 
+# Self notes:
+## How to transpile
+We need to transpile the JS code so that we can run it using node. Without transpile, it can be run via browser only.
+```
+npm install babel
+npx babel src --out-dir dist
+```
+## How to run main.js using node
+Once its transpiled you can run the main.js file using following command:
+```
+node dist/main.js
+```

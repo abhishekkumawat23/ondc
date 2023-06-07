@@ -106,7 +106,7 @@ import {ONDCGatewayApi} from './api/ONDCGatewayApi';
 * @module index
 * @version 1.0.0
 */
-export default {
+export {
     /**
      * The ApiClient constructor.
      * @property {module:ApiClient}
