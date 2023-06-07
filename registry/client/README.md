@@ -127,3 +127,16 @@ Class | Method | HTTP request | Description
 
  All endpoints do not require authorization.
 
+ # Self notes:
+## How to transpile
+We need to transpile the JS code so that we can run it using node. Without transpile, it can be run via browser only.
+```
+npx babel src --out-dir dist
+```
+## How to run main.js using node
+Once its transpiled you can run the main.js file using following command:
+```
+node dist/main.js
+```
+
+
