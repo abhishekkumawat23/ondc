@@ -44,11 +44,11 @@ export class Context {
     this.country = country;
     this.city = city;
     this.action = action;
-    this.coreVersion = coreVersion;
-    this.bapId = bapId;
-    this.bapUri = bapUri;
-    this.transactionId = transactionId;
-    this.messageId = messageId;
+    this.core_version = coreVersion;
+    this.bap_id = bapId;
+    this.bap_uri = bapUri;
+    this.transaction_id = transactionId;
+    this.message_id = messageId;
     this.timestamp = timestamp;
   }
 
