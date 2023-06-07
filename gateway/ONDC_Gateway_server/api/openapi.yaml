@@ -7,7 +7,7 @@ externalDocs:
     \ details in spec)"
   url: https://docs.google.com/document/d/12oMC4A05jT5rjCbY-M7j4T2oekr9bqcvSOpTI0jFEgE/edit
 servers:
-- url: https://nginx-image-sndc6jm6kq-uc.a.run.app/gateway
+- url: http://localhost:8080/gateway
 security:
 - SubscriberAuth: []
 - GatewaySubscriberAuth: []
@@ -180,15 +180,7 @@ components:
       type: object
       properties:
         id:
-          type: string
-          description: Unique id of the category
-          enum:
-          - Grocery
-          - Packaged Commodities
-          - Packaged Foods
-          - Fruits and Vegetables
-          - F&B
-          - Home & Decor
+          $ref: '#/components/schemas/CategoryId'
         parent_category_id:
           type: string
           description: Unique id of the parent category
@@ -203,6 +195,16 @@ components:
         tags:
           $ref: '#/components/schemas/Tags'
       description: Describes a category
+    CategoryId:
+      type: string
+      description: Unique id of the category
+      enum:
+      - Grocery
+      - Packaged Commodities
+      - Packaged Foods
+      - Fruits and Vegetables
+      - F&B
+      - Home & Decor
     Circle:
       required:
       - gps
@@ -221,10 +223,12 @@ components:
           type: string
           description: Name of the city
         code:
-          type: string
-          description: "Codification of city code will be using the std code of the\
-            \ city e.g. for Bengaluru, city code is 'std:080'"
+          $ref: '#/components/schemas/CityCode'
       description: Describes a city
+    CityCode:
+      type: string
+      description: "Codification of city code will be using the std code of the\
+      \ city e.g. for Bengaluru, city code is 'std:080'"
     Contact:
       type: object
       properties:
@@ -251,9 +255,9 @@ components:
         domain:
           $ref: '#/components/schemas/Domain'
         country:
-          $ref: '#/components/schemas/Country/properties/code'
+          $ref: '#/components/schemas/CountryCode'
         city:
-          $ref: '#/components/schemas/City/properties/code'
+          $ref: '#/components/schemas/CityCode'
         action:
           type: string
           description: Defines the ONDC API call. Any actions other than the enumerated
@@ -314,9 +318,11 @@ components:
           type: string
           description: Name of the country
         code:
-          type: string
-          description: Country code as per ISO 3166 Alpha-3 code format
+          $ref: '#/components/schemas/CountryCode'
       description: Describes a country.
+    CountryCode:
+      type: string
+      description: Country code as per ISO 3166 Alpha-3 code format
     DecimalValue:
       pattern: "[+-]?([0-9]*[.])?[0-9]+"
       type: string
@@ -391,8 +397,7 @@ components:
       type: object
       properties:
         id:
-          type: string
-          description: Unique reference ID to the fulfillment of an order
+          $ref: '#/components/schemas/FulfillmentId'
         type:
           type: string
           description: This describes the type of fulfillment ("Pickup" - Buyer picks
@@ -442,6 +447,9 @@ components:
         \ to the end customer - State can have following values - \"Serviceable\"\
         , \"Non-serviceable\", \"At pickup location\", \"Order picked up\", \"At drop\
         \ location\", \"Order delivered\", \"Cancelled\""
+    FulfillmentId:
+      type: string
+      description: Unique reference ID to the fulfillment of an order
     Gps:
       pattern: "^[-+]?([1-8]?\\d(\\.\\d+)?|90(\\.0+)?),\\s*[-+]?(180(\\.0+)?|((1[0-7]\\\
         d)|([1-9]?\\d))(\\.\\d+)?)$"
@@ -496,9 +504,7 @@ components:
       type: object
       properties:
         id:
-          type: string
-          description: This is the most unique identifier of a service item. An example
-            of an Item ID could be the SKU of a product.
+          $ref: '#/components/schemas/ItemId'
         parent_item_id:
           $ref: '#/components/schemas/Item/properties/id'
         descriptor:
@@ -506,11 +512,11 @@ components:
         price:
           $ref: '#/components/schemas/Price'
         category_id:
-          $ref: '#/components/schemas/Category/properties/id'
+          $ref: '#/components/schemas/CategoryId'
         fulfillment_id:
-          $ref: '#/components/schemas/Fulfillment/properties/id'
+          $ref: '#/components/schemas/FulfillmentId'
         location_id:
-          $ref: '#/components/schemas/Location/properties/id'
+          $ref: '#/components/schemas/LocationId'
         time:
           $ref: '#/components/schemas/Time'
         rateable:
@@ -566,13 +572,17 @@ components:
         \ (for declared price); All other statutory attributes must be provided, as\
         \ applicable, for the above; No statutory requirement for category_id \"F&B\"\
         \ or \"Fruits and Vegetables\""
+    ItemId:
+      type: string
+      description: This is the most unique identifier of a service item. An example
+        of an Item ID could be the SKU of a product.
     Location:
       type: object
       properties:
         id:
-          type: string
-        descriptor:
-          $ref: '#/components/schemas/Descriptor'
+          $ref: '#/components/schemas/LocationId'
+          descriptor:
+            $ref: '#/components/schemas/Descriptor'
         gps:
           $ref: '#/components/schemas/Gps'
         address:
@@ -592,6 +602,8 @@ components:
         time:
           $ref: '#/components/schemas/Time'
       description: Describes the location of a runtime object.
+    LocationId:
+      type: string
     Name:
       pattern: "^\\./[^/]+/[^/]*/[^/]*/[^/]*/[^/]*/[^/]*$"
       type: string
@@ -606,15 +618,15 @@ components:
         location_ids:
           type: array
           items:
-            $ref: '#/components/schemas/Location/properties/id'
+            $ref: '#/components/schemas/LocationId'
         category_ids:
           type: array
           items:
-            $ref: '#/components/schemas/Category/properties/id'
+            $ref: '#/components/schemas/CategoryId'
         item_ids:
           type: array
           items:
-            $ref: '#/components/schemas/Item/properties/id'
+            $ref: '#/components/schemas/ItemId'
         time:
           $ref: '#/components/schemas/Time'
       description: Describes an offer
@@ -744,6 +756,9 @@ components:
         tags:
           $ref: '#/components/schemas/Tags'
       description: Describes a person.
+    Currency:
+      type: string
+      description: ISO 4217 alphabetic currency code e.g. 'INR'
     Price:
       required:
       - currency
@@ -751,8 +766,7 @@ components:
       type: object
       properties:
         currency:
-          type: string
-          description: ISO 4217 alphabetic currency code e.g. 'INR'
+          $ref: '#/components/schemas/Currency'
         value:
           $ref: '#/components/schemas/DecimalValue'
         estimated_value:
@@ -777,8 +791,7 @@ components:
       type: object
       properties:
         id:
-          type: string
-          description: Id of the provider
+          $ref: '#/components/schemas/ProviderId'
         descriptor:
           $ref: '#/components/schemas/Descriptor'
         category_id:
@@ -833,6 +846,9 @@ components:
           $ref: '#/components/schemas/Tags'
       description: "Describes a service provider. This can be a restaurant, a hospital,\
         \ a Store etc"
+    ProviderId:
+      type: string
+      description: Id of the provider
     Rateable:
       type: boolean
       description: If the entity can be rated or not
@@ -1169,7 +1185,7 @@ components:
         amount:
           $ref: '#/components/schemas/Price/properties/value'
         currency:
-          $ref: '#/components/schemas/Price/properties/currency'
+          $ref: '#/components/schemas/Currency'
       additionalProperties:
         type: string
     Payment_ondcorgsettlement_details:
