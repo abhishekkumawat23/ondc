@@ -34,7 +34,7 @@ export class ApiClient {
          * @type {String}
          * @default http://localhost:8080/gateway
          */
-        this.basePath = 'http://localhost:8080/gateway'.replace(/\/+$/, '');
+        this.basePath = 'http://localhost:9080/gateway'.replace(/\/+$/, '');
 
         /**
          * The authentication methods to be included for all API calls.
