@@ -27,6 +27,7 @@ module.exports.searchbyproduct = function searchbyproduct (req, res, next, body)
   console.log(`request` + JSON.stringify(req.body));
   Search.searchbyproduct(body)
     .then(function (response) {
+      console.log('in searchbyproduct controller:' + JSON.stringify(response))
       utils.writeJson(res, response);
     })
     .catch(function (response) {

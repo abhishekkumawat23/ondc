@@ -13,7 +13,7 @@ exports.on_searchPOST = function(body) {
     examples['application/json'] = {
   "message" : {
     "ack" : {
-      "status" : "ACK"
+      "status" : "ACK2222"
     }
   },
   "error" : {
@@ -44,7 +44,7 @@ exports.searchPOST = function(body) {
     examples['application/json'] = {
   "message" : {
     "ack" : {
-      "status" : "ACK"
+      "status" : "ACK111"
     }
   },
   "error" : {

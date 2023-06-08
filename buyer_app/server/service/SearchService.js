@@ -2,8 +2,8 @@
 
 var OndcGateway = require('../ONDC_Gateway_client/dist/index.js');
 
-function searchbyproductPOST() {
-  var apiClient = new OndcGateway.ApiClient();
+function searchbyproductPOST(callback) {
+  var apiClient = new OndcGateway['default'].ApiClient();
   /*apiClient.authentications = {
     "GatewaySubscriberAuth": {
         "type": "oauth2",
@@ -28,7 +28,7 @@ function searchbyproductPOST() {
   // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
   //SubscriberAuth.apiKeyPrefix['Authorization'] = "Token"
   
-  var api = new OndcGateway.ONDCGatewayApi(apiClient)
+  var api = new OndcGateway['default'].ONDCGatewayApi(apiClient)
   let contextExample = {
     domain: "nic2004:52110",
     country: "IND",
@@ -41,7 +41,7 @@ function searchbyproductPOST() {
     message_id: "c4b71e62-f51d-425a-892b-539920e945ca",
     timestamp: "2022-06-29T04:21:08.921Z"
   }
-  let context = new OndcGateway.Context(contextExample.domain,
+  let context = new OndcGateway['default'].Context(contextExample.domain,
                                         contextExample.country,
                                         contextExample.city,
                                         contextExample.action,
@@ -52,15 +52,9 @@ function searchbyproductPOST() {
                                         contextExample.message_id,
                                         contextExample.timestamp  );
   var opts = { 
-    'body': new OndcGateway.OnSearchBody(context) // {OnSearchBody} Sellers provide their catalog in response to buyer search
+    'body': new OndcGateway['default'].OnSearchBody(context) // {OnSearchBody} Sellers provide their catalog in response to buyer search
   };
-  var callback = function(error, data, response) {
-    if (error) {
-      console.error(error);
-    } else {
-      console.log('API called successfully. Returned data: ' + data);
-    }
-  };
+
   api.onSearchPOST(opts, callback);
 }
 
@@ -265,9 +259,9 @@ exports.onsearch = function(messageId) {
  **/
 exports.searchbyproduct = function(body) {
   console.log("I am in onsearch of buyer app server");
-  searchbyproductPOST();
+
   return new Promise(function(resolve, reject) {
-    var examples = {};
+   /* var examples = {};
     examples['application/json'] = {
   "context" : {
     "domain" : "nic2004:52110",
@@ -292,6 +286,17 @@ exports.searchbyproduct = function(body) {
     } else {
       resolve();
     }
+*/
+    var callback = function(error, data, response) {
+      if (error) {
+        console.error(error);
+        reject(error);
+      } else {
+        console.log('API called successfully. Returned data: ' + data);
+        resolve(data);
+      }
+    };
+    searchbyproductPOST(callback);
   });
 }
 
