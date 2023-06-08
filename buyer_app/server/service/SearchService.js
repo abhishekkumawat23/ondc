@@ -1,6 +1,7 @@
 'use strict';
 
-var OndcGateway = require('../ONDC_Gateway_client/dist/index.js');
+var OndcGateway = require('../../../gateway/ONDC_Gateway_client/dist/index.js');
+
 
 function searchbyproductPOST(callback) {
   var apiClient = new OndcGateway['default'].ApiClient();
