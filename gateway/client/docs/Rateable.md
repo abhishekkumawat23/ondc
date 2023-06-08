@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.Rateable
+# OndcGateway.Rateable
 
 ## Properties
 Name | Type | Description | Notes

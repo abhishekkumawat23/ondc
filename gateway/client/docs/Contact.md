@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.Contact
+# OndcGateway.Contact
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.Intent
+# OndcGateway.Intent
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.Address
+# OndcGateway.Address
 
 ## Properties
 Name | Type | Description | Notes

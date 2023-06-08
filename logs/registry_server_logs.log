@@ -1,0 +1,31 @@
+
+> ondc-registry@2.0.5 prestart
+> npm install
+
+
+up to date, audited 153 packages in 2s
+
+11 packages are looking for funding
+  run `npm fund` for details
+
+6 high severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+> ondc-registry@2.0.5 start
+> node index.js
+
+  Mock mode: disabled
+Your server is listening on port 8080 (http://localhost:8080)
+Swagger-ui is available on http://localhost:8080/docs
+[0mGET /docs/ [36m304[0m 9.837 ms - -[0m
+[0mGET /docs/swagger-ui-standalone-preset.js [36m304[0m 4.344 ms - -[0m
+[0mGET /docs/swagger-ui.css [36m304[0m 2.178 ms - -[0m
+[0mGET /docs/swagger-ui-bundle.js [36m304[0m 0.957 ms - -[0m
+[0mHEAD /docs/ [36m304[0m 2.291 ms - -[0m
+[0mGET /docs/favicon-32x32.png [36m304[0m 1.166 ms - -[0m
+[0mGET /api-docs [32m200[0m 1.029 ms - -[0m
+[0mGET /api-docs [32m200[0m 0.247 ms - -[0m

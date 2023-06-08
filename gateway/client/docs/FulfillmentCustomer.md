@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.FulfillmentCustomer
+# OndcGateway.FulfillmentCustomer
 
 ## Properties
 Name | Type | Description | Notes

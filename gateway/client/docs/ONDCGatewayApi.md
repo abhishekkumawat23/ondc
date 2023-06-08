@@ -1,15 +1,15 @@
-# OndcProtocolCoreApi.ONDCGatewayApi
+# OndcGateway.ONDCGatewayApi
 
-All URIs are relative to *https://virtserver.swaggerhub.com/ONDCTech/ONDC-Protocol-Core/1.0.0*
+All URIs are relative to *http://localhost:8080/gateway*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**onSearchPost**](ONDCGatewayApi.md#onSearchPost) | **POST** /on_search | 
-[**searchPost**](ONDCGatewayApi.md#searchPost) | **POST** /search | 
+[**onSearchPOST**](ONDCGatewayApi.md#onSearchPOST) | **POST** /on_search | 
+[**searchPOST**](ONDCGatewayApi.md#searchPOST) | **POST** /search | 
 
-<a name="onSearchPost"></a>
-# **onSearchPost**
-> InlineResponse2001 onSearchPost(opts)
+<a name="onSearchPOST"></a>
+# **onSearchPOST**
+> InlineResponse2001 onSearchPOST(opts)
 
 
 
@@ -17,8 +17,8 @@ Send catalog
 
 ### Example
 ```javascript
-import {OndcProtocolCoreApi} from 'ondc_protocol_core_api';
-let defaultClient = OndcProtocolCoreApi.ApiClient.instance;
+import {OndcGateway} from 'ondc_gateway';
+let defaultClient = OndcGateway.ApiClient.instance;
 
 // Configure API key authorization: GatewaySubscriberAuth
 let GatewaySubscriberAuth = defaultClient.authentications['GatewaySubscriberAuth'];
@@ -38,11 +38,11 @@ SubscriberAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //SubscriberAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new OndcProtocolCoreApi.ONDCGatewayApi();
+let apiInstance = new OndcGateway.ONDCGatewayApi();
 let opts = { 
-  'body': new OndcProtocolCoreApi.OnSearchBody() // OnSearchBody | Sellers provide their catalog in response to buyer search
+  'body': new OndcGateway.OnSearchBody() // OnSearchBody | Sellers provide their catalog in response to buyer search
 };
-apiInstance.onSearchPost(opts, (error, data, response) => {
+apiInstance.onSearchPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -70,9 +70,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="searchPost"></a>
-# **searchPost**
-> InlineResponse200 searchPost(opts)
+<a name="searchPOST"></a>
+# **searchPOST**
+> InlineResponse200 searchPOST(opts)
 
 
 
@@ -80,8 +80,8 @@ Search for services by intent
 
 ### Example
 ```javascript
-import {OndcProtocolCoreApi} from 'ondc_protocol_core_api';
-let defaultClient = OndcProtocolCoreApi.ApiClient.instance;
+import {OndcGateway} from 'ondc_gateway';
+let defaultClient = OndcGateway.ApiClient.instance;
 
 // Configure API key authorization: GatewaySubscriberAuth
 let GatewaySubscriberAuth = defaultClient.authentications['GatewaySubscriberAuth'];
@@ -101,11 +101,11 @@ SubscriberAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //SubscriberAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new OndcProtocolCoreApi.ONDCGatewayApi();
+let apiInstance = new OndcGateway.ONDCGatewayApi();
 let opts = { 
-  'body': new OndcProtocolCoreApi.SearchBody() // SearchBody | Buyer searches for products and services
+  'body': new OndcGateway.SearchBody() // SearchBody | Buyer searches for products and services
 };
-apiInstance.searchPost(opts, (error, data, response) => {
+apiInstance.searchPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

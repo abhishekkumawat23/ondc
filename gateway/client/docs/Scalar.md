@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.Scalar
+# OndcGateway.Scalar
 
 ## Properties
 Name | Type | Description | Notes

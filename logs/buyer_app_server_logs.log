@@ -1,0 +1,31 @@
+
+> sandbox-client-sdk@1.0 prestart
+> npm install
+
+
+up to date, audited 153 packages in 2s
+
+11 packages are looking for funding
+  run `npm fund` for details
+
+6 high severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+> sandbox-client-sdk@1.0 start
+> node index.js
+
+  Mock mode: disabled
+Your server is listening on port 9090 (http://localhost:9090)
+Swagger-ui is available on http://localhost:9090/docs
+[0mGET /docs/ [36m304[0m 6.217 ms - -[0m
+[0mGET /docs/swagger-ui.css [36m304[0m 4.577 ms - -[0m
+[0mGET /docs/swagger-ui-bundle.js [36m304[0m 1.600 ms - -[0m
+[0mGET /docs/swagger-ui-standalone-preset.js [36m304[0m 0.981 ms - -[0m
+[0mGET /docs/favicon-32x32.png [36m304[0m 1.062 ms - -[0m
+[0mHEAD /docs/ [36m304[0m 5.190 ms - -[0m
+[0mGET /api-docs [32m200[0m 3.232 ms - -[0m
+[0mGET /api-docs [32m200[0m 2.570 ms - -[0m

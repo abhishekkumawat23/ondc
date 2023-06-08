@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.Schedule
+# OndcGateway.Schedule
 
 ## Properties
 Name | Type | Description | Notes

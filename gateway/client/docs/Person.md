@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.Person
+# OndcGateway.Person
 
 ## Properties
 Name | Type | Description | Notes

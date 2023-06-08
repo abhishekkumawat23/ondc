@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.InlineResponse200Message
+# OndcGateway.InlineResponse200Message
 
 ## Properties
 Name | Type | Description | Notes

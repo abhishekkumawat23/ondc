@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.Ack
+# OndcGateway.Ack
 
 ## Properties
 Name | Type | Description | Notes

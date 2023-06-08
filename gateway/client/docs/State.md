@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.State
+# OndcGateway.State
 
 ## Properties
 Name | Type | Description | Notes
