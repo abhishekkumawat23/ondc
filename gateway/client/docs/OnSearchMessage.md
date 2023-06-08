@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.OnSearchMessage
+# OndcGateway.OnSearchMessage
 
 ## Properties
 Name | Type | Description | Notes

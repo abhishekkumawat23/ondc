@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.Payment
+# OndcGateway.Payment
 
 ## Properties
 Name | Type | Description | Notes
@@ -10,6 +10,18 @@ Name | Type | Description | Notes
 **status** | **String** |  | [optional] 
 **time** | [**Time**](Time.md) |  | [optional] 
 **collectedBy** | **String** |  | [optional] 
+**ondcorgcollectedByStatus** | **String** |  | [optional] 
+**ondcorgbuyerAppFinderFeeType** | **String** |  | [optional] 
+**ondcorgbuyerAppFinderFeeAmount** | [**DecimalValue**](DecimalValue.md) |  | [optional] 
+**ondcorgwithholdingAmount** | [**DecimalValue**](DecimalValue.md) |  | [optional] 
+**ondcorgwithholdingAmountStatus** | **String** |  | [optional] 
+**ondcorgreturnWindow** | **String** | return window for withholding amount in ISO8601 durations format e.g. &#x27;PT24H&#x27; indicates 24 hour return window | [optional] 
+**ondcorgreturnWindowStatus** | **String** |  | [optional] 
+**ondcorgsettlementBasis** | **String** | In case of prepaid payment, whether settlement between counterparties should be on the basis of collection, shipment or delivery | [optional] 
+**ondcorgsettlementBasisStatus** | **String** |  | [optional] 
+**ondcorgsettlementWindow** | **String** | settlement window for the counterparty in ISO8601 durations format e.g. &#x27;PT48H&#x27; indicates 48 hour return window | [optional] 
+**ondcorgsettlementWindowStatus** | **String** |  | [optional] 
+**ondcorgsettlementDetails** | [**[PaymentOndcorgsettlementDetails]**](PaymentOndcorgsettlementDetails.md) |  | [optional] 
 
 <a name="TlMethodEnum"></a>
 ## Enum: TlMethodEnum
@@ -34,6 +46,7 @@ Name | Type | Description | Notes
 
 * `PAID` (value: `"PAID"`)
 * `NOT_PAID` (value: `"NOT-PAID"`)
+* `PENDING` (value: `"PENDING"`)
 
 
 <a name="CollectedByEnum"></a>
@@ -41,4 +54,64 @@ Name | Type | Description | Notes
 
 * `BAP` (value: `"BAP"`)
 * `BPP` (value: `"BPP"`)
+
+
+<a name="OndcorgcollectedByStatusEnum"></a>
+## Enum: OndcorgcollectedByStatusEnum
+
+* `assert` (value: `"Assert"`)
+* `agree` (value: `"Agree"`)
+* `disagree` (value: `"Disagree"`)
+* `terminate` (value: `"Terminate"`)
+
+
+<a name="OndcorgbuyerAppFinderFeeTypeEnum"></a>
+## Enum: OndcorgbuyerAppFinderFeeTypeEnum
+
+* `amount` (value: `"Amount"`)
+* `percent` (value: `"Percent"`)
+
+
+<a name="OndcorgwithholdingAmountStatusEnum"></a>
+## Enum: OndcorgwithholdingAmountStatusEnum
+
+* `assert` (value: `"Assert"`)
+* `agree` (value: `"Agree"`)
+* `disagree` (value: `"Disagree"`)
+* `terminate` (value: `"Terminate"`)
+
+
+<a name="OndcorgreturnWindowStatusEnum"></a>
+## Enum: OndcorgreturnWindowStatusEnum
+
+* `assert` (value: `"Assert"`)
+* `agree` (value: `"Agree"`)
+* `disagree` (value: `"Disagree"`)
+* `terminate` (value: `"Terminate"`)
+
+
+<a name="OndcorgsettlementBasisEnum"></a>
+## Enum: OndcorgsettlementBasisEnum
+
+* `collection` (value: `"Collection"`)
+* `shipment` (value: `"Shipment"`)
+* `delivery` (value: `"Delivery"`)
+
+
+<a name="OndcorgsettlementBasisStatusEnum"></a>
+## Enum: OndcorgsettlementBasisStatusEnum
+
+* `assert` (value: `"Assert"`)
+* `agree` (value: `"Agree"`)
+* `disagree` (value: `"Disagree"`)
+* `terminate` (value: `"Terminate"`)
+
+
+<a name="OndcorgsettlementWindowStatusEnum"></a>
+## Enum: OndcorgsettlementWindowStatusEnum
+
+* `assert` (value: `"Assert"`)
+* `agree` (value: `"Agree"`)
+* `disagree` (value: `"Disagree"`)
+* `terminate` (value: `"Terminate"`)
 

@@ -1,10 +1,10 @@
 'use strict';
 
-var OndcGateway = require('../../../gateway/ONDC_Gateway_client/dist/index.js');
+var OndcGateway = require('../../../gateway/client/dist/index.js');
 
 
 function searchbyproductPOST(callback) {
-  var apiClient = new OndcGateway['default'].ApiClient();
+  var apiClient = new OndcGateway.ApiClient();
   /*apiClient.authentications = {
     "GatewaySubscriberAuth": {
         "type": "oauth2",
@@ -29,7 +29,7 @@ function searchbyproductPOST(callback) {
   // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
   //SubscriberAuth.apiKeyPrefix['Authorization'] = "Token"
   
-  var api = new OndcGateway['default'].ONDCGatewayApi(apiClient)
+  var api = new OndcGateway.ONDCGatewayApi(apiClient)
   let contextExample = {
     domain: "nic2004:52110",
     country: "IND",
@@ -42,7 +42,7 @@ function searchbyproductPOST(callback) {
     message_id: "c4b71e62-f51d-425a-892b-539920e945ca",
     timestamp: "2022-06-29T04:21:08.921Z"
   }
-  let context = new OndcGateway['default'].Context(contextExample.domain,
+  let context = new OndcGateway.Context(contextExample.domain,
                                         contextExample.country,
                                         contextExample.city,
                                         contextExample.action,
@@ -53,7 +53,7 @@ function searchbyproductPOST(callback) {
                                         contextExample.message_id,
                                         contextExample.timestamp  );
   var opts = { 
-    'body': new OndcGateway['default'].OnSearchBody(context) // {OnSearchBody} Sellers provide their catalog in response to buyer search
+    'body': new OndcGateway.OnSearchBody(context) // {OnSearchBody} Sellers provide their catalog in response to buyer search
   };
 
   api.onSearchPOST(opts, callback);

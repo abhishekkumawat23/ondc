@@ -1,7 +1,7 @@
 {
-  "name": "ondc_protocol_core_api",
+  "name": "ondc_gateway",
   "version": "1.0.0",
-  "description": "ONDC_Protocol_Core_API_specification__This_is_an_adaptation_of_Beckn_Core_version_0_9_3",
+  "description": "Object",
   "license": "Unlicense",
   "main": "src/index.js",
   "scripts": {
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@babel/cli": "^7.0.0",
+    "babel": "^6.23.0",
     "superagent": "^5.3.0"
   },
   "devDependencies": {

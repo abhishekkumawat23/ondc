@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.OnSearchBody
+# OndcGateway.OnSearchBody
 
 ## Properties
 Name | Type | Description | Notes

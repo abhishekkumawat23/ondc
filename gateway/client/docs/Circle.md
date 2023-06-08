@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.Circle
+# OndcGateway.Circle
 
 ## Properties
 Name | Type | Description | Notes

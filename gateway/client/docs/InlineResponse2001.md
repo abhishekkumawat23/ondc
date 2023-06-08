@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.InlineResponse2001
+# OndcGateway.InlineResponse2001
 
 ## Properties
 Name | Type | Description | Notes

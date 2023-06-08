@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.Authorization
+# OndcGateway.Authorization
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.Descriptor
+# OndcGateway.Descriptor
 
 ## Properties
 Name | Type | Description | Notes

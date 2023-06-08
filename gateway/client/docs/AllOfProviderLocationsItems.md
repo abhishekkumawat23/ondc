@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.AllOfProviderLocationsItems
+# OndcGateway.AllOfProviderLocationsItems
 
 ## Properties
 Name | Type | Description | Notes

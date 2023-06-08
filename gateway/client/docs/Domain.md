@@ -1,5 +1,5 @@
-# OndcProtocolCoreApi.Domain
+# OndcGateway.Domain
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
+## Enum
+
+* `nic200452110` (value: `"nic2004:52110"`)

@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.Duration
+# OndcGateway.Duration
 
 ## Properties
 Name | Type | Description | Notes

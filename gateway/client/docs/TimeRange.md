@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.TimeRange
+# OndcGateway.TimeRange
 
 ## Properties
 Name | Type | Description | Notes

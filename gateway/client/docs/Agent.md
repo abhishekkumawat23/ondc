@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.Agent
+# OndcGateway.Agent
 
 ## Properties
 Name | Type | Description | Notes

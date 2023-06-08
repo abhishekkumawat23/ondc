@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.Vehicle
+# OndcGateway.Vehicle
 
 ## Properties
 Name | Type | Description | Notes

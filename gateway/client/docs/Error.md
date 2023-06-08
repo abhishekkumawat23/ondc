@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.Error
+# OndcGateway.Error
 
 ## Properties
 Name | Type | Description | Notes

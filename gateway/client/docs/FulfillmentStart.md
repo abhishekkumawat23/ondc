@@ -1,4 +1,4 @@
-# OndcProtocolCoreApi.FulfillmentStart
+# OndcGateway.FulfillmentStart
 
 ## Properties
 Name | Type | Description | Notes
