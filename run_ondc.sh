@@ -18,8 +18,8 @@ process_client_folder() {
   folder=$1
   cd $folder/client/
   log_current_directory
-#   npm uninstall babel
-#   npm install babel
+ # npm uninstall babel
+ # npm install babel
   npx babel src --out-dir dist
   cd $root
   log_current_directory
