@@ -22,3 +22,5 @@ for port in "${ports[@]}"; do
     echo "No process found using port $port."
   fi
 done
+
+
