@@ -80,6 +80,9 @@ To get started with understanding ONDC technology, please refer to the following
 
 >![5](https://user-images.githubusercontent.com/95357304/179465248-feee5a91-3089-48b4-acf5-ed54d98e2652.png)
 
+14. List of domains
+https://docs.google.com/spreadsheets/d/1Rj7Hqdvmzup5kAvzbW15NgX5dV4U8c7DtvFopCW_9cc/edit?usp=sharing
+
 
 
 
