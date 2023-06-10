@@ -1,7 +1,10 @@
 #!/bin/bash
 
+# Kill all ports(if in use) before starting
+bash '/Users/akumawat/Desktop/ondc/kill_ondc.sh'
+
 # Set the root path
-root=~/Desktop/ondc
+root="${1:-/Users/akumawat/Desktop/ondc}"
 
 # Log current directory function
 log_current_directory() {
