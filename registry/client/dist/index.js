@@ -3,7 +3,174 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+Object.defineProperty(exports, "Ack", {
+  enumerable: true,
+  get: function get() {
+    return _Ack.Ack;
+  }
+});
+Object.defineProperty(exports, "ApiClient", {
+  enumerable: true,
+  get: function get() {
+    return _ApiClient.ApiClient;
+  }
+});
+Object.defineProperty(exports, "City", {
+  enumerable: true,
+  get: function get() {
+    return _City.City;
+  }
+});
+Object.defineProperty(exports, "Context", {
+  enumerable: true,
+  get: function get() {
+    return _Context.Context;
+  }
+});
+Object.defineProperty(exports, "Entity", {
+  enumerable: true,
+  get: function get() {
+    return _Entity.Entity;
+  }
+});
+Object.defineProperty(exports, "EntityGst", {
+  enumerable: true,
+  get: function get() {
+    return _EntityGst.EntityGst;
+  }
+});
+Object.defineProperty(exports, "EntityPan", {
+  enumerable: true,
+  get: function get() {
+    return _EntityPan.EntityPan;
+  }
+});
+Object.defineProperty(exports, "Error", {
+  enumerable: true,
+  get: function get() {
+    return _Error.Error;
+  }
+});
+Object.defineProperty(exports, "InlineResponse200", {
+  enumerable: true,
+  get: function get() {
+    return _InlineResponse.InlineResponse200;
+  }
+});
+Object.defineProperty(exports, "InlineResponse2001", {
+  enumerable: true,
+  get: function get() {
+    return _InlineResponse2.InlineResponse2001;
+  }
+});
+Object.defineProperty(exports, "InlineResponse2002", {
+  enumerable: true,
+  get: function get() {
+    return _InlineResponse3.InlineResponse2002;
+  }
+});
+Object.defineProperty(exports, "InlineResponse2003", {
+  enumerable: true,
+  get: function get() {
+    return _InlineResponse4.InlineResponse2003;
+  }
+});
+Object.defineProperty(exports, "InlineResponse200Message", {
+  enumerable: true,
+  get: function get() {
+    return _InlineResponse200Message.InlineResponse200Message;
+  }
+});
+Object.defineProperty(exports, "KeyPair", {
+  enumerable: true,
+  get: function get() {
+    return _KeyPair.KeyPair;
+  }
+});
+Object.defineProperty(exports, "KeyRotationOfNetworkParticipantBuyerAppOrSellerAppApi", {
+  enumerable: true,
+  get: function get() {
+    return _KeyRotationOfNetworkParticipantBuyerAppOrSellerAppApi.KeyRotationOfNetworkParticipantBuyerAppOrSellerAppApi;
+  }
+});
+Object.defineProperty(exports, "LookupBody", {
+  enumerable: true,
+  get: function get() {
+    return _LookupBody.LookupBody;
+  }
+});
+Object.defineProperty(exports, "NetworkParticipant", {
+  enumerable: true,
+  get: function get() {
+    return _NetworkParticipant.NetworkParticipant;
+  }
+});
+Object.defineProperty(exports, "ONDCNetworkParticipantOnboardingApi", {
+  enumerable: true,
+  get: function get() {
+    return _ONDCNetworkParticipantOnboardingApi.ONDCNetworkParticipantOnboardingApi;
+  }
+});
+Object.defineProperty(exports, "SellerOnRecord", {
+  enumerable: true,
+  get: function get() {
+    return _SellerOnRecord.SellerOnRecord;
+  }
+});
+Object.defineProperty(exports, "SubscribeBody", {
+  enumerable: true,
+  get: function get() {
+    return _SubscribeBody.SubscribeBody;
+  }
+});
+Object.defineProperty(exports, "SubscribeContext", {
+  enumerable: true,
+  get: function get() {
+    return _SubscribeContext.SubscribeContext;
+  }
+});
+Object.defineProperty(exports, "SubscribeMessage", {
+  enumerable: true,
+  get: function get() {
+    return _SubscribeMessage.SubscribeMessage;
+  }
+});
+Object.defineProperty(exports, "SubscriberUrlOnSubscribeBody", {
+  enumerable: true,
+  get: function get() {
+    return _SubscriberUrlOnSubscribeBody.SubscriberUrlOnSubscribeBody;
+  }
+});
+Object.defineProperty(exports, "VlookupBody", {
+  enumerable: true,
+  get: function get() {
+    return _VlookupBody.VlookupBody;
+  }
+});
+Object.defineProperty(exports, "VlookupKeyPair", {
+  enumerable: true,
+  get: function get() {
+    return _VlookupKeyPair.VlookupKeyPair;
+  }
+});
+Object.defineProperty(exports, "VlookupNetworkParticipant", {
+  enumerable: true,
+  get: function get() {
+    return _VlookupNetworkParticipant.VlookupNetworkParticipant;
+  }
+});
+Object.defineProperty(exports, "VlookupSearchParameters", {
+  enumerable: true,
+  get: function get() {
+    return _VlookupSearchParameters.VlookupSearchParameters;
+  }
+});
+Object.defineProperty(exports, "VlookupSellerOnRecord", {
+  enumerable: true,
+  get: function get() {
+    return _VlookupSellerOnRecord.VlookupSellerOnRecord;
+  }
+});
 var _ApiClient = require("./ApiClient.js");
 var _Ack = require("./model/Ack");
 var _City = require("./model/City");
@@ -32,191 +199,3 @@ var _VlookupSearchParameters = require("./model/VlookupSearchParameters");
 var _VlookupSellerOnRecord = require("./model/VlookupSellerOnRecord");
 var _KeyRotationOfNetworkParticipantBuyerAppOrSellerAppApi = require("./api/KeyRotationOfNetworkParticipantBuyerAppOrSellerAppApi");
 var _ONDCNetworkParticipantOnboardingApi = require("./api/ONDCNetworkParticipantOnboardingApi");
-/*
- * ONDC Registry 
- * ONDC Participant Management API
- *
- * OpenAPI spec version: 2.0.5
- *
- * NOTE: This class is auto generated by the swagger code generator program.
- * https://github.com/swagger-api/swagger-codegen.git
- *
- * Swagger Codegen version: 3.0.42
- *
- * Do not edit the class manually.
- *
- */
-/**
-* ONDC_Participant_Management_API.<br>
-* The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
-* <p>
-* An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
-* <pre>
-* var OndcRegistry_ = require('index'); // See note below*.
-* var xxxSvc = new OndcRegistry_.XxxApi(); // Allocate the API class we're going to use.
-* var yyyModel = new OndcRegistry_.Yyy(); // Construct a model instance.
-* yyyModel.someProperty = 'someValue';
-* ...
-* var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
-* ...
-* </pre>
-* <em>*NOTE: For a top-level AMD script, use require(['index'], function(){...})
-* and put the application logic within the callback function.</em>
-* </p>
-* <p>
-* A non-AMD browser application (discouraged) might do something like this:
-* <pre>
-* var xxxSvc = new OndcRegistry_.XxxApi(); // Allocate the API class we're going to use.
-* var yyy = new OndcRegistry_.Yyy(); // Construct a model instance.
-* yyyModel.someProperty = 'someValue';
-* ...
-* var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
-* ...
-* </pre>
-* </p>
-* @module index
-* @version 2.0.5
-*/
-var _default = {
-  /**
-   * The ApiClient constructor.
-   * @property {module:ApiClient}
-   */
-  ApiClient: _ApiClient.ApiClient,
-  /**
-   * The Ack model constructor.
-   * @property {module:model/Ack}
-   */
-  Ack: _Ack.Ack,
-  /**
-   * The City model constructor.
-   * @property {module:model/City}
-   */
-  City: _City.City,
-  /**
-   * The Context model constructor.
-   * @property {module:model/Context}
-   */
-  Context: _Context.Context,
-  /**
-   * The Entity model constructor.
-   * @property {module:model/Entity}
-   */
-  Entity: _Entity.Entity,
-  /**
-   * The EntityGst model constructor.
-   * @property {module:model/EntityGst}
-   */
-  EntityGst: _EntityGst.EntityGst,
-  /**
-   * The EntityPan model constructor.
-   * @property {module:model/EntityPan}
-   */
-  EntityPan: _EntityPan.EntityPan,
-  /**
-   * The Error model constructor.
-   * @property {module:model/Error}
-   */
-  Error: _Error.Error,
-  /**
-   * The InlineResponse200 model constructor.
-   * @property {module:model/InlineResponse200}
-   */
-  InlineResponse200: _InlineResponse.InlineResponse200,
-  /**
-   * The InlineResponse2001 model constructor.
-   * @property {module:model/InlineResponse2001}
-   */
-  InlineResponse2001: _InlineResponse2.InlineResponse2001,
-  /**
-   * The InlineResponse2002 model constructor.
-   * @property {module:model/InlineResponse2002}
-   */
-  InlineResponse2002: _InlineResponse3.InlineResponse2002,
-  /**
-   * The InlineResponse2003 model constructor.
-   * @property {module:model/InlineResponse2003}
-   */
-  InlineResponse2003: _InlineResponse4.InlineResponse2003,
-  /**
-   * The InlineResponse200Message model constructor.
-   * @property {module:model/InlineResponse200Message}
-   */
-  InlineResponse200Message: _InlineResponse200Message.InlineResponse200Message,
-  /**
-   * The KeyPair model constructor.
-   * @property {module:model/KeyPair}
-   */
-  KeyPair: _KeyPair.KeyPair,
-  /**
-   * The LookupBody model constructor.
-   * @property {module:model/LookupBody}
-   */
-  LookupBody: _LookupBody.LookupBody,
-  /**
-   * The NetworkParticipant model constructor.
-   * @property {module:model/NetworkParticipant}
-   */
-  NetworkParticipant: _NetworkParticipant.NetworkParticipant,
-  /**
-   * The SellerOnRecord model constructor.
-   * @property {module:model/SellerOnRecord}
-   */
-  SellerOnRecord: _SellerOnRecord.SellerOnRecord,
-  /**
-   * The SubscribeBody model constructor.
-   * @property {module:model/SubscribeBody}
-   */
-  SubscribeBody: _SubscribeBody.SubscribeBody,
-  /**
-   * The SubscribeContext model constructor.
-   * @property {module:model/SubscribeContext}
-   */
-  SubscribeContext: _SubscribeContext.SubscribeContext,
-  /**
-   * The SubscribeMessage model constructor.
-   * @property {module:model/SubscribeMessage}
-   */
-  SubscribeMessage: _SubscribeMessage.SubscribeMessage,
-  /**
-   * The SubscriberUrlOnSubscribeBody model constructor.
-   * @property {module:model/SubscriberUrlOnSubscribeBody}
-   */
-  SubscriberUrlOnSubscribeBody: _SubscriberUrlOnSubscribeBody.SubscriberUrlOnSubscribeBody,
-  /**
-   * The VlookupBody model constructor.
-   * @property {module:model/VlookupBody}
-   */
-  VlookupBody: _VlookupBody.VlookupBody,
-  /**
-   * The VlookupKeyPair model constructor.
-   * @property {module:model/VlookupKeyPair}
-   */
-  VlookupKeyPair: _VlookupKeyPair.VlookupKeyPair,
-  /**
-   * The VlookupNetworkParticipant model constructor.
-   * @property {module:model/VlookupNetworkParticipant}
-   */
-  VlookupNetworkParticipant: _VlookupNetworkParticipant.VlookupNetworkParticipant,
-  /**
-   * The VlookupSearchParameters model constructor.
-   * @property {module:model/VlookupSearchParameters}
-   */
-  VlookupSearchParameters: _VlookupSearchParameters.VlookupSearchParameters,
-  /**
-   * The VlookupSellerOnRecord model constructor.
-   * @property {module:model/VlookupSellerOnRecord}
-   */
-  VlookupSellerOnRecord: _VlookupSellerOnRecord.VlookupSellerOnRecord,
-  /**
-  * The KeyRotationOfNetworkParticipantBuyerAppOrSellerAppApi service constructor.
-  * @property {module:api/KeyRotationOfNetworkParticipantBuyerAppOrSellerAppApi}
-  */
-  KeyRotationOfNetworkParticipantBuyerAppOrSellerAppApi: _KeyRotationOfNetworkParticipantBuyerAppOrSellerAppApi.KeyRotationOfNetworkParticipantBuyerAppOrSellerAppApi,
-  /**
-  * The ONDCNetworkParticipantOnboardingApi service constructor.
-  * @property {module:api/ONDCNetworkParticipantOnboardingApi}
-  */
-  ONDCNetworkParticipantOnboardingApi: _ONDCNetworkParticipantOnboardingApi.ONDCNetworkParticipantOnboardingApi
-};
-exports["default"] = _default;

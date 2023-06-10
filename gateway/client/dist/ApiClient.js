@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.ApiClient = void 0;
 var _superagent = _interopRequireDefault(require("superagent"));
 var _querystring = _interopRequireDefault(require("querystring"));
+var _fs = require("fs");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -420,6 +421,7 @@ var ApiClient = /*#__PURE__*/function () {
       } else if (!request.header['Content-Type']) {
         request.type('application/json');
       }
+      console.log('hello 4');
       if (contentType === 'application/x-www-form-urlencoded') {
         request.send(_querystring["default"].stringify(this.normalizeParams(formParams)));
       } else if (contentType == 'multipart/form-data') {

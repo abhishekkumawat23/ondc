@@ -4,7 +4,7 @@ info:
   description: ONDC Participant Management API
   version: 2.0.5
 servers:
-- url: http://localhost:8080/ONDC/ONDC-Registry-Onboarding/2.0.5
+- url: http://localhost:9070/ONDC/ONDC-Registry-Onboarding/2.0.5
   description: SwaggerHub API Auto Mocking
 tags:
 - name: ONDC Network Participant Onboarding
