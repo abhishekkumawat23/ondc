@@ -1,7 +1,7 @@
 'use strict';
 
 var utils = require('../utils/writer.js');
-var ONDCGateway = require('../service/ONDCGatewayService');
+var ONDCGateway = require('../service/ONDCGatewayService.js');
 
 module.exports.on_searchPOST = function on_searchPOST (req, res, next, body) {
   ONDCGateway.on_searchPOST(body)

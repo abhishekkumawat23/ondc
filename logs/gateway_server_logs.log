@@ -3,7 +3,7 @@
 > npm install
 
 
-up to date, audited 153 packages in 2s
+up to date, audited 153 packages in 875ms
 
 11 packages are looking for funding
   run `npm fund` for details
@@ -21,19 +21,10 @@ Run `npm audit` for details.
   Mock mode: disabled
 Your server is listening on port 9080 (http://localhost:9080)
 Swagger-ui is available on http://localhost:9080/docs
-[0mGET /docs/ [36m304[0m 10.828 ms - -[0m
-[0mGET /docs/swagger-ui.css [36m304[0m 2.114 ms - -[0m
-[0mGET /docs/swagger-ui-bundle.js [36m304[0m 1.694 ms - -[0m
-[0mGET /docs/swagger-ui-standalone-preset.js [36m304[0m 1.622 ms - -[0m
-[0mHEAD /docs/ [36m304[0m 1.791 ms - -[0m
-[0mGET /docs/favicon-32x32.png [36m304[0m 1.632 ms - -[0m
-[0mGET /api-docs [32m200[0m 0.961 ms - -[0m
-[0mGET /api-docs [32m200[0m 0.337 ms - -[0m
-[0mGET /docs/ [36m304[0m 1.315 ms - -[0m
-[0mGET /docs/swagger-ui.css [36m304[0m 3.189 ms - -[0m
-[0mGET /docs/swagger-ui-bundle.js [36m304[0m 1.769 ms - -[0m
-[0mGET /docs/swagger-ui-standalone-preset.js [36m304[0m 0.909 ms - -[0m
-[0mGET /docs/favicon-32x32.png [36m304[0m 6.468 ms - -[0m
-[0mHEAD /docs/ [36m304[0m 3.349 ms - -[0m
-[0mGET /api-docs [32m200[0m 0.295 ms - -[0m
-[0mGET /api-docs [32m200[0m 0.270 ms - -[0m
+[0mGET /docs/ [36m304[0m 10.834 ms - -[0m
+[0mGET /docs/swagger-ui.css [36m304[0m 9.789 ms - -[0m
+[0mGET /docs/swagger-ui-standalone-preset.js [36m304[0m 2.371 ms - -[0m
+[0mGET /docs/swagger-ui-bundle.js [36m304[0m 3.078 ms - -[0m
+[0mHEAD /docs/ [36m304[0m 6.398 ms - -[0m
+[0mGET /api-docs [32m200[0m 0.880 ms - -[0m
+[0mGET /api-docs [32m200[0m 0.125 ms - -[0m
