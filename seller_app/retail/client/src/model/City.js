@@ -64,67 +64,67 @@ City.CodeEnum = {
    * value: "std:080 (Bengaluru)"
    * @const
    */
-  _080Bengaluru: "std:080 (Bengaluru)",
+  _080Bengaluru: "std:080",
 
   /**
    * value: "std:011 (New Delhi)"
    * @const
    */
-  _011NewDelhi: "std:011 (New Delhi)",
+  _011NewDelhi: "std:011",
 
   /**
    * value: "std:0422 (Coimbatore)"
    * @const
    */
-  _0422Coimbatore: "std:0422 (Coimbatore)",
+  _0422Coimbatore: "std:0422",
 
   /**
    * value: "std:0364 (Shillong)"
    * @const
    */
-  _0364Shillong: "std:0364 (Shillong)",
+  _0364Shillong: "std:0364",
 
   /**
    * value: "std:0522 (Lucknow)"
    * @const
    */
-  _0522Lucknow: "std:0522 (Lucknow)",
+  _0522Lucknow: "std:0522",
 
   /**
    * value: "std:0755 (Bhopal)"
    * @const
    */
-  _0755Bhopal: "std:0755 (Bhopal)",
+  _0755Bhopal: "std:0755",
 
   /**
    * value: "std:044 (Chennai)"
    * @const
    */
-  _044Chennai: "std:044 (Chennai)",
+  _044Chennai: "std:044",
 
   /**
    * value: "std:022 (Mumbai)"
    * @const
    */
-  _022Mumbai: "std:022 (Mumbai)",
+  _022Mumbai: "std:022",
 
   /**
    * value: "std:020 (Pune)"
    * @const
    */
-  _020Pune: "std:020 (Pune)",
+  _020Pune: "std:020",
 
   /**
    * value: "std:040 (Hyderabad)"
    * @const
    */
-  _040Hyderabad: "std:040 (Hyderabad)",
+  _040Hyderabad: "std:040",
 
   /**
    * value: "std:0145 (Ajmer)"
    * @const
    */
-  _0145Ajmer: "std:0145 (Ajmer)"
+  _0145Ajmer: "std:0145"
 };
 /**
  * Codification of city code will be using the std code of the city e.g. for Bengaluru, city code is 'std:080'

@@ -1,12 +1,14 @@
 #!/bin/bash
 
 declare -a ports
-# ports[0]="buyer_app"
+# "buyer_app"
 ports[0]=9090
-# ports[2]="gateway"
+# "gateway"
 ports[1]=9080
-# ports[4]="registry"
+# "registry"
 ports[2]=9070
+# "seller_app/retail"
+ports[3]=9060
 
 processTermination() {
   port="$1"
