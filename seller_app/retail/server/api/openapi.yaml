@@ -10,7 +10,7 @@ externalDocs:
     \ details in spec)"
   url: https://docs.google.com/document/d/12oMC4A05jT5rjCbY-M7j4T2oekr9bqcvSOpTI0jFEgE/edit
 servers:
-- url: https://virtserver.swaggerhub.com/ONDC/ONDC-Protocol-Hyperlocal/1.0.13
+- url: http://localhost:9060/ONDC/ONDC-Protocol-Hyperlocal/1.0.13
   description: SwaggerHub API Auto Mocking
 security:
 - SubscriberAuth: []
@@ -644,14 +644,16 @@ components:
       type: object
       properties:
         id:
-          type: string
-          description: "ID of the add-on. This follows the syntax {item.id}/add-on/{add-on\
-            \ unique id} for item specific add-on OR "
+          $ref: '#/components/schemas/AddOnId'
         descriptor:
           $ref: '#/components/schemas/Descriptor'
         price:
           $ref: '#/components/schemas/Price'
       description: Describes an add-on
+    AddOnId:
+      type: string
+      description: "ID of the add-on. This follows the syntax {item.id}/add-on/{add-on\
+        \ unique id} for item specific add-on OR "
     Address:
       type: object
       properties:
@@ -827,15 +829,7 @@ components:
       type: object
       properties:
         id:
-          type: string
-          description: Unique id of the category
-          enum:
-          - Grocery
-          - Packaged Commodities
-          - Packaged Foods
-          - Fruits and Vegetables
-          - F&B
-          - Fashion
+          $ref: '#/components/schemas/CategoryId'
         parent_category_id:
           type: string
           description: Unique id of the parent category
@@ -850,6 +844,16 @@ components:
         tags:
           $ref: '#/components/schemas/Tags'
       description: Describes a category
+    CategoryId:
+      type: string
+      description: Unique id of the category
+      enum:
+      - Grocery
+      - Packaged Commodities
+      - Packaged Foods
+      - Fruits and Vegetables
+      - F&B
+      - Fashion
     Circle:
       required:
       - gps
@@ -868,22 +872,24 @@ components:
           type: string
           description: Name of the city
         code:
-          type: string
-          description: "Codification of city code will be using the std code of the\
-            \ city e.g. for Bengaluru, city code is 'std:080'"
-          enum:
-          - std:080 (Bengaluru)
-          - std:011 (New Delhi)
-          - std:0422 (Coimbatore)
-          - std:0364 (Shillong)
-          - std:0522 (Lucknow)
-          - std:0755 (Bhopal)
-          - std:044 (Chennai)
-          - std:022 (Mumbai)
-          - std:020 (Pune)
-          - std:040 (Hyderabad)
-          - std:0145 (Ajmer)
+          $ref: '#/components/schemas/CityCode'
       description: Describes a city
+    CityCode:
+      type: string
+      description: "Codification of city code will be using the std code of the\
+      \ city e.g. for Bengaluru, city code is 'std:080'"
+      enum:
+        - std:080 (Bengaluru)
+        - std:011 (New Delhi)
+        - std:0422 (Coimbatore)
+        - std:0364 (Shillong)
+        - std:0522 (Lucknow)
+        - std:0755 (Bhopal)
+        - std:044 (Chennai)
+        - std:022 (Mumbai)
+        - std:020 (Pune)
+        - std:040 (Hyderabad)
+        - std:0145 (Ajmer)
     Contact:
       type: object
       properties:
@@ -910,9 +916,9 @@ components:
         domain:
           $ref: '#/components/schemas/Domain'
         country:
-          $ref: '#/components/schemas/Country/properties/code'
+          $ref: '#/components/schemas/CountryCode'
         city:
-          $ref: '#/components/schemas/City/properties/code'
+          $ref: '#/components/schemas/CityCode'
         action:
           type: string
           description: Defines the ONDC API call. Any actions other than the enumerated
@@ -991,9 +997,11 @@ components:
           type: string
           description: Name of the country
         code:
-          type: string
-          description: Country code as per ISO 3166 Alpha-3 code format
+          $ref: '#/components/schemas/CountryCode'
       description: Describes a country.
+    CountryCode:
+      type: string
+      description: Country code as per ISO 3166 Alpha-3 code format
     DecimalValue:
       pattern: "[+-]?([0-9]*[.])?[0-9]+"
       type: string
@@ -1098,9 +1106,9 @@ components:
       type: object
       properties:
         id:
-          type: string
+          $ref: '#/components/schemas/FeedbackFormElementId'
         parent_id:
-          $ref: '#/components/schemas/FeedbackFormElement/properties/id'
+          $ref: '#/components/schemas/FeedbackFormElementId'
         question:
           type: string
           description: Specifies the question to which the answer options will be
@@ -1118,6 +1126,8 @@ components:
           - text
       description: An element in the feedback form. It can be question or an answer
         to the question.
+    FeedbackFormElementId:
+      type: string
     FeedbackUrl:
       type: object
       properties:
@@ -1140,8 +1150,7 @@ components:
       type: object
       properties:
         id:
-          type: string
-          description: Unique reference ID to the fulfillment of an order
+          $ref: '#/components/schemas/FulfillmentId'
         type:
           type: string
           description: This describes the type of fulfillment ("Pickup" - Buyer picks
@@ -1163,7 +1172,7 @@ components:
         '@ondc/org/provider_name':
           type: string
         rating:
-          $ref: '#/components/schemas/Rating/properties/value'
+          $ref: '#/components/schemas/RatingValue'
         state:
           $ref: '#/components/schemas/State'
         tracking:
@@ -1194,6 +1203,9 @@ components:
         \ have following values - \"Searching-for-Agent\", \"Assigned-Agent\", \"\
         En-route-to-drop\", \"At-pickup-location\", \"At-drop-location\", \"Delivered-package\"\
         , \"Cancelled-package\", \"Returned-package\""
+    FulfillmentId:
+      type: string
+      description: Unique reference ID to the fulfillment of an order
     Gps:
       pattern: "^[-+]?([1-8]?\\d(\\.\\d+)?|90(\\.0+)?),\\s*[-+]?(180(\\.0+)?|((1[0-7]\\\
         d)|([1-9]?\\d))(\\.\\d+)?)$"
@@ -1262,23 +1274,21 @@ components:
       type: object
       properties:
         id:
-          type: string
-          description: This is the most unique identifier of a service item. An example
-            of an Item ID could be the SKU of a product.
+          $ref: '#/components/schemas/ItemId'
         parent_item_id:
-          $ref: '#/components/schemas/Item/properties/id'
+          $ref: '#/components/schemas/ItemId'
         descriptor:
           $ref: '#/components/schemas/Descriptor'
         price:
           $ref: '#/components/schemas/Price'
         category_id:
-          $ref: '#/components/schemas/Category/properties/id'
+          $ref: '#/components/schemas/CategoryId'
         fulfillment_id:
-          $ref: '#/components/schemas/Fulfillment/properties/id'
+          $ref: '#/components/schemas/FulfillmentId'
         rating:
-          $ref: '#/components/schemas/Rating/properties/value'
+          $ref: '#/components/schemas/RatingValue'
         location_id:
-          $ref: '#/components/schemas/Location/properties/id'
+          $ref: '#/components/schemas/LocationId'
         time:
           $ref: '#/components/schemas/Time'
         rateable:
@@ -1334,6 +1344,10 @@ components:
         \ (for declared price); All other statutory attributes must be provided, as\
         \ applicable, for the above; No statutory requirement for category_id \"F&B\"\
         \ or \"Fruits and Vegetables\""
+    ItemId:
+      type: string
+      description: This is the most unique identifier of a service item. An example
+        of an Item ID could be the SKU of a product.
     Language:
       type: object
       properties:
@@ -1345,7 +1359,7 @@ components:
       type: object
       properties:
         id:
-          type: string
+          $ref: '#/components/schemas/LocationId'
         descriptor:
           $ref: '#/components/schemas/Descriptor'
         gps:
@@ -1367,6 +1381,8 @@ components:
         time:
           $ref: '#/components/schemas/Time'
       description: Describes the location of a runtime object.
+    LocationId:
+      type: string
     Name:
       pattern: "^\\./[^/]+/[^/]*/[^/]*/[^/]*/[^/]*/[^/]*$"
       type: string
@@ -1375,24 +1391,26 @@ components:
       type: object
       properties:
         id:
-          type: string
+          $ref: '#/components/schemas/OfferId'
         descriptor:
           $ref: '#/components/schemas/Descriptor'
         location_ids:
           type: array
           items:
-            $ref: '#/components/schemas/Location/properties/id'
+            $ref: '#/components/schemas/LocationId'
         category_ids:
           type: array
           items:
-            $ref: '#/components/schemas/Category/properties/id'
+            $ref: '#/components/schemas/CategoryId'
         item_ids:
           type: array
           items:
-            $ref: '#/components/schemas/Item/properties/id'
+            $ref: '#/components/schemas/ItemId'
         time:
           $ref: '#/components/schemas/Time'
       description: Describes an offer
+    OfferId:
+      type: string
     Operator:
       description: Describes the agent of a service
       allOf:
@@ -1404,17 +1422,17 @@ components:
       type: object
       properties:
         id:
-          type: string
+          $ref: '#/components/schemas/OptionId'
         descriptor:
           $ref: '#/components/schemas/Descriptor'
       description: Describes a selectable option
+    OptionId:
+      type: string
     Order:
       type: object
       properties:
         id:
-          type: string
-          description: "Unique identifier for Order across the network, Will be created\
-            \ by buyer app in confirm API"
+          $ref: '#/components/schemas/OrderId'
         state:
           type: string
           enum:
@@ -1467,6 +1485,10 @@ components:
           format: date-time
       description: "Describes the details of an order - For \"@ondc/org/cancellation.cancelled_by\"\
         \ use following values - buyer-app, seller-app, logistics-provider;"
+    OrderId:
+      type: string
+      description: "Unique identifier for Order across the network, Will be created\
+        \ by buyer app in confirm API"
     Organization:
       type: object
       properties:
@@ -1613,14 +1635,19 @@ components:
       type: object
       properties:
         id:
-          type: string
+          $ref: '#/components/schemas/PolicyId'
         descriptor:
           $ref: '#/components/schemas/Descriptor'
         parent_policy_id:
-          $ref: '#/components/schemas/Policy/properties/id'
+          $ref: '#/components/schemas/PolicyId'
         time:
           $ref: '#/components/schemas/Time'
       description: Describes a policy. Allows for domain extension.
+    PolicyId:
+      type: string
+    Currency:
+      type: string
+      description: ISO 4217 alphabetic currency code e.g. 'INR'
     Price:
       required:
       - currency
@@ -1628,8 +1655,7 @@ components:
       type: object
       properties:
         currency:
-          type: string
-          description: ISO 4217 alphabetic currency code e.g. 'INR'
+          $ref: '#/components/schemas/Currency'
         value:
           $ref: '#/components/schemas/DecimalValue'
         estimated_value:
@@ -1654,8 +1680,7 @@ components:
       type: object
       properties:
         id:
-          type: string
-          description: Id of the provider
+          $ref: '#/components/schemas/ProviderId'
         descriptor:
           $ref: '#/components/schemas/Descriptor'
         category_id:
@@ -1665,7 +1690,7 @@ components:
           type: string
           description: FSSAI license no. Mandatory for category_id "F&B"
         rating:
-          $ref: '#/components/schemas/Rating/properties/value'
+          $ref: '#/components/schemas/RatingValue'
         time:
           $ref: '#/components/schemas/Time'
         categories:
@@ -1712,6 +1737,9 @@ components:
           $ref: '#/components/schemas/Tags'
       description: "Describes a service provider. This can be a restaurant, a hospital,\
         \ a Store etc"
+    ProviderId:
+      type: string
+      description: Id of the provider
     Quotation:
       required:
       - '@ondc/org/item_id'
@@ -1736,22 +1764,20 @@ components:
       type: object
       properties:
         rating_category:
-          type: string
-          description: Category of the object being rated
+          $ref: '#/components/schemas/RatingCategory'
         id:
           type: string
           description: Id of the object being rated
         value:
-          maximum: 5
-          minimum: 1
-          type: number
-          description: Rating value given to the object (1 - Poor; 2 - Needs improvement;
-            3 - Satisfactory; 4 - Good; 5 - Excellent)
+          $ref: '#/components/schemas/RatingValue'
         feedback_form:
           $ref: '#/components/schemas/FeedbackForm'
         feedback_id:
-          $ref: '#/components/schemas/FeedbackUrl/properties/params/properties/feedback_id'
+          $ref: '#/components/schemas/FeedbackUrlFeedback_id'
       description: Describes the rating of a person or an object.
+    RatingCategory:
+      type: string
+      description: Category of the object being rated
     RatingAck:
       type: object
       properties:
@@ -1761,6 +1787,12 @@ components:
         rating_ack:
           type: boolean
           description: If rating has been recorded or not
+    RatingValue:
+      maximum: 5
+      minimum: 1
+      type: number
+      description: Rating value given to the object (1 - Poor; 2 - Needs improvement;
+       3 - Satisfactory; 4 - Good; 5 - Excellent)
     Scalar:
       required:
       - unit
@@ -1831,9 +1863,9 @@ components:
         domain:
           $ref: '#/components/schemas/Domain'
         city:
-          $ref: '#/components/schemas/City/properties/code'
+          $ref: '#/components/schemas/CityCode'
         country:
-          $ref: '#/components/schemas/Country/properties/code'
+          $ref: '#/components/schemas/CountryCode'
         signing_public_key:
           type: string
           description: "Signing Public key of the subscriber. <br/><br/>Any subscriber\
@@ -2026,7 +2058,7 @@ components:
       type: object
       properties:
         order_id:
-          $ref: '#/components/schemas/Order/properties/id'
+          $ref: '#/components/schemas/OrderId'
     status_body:
       required:
       - context
@@ -2043,7 +2075,7 @@ components:
       type: object
       properties:
         order_id:
-          $ref: '#/components/schemas/Order/properties/id'
+          $ref: '#/components/schemas/OrderId'
         callback_url:
           type: string
           format: uri
@@ -2063,9 +2095,9 @@ components:
       type: object
       properties:
         order_id:
-          $ref: '#/components/schemas/Order/properties/id'
+          $ref: '#/components/schemas/OrderId'
         cancellation_reason_id:
-          $ref: '#/components/schemas/Option/properties/id'
+          $ref: '#/components/schemas/OptionId'
         descriptor:
           $ref: '#/components/schemas/Descriptor'
     cancel_body:
@@ -2209,29 +2241,29 @@ components:
       type: object
       properties:
         id:
-          $ref: '#/components/schemas/Provider/properties/id'
+          $ref: '#/components/schemas/ProviderId'
     on_init_message_order_provider_location:
       type: object
       properties:
         id:
-          $ref: '#/components/schemas/Location/properties/id'
+          $ref: '#/components/schemas/LocationId'
     on_init_message_order_items:
       type: object
       properties:
         id:
-          $ref: '#/components/schemas/Item/properties/id'
+          $ref: '#/components/schemas/ItemId'
         quantity:
           $ref: '#/components/schemas/ItemQuantity/properties/selected'
     on_init_message_order_add_ons:
       type: object
       properties:
         id:
-          $ref: '#/components/schemas/AddOn/properties/id'
+          $ref: '#/components/schemas/AddOnId'
     on_init_message_order_offers:
       type: object
       properties:
         id:
-          $ref: '#/components/schemas/Offer/properties/id'
+          $ref: '#/components/schemas/OfferId'
     on_init_message_order:
       required:
       - items.id
@@ -2360,7 +2392,7 @@ components:
       properties:
         phone:
           type: string
-          format: phone
+         # format: phone
         email:
           type: string
           format: email
@@ -2424,7 +2456,7 @@ components:
         rating_categories:
           type: array
           items:
-            $ref: '#/components/schemas/Rating/properties/rating_category'
+            $ref: '#/components/schemas/RatingCategory'
     get_feedback_categories_body:
       type: object
       properties:
@@ -2438,14 +2470,14 @@ components:
         feedback_categories:
           type: array
           items:
-            $ref: '#/components/schemas/Rating/properties/rating_category'
+            $ref: '#/components/schemas/RatingCategory'
     get_feedback_form_message:
       type: object
       properties:
         rating_value:
-          $ref: '#/components/schemas/Rating/properties/value'
+          $ref: '#/components/schemas/RatingValue'
         rating_category:
-          $ref: '#/components/schemas/Rating/properties/rating_category'
+          $ref: '#/components/schemas/RatingCategory'
     get_feedback_form_body:
       type: object
       properties:
@@ -2464,18 +2496,20 @@ components:
       type: object
       properties:
         id:
-          $ref: '#/components/schemas/Option/properties/id'
+          $ref: '#/components/schemas/OptionId'
     FeedbackUrl_params:
       required:
       - feedback_id
       type: object
       properties:
         feedback_id:
-          type: string
-          description: This value will be placed in the the $feedback_id url param
-            in case of http/get and in the requestBody http/post requests
+          $ref: '#/components/schemas/FeedbackUrlFeedback_id'
       additionalProperties:
         type: string
+    FeedbackUrlFeedback_id:
+      type: string
+      description: This value will be placed in the the $feedback_id url param
+        in case of http/get and in the requestBody http/post requests
     Fulfillment_customer:
       type: object
       properties:
@@ -2660,12 +2694,12 @@ components:
       type: object
       properties:
         id:
-          $ref: '#/components/schemas/Location/properties/id'
+          $ref: '#/components/schemas/LocationId'
     Order_provider:
       type: object
       properties:
         id:
-          $ref: '#/components/schemas/Provider/properties/id'
+          $ref: '#/components/schemas/ProviderId'
         locations:
           maxItems: 1
           type: array
@@ -2677,7 +2711,7 @@ components:
       type: object
       properties:
         id:
-          $ref: '#/components/schemas/Item/properties/id'
+          $ref: '#/components/schemas/ItemId'
         quantity:
           $ref: '#/components/schemas/ItemQuantity/properties/selected'
     Order_add_ons:
@@ -2686,14 +2720,14 @@ components:
       type: object
       properties:
         id:
-          $ref: '#/components/schemas/AddOn/properties/id'
+          $ref: '#/components/schemas/AddOnId'
     Order_offers:
       required:
       - id
       type: object
       properties:
         id:
-          $ref: '#/components/schemas/Offer/properties/id'
+          $ref: '#/components/schemas/OfferId'
     Order_ondcorglinked_orders:
       type: object
       properties:
@@ -2713,7 +2747,7 @@ components:
         amount:
           $ref: '#/components/schemas/Price/properties/value'
         currency:
-          $ref: '#/components/schemas/Price/properties/currency'
+          $ref: '#/components/schemas/Currency'
       additionalProperties:
         type: string
     Payment_ondcorgsettlement_details:
@@ -2768,7 +2802,7 @@ components:
       type: object
       properties:
         '@ondc/org/item_id':
-          $ref: '#/components/schemas/Item/properties/id'
+          $ref: '#/components/schemas/ItemId'
         '@ondc/org/item_quantity':
           $ref: '#/components/schemas/ItemQuantity/properties/selected'
         '@ondc/org/title_type':
