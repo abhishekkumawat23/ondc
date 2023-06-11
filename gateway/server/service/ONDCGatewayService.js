@@ -1,6 +1,7 @@
 'use strict';
 
 const OndcRegistryClient = require('../../../registry/client/dist/index.js')
+const util = require('util');
 
 function lookupPost(callback) {
   console.log('gateway 0.0')
@@ -64,38 +65,47 @@ exports.on_searchPOST = function(body) {
  * body Search_body Buyer searches for products and services (optional)
  * returns inline_response_200
  **/
-exports.searchPOST = function(body) {
-  console.log('in search post body')
-  return new Promise(function(resolve, reject) {
-//     var examples = {};
-//     examples['application/json'] = {
-//   "message" : {
-//     "ack" : {
-//       "status" : "ACK"
-//     }
-//   },
-//   "error" : {
-//     "path" : "path",
-//     "code" : "code",
-//     "type" : "CONTEXT-ERROR",
-//     "message" : "message"
-//   }
-// };
-//     if (Object.keys(examples).length > 0) {
-//       resolve(examples[Object.keys(examples)[0]]);
-//     } else {
-//       resolve();
-//     }
-    var callback = function(error, data, response) {
-      if (error) {
-        console.error(error);
-        reject(error);
-      } else {
-        console.log('API called successfully. Returned data: ' + data);
-        resolve(data);
-      }
-    };
-    lookupPost(callback)
-  });
-}
+// exports.searchPOST = function(body) {
+//   console.log('in search post body')
+//   return new Promise(function(resolve, reject) {
+// //     var examples = {};
+// //     examples['application/json'] = {
+// //   "message" : {
+// //     "ack" : {
+// //       "status" : "ACK"
+// //     }
+// //   },
+// //   "error" : {
+// //     "path" : "path",
+// //     "code" : "code",
+// //     "type" : "CONTEXT-ERROR",
+// //     "message" : "message"
+// //   }
+// // };
+// //     if (Object.keys(examples).length > 0) {
+// //       resolve(examples[Object.keys(examples)[0]]);
+// //     } else {
+// //       resolve();
+// //     }
+//     var callback = function(error, data, response) {
+//       if (error) {
+//         console.error(error);
+//         reject(error);
+//       } else {
+//         console.log('API called successfully. Returned data: ' + data);
+//         resolve(data);
+//       }
+//     };
+//     lookupPost(callback)
+//   });
+// }
 
+exports.searchPOST =  async function(body) {
+  console.log('in search post body')
+
+
+    const data = await util.promisify(lookupPost)();
+    console.log('API called successfully. Returned data: ' + JSON.stringify(data));
+    return data;
+
+}
