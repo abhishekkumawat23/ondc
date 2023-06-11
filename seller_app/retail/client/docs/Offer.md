@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] 
+**id** | [**OfferId**](OfferId.md) |  | [optional] 
 **descriptor** | [**Descriptor**](Descriptor.md) |  | [optional] 
-**locationIds** | [**[Locationpropertiesid]**](Locationpropertiesid.md) |  | [optional] 
-**categoryIds** | [**[Categorypropertiesid]**](Categorypropertiesid.md) |  | [optional] 
-**itemIds** | [**[Itempropertiesid]**](Itempropertiesid.md) |  | [optional] 
+**locationIds** | [**[LocationId]**](LocationId.md) |  | [optional] 
+**categoryIds** | [**[CategoryId]**](CategoryId.md) |  | [optional] 
+**itemIds** | [**[ItemId]**](ItemId.md) |  | [optional] 
 **time** | [**Time**](Time.md) |  | [optional] 

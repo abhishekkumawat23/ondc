@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ratingCategory** | **String** | Category of the object being rated | [optional] 
+**ratingCategory** | [**RatingCategory**](RatingCategory.md) |  | [optional] 
 **id** | **String** | Id of the object being rated | [optional] 
-**value** | **Number** | Rating value given to the object (1 - Poor; 2 - Needs improvement; 3 - Satisfactory; 4 - Good; 5 - Excellent) | [optional] 
+**value** | [**RatingValue**](RatingValue.md) |  | [optional] 
 **feedbackForm** | [**FeedbackForm**](FeedbackForm.md) |  | [optional] 
-**feedbackId** | [**FeedbackUrlpropertiesparamspropertiesfeedbackId**](FeedbackUrlpropertiesparamspropertiesfeedbackId.md) |  | [optional] 
+**feedbackId** | [**FeedbackUrlFeedbackId**](FeedbackUrlFeedbackId.md) |  | [optional] 

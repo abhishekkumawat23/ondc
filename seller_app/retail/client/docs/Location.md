@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] 
+**id** | [**LocationId**](LocationId.md) |  | [optional] 
 **descriptor** | [**Descriptor**](Descriptor.md) |  | [optional] 
 **gps** | [**Gps**](Gps.md) |  | [optional] 
 **address** | [**Address**](Address.md) |  | [optional] 

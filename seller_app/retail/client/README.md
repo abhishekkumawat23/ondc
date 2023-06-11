@@ -100,52 +100,53 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.cancellationReasonsPost(opts, callback);
+api.cancellationReasonsPOST(opts, callback);
 ```
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://virtserver.swaggerhub.com/ONDC/ONDC-Protocol-Hyperlocal/1.0.13*
+All URIs are relative to *http://localhost:9060/ONDC/ONDC-Protocol-Hyperlocal/1.0.13*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*OndcProtocolApiForRetailGroceryFb.BuyerAppMetaAPIsApi* | [**cancellationReasonsPost**](docs/BuyerAppMetaAPIsApi.md#cancellationReasonsPost) | **POST** /cancellation_reasons | 
-*OndcProtocolApiForRetailGroceryFb.BuyerAppMetaAPIsApi* | [**feedbackCategoriesPost**](docs/BuyerAppMetaAPIsApi.md#feedbackCategoriesPost) | **POST** /feedback_categories | 
-*OndcProtocolApiForRetailGroceryFb.BuyerAppMetaAPIsApi* | [**feedbackFormPost**](docs/BuyerAppMetaAPIsApi.md#feedbackFormPost) | **POST** /feedback_form | 
-*OndcProtocolApiForRetailGroceryFb.BuyerAppMetaAPIsApi* | [**ratingCategoriesPost**](docs/BuyerAppMetaAPIsApi.md#ratingCategoriesPost) | **POST** /rating_categories | 
-*OndcProtocolApiForRetailGroceryFb.BuyerAppMetaAPIsApi* | [**returnReasonsPost**](docs/BuyerAppMetaAPIsApi.md#returnReasonsPost) | **POST** /return_reasons | 
-*OndcProtocolApiForRetailGroceryFb.ONDCBuyerAppApi* | [**onCancelPost**](docs/ONDCBuyerAppApi.md#onCancelPost) | **POST** /on_cancel | 
-*OndcProtocolApiForRetailGroceryFb.ONDCBuyerAppApi* | [**onConfirmPost**](docs/ONDCBuyerAppApi.md#onConfirmPost) | **POST** /on_confirm | 
-*OndcProtocolApiForRetailGroceryFb.ONDCBuyerAppApi* | [**onInitPost**](docs/ONDCBuyerAppApi.md#onInitPost) | **POST** /on_init | 
-*OndcProtocolApiForRetailGroceryFb.ONDCBuyerAppApi* | [**onRatingPost**](docs/ONDCBuyerAppApi.md#onRatingPost) | **POST** /on_rating | 
-*OndcProtocolApiForRetailGroceryFb.ONDCBuyerAppApi* | [**onSearchPost**](docs/ONDCBuyerAppApi.md#onSearchPost) | **POST** /on_search | 
-*OndcProtocolApiForRetailGroceryFb.ONDCBuyerAppApi* | [**onSelectPost**](docs/ONDCBuyerAppApi.md#onSelectPost) | **POST** /on_select | 
-*OndcProtocolApiForRetailGroceryFb.ONDCBuyerAppApi* | [**onStatusPost**](docs/ONDCBuyerAppApi.md#onStatusPost) | **POST** /on_status | 
-*OndcProtocolApiForRetailGroceryFb.ONDCBuyerAppApi* | [**onSupportPost**](docs/ONDCBuyerAppApi.md#onSupportPost) | **POST** /on_support | 
-*OndcProtocolApiForRetailGroceryFb.ONDCBuyerAppApi* | [**onTrackPost**](docs/ONDCBuyerAppApi.md#onTrackPost) | **POST** /on_track | 
-*OndcProtocolApiForRetailGroceryFb.ONDCBuyerAppApi* | [**onUpdatePost**](docs/ONDCBuyerAppApi.md#onUpdatePost) | **POST** /on_update | 
-*OndcProtocolApiForRetailGroceryFb.ONDCGatewayApi* | [**onSearchPost**](docs/ONDCGatewayApi.md#onSearchPost) | **POST** /on_search | 
-*OndcProtocolApiForRetailGroceryFb.ONDCGatewayApi* | [**searchPost**](docs/ONDCGatewayApi.md#searchPost) | **POST** /search | 
-*OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi* | [**cancelPost**](docs/ONDCSellerAppApi.md#cancelPost) | **POST** /cancel | 
-*OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi* | [**confirmPost**](docs/ONDCSellerAppApi.md#confirmPost) | **POST** /confirm | 
-*OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi* | [**initPost**](docs/ONDCSellerAppApi.md#initPost) | **POST** /init | 
-*OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi* | [**ratingPost**](docs/ONDCSellerAppApi.md#ratingPost) | **POST** /rating | 
-*OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi* | [**searchPost**](docs/ONDCSellerAppApi.md#searchPost) | **POST** /search | 
-*OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi* | [**selectPost**](docs/ONDCSellerAppApi.md#selectPost) | **POST** /select | 
-*OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi* | [**statusPost**](docs/ONDCSellerAppApi.md#statusPost) | **POST** /status | 
-*OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi* | [**supportPost**](docs/ONDCSellerAppApi.md#supportPost) | **POST** /support | 
-*OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi* | [**trackPost**](docs/ONDCSellerAppApi.md#trackPost) | **POST** /track | 
-*OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi* | [**updatePost**](docs/ONDCSellerAppApi.md#updatePost) | **POST** /update | 
-*OndcProtocolApiForRetailGroceryFb.SellerAppMetaAPIsApi* | [**getCancellationReasonsPost**](docs/SellerAppMetaAPIsApi.md#getCancellationReasonsPost) | **POST** /get_cancellation_reasons | 
-*OndcProtocolApiForRetailGroceryFb.SellerAppMetaAPIsApi* | [**getFeedbackFormPost**](docs/SellerAppMetaAPIsApi.md#getFeedbackFormPost) | **POST** /get_feedback_form | 
-*OndcProtocolApiForRetailGroceryFb.SellerAppMetaAPIsApi* | [**getRatingCategoriesPost**](docs/SellerAppMetaAPIsApi.md#getRatingCategoriesPost) | **POST** /get_rating_categories | 
-*OndcProtocolApiForRetailGroceryFb.SellerAppMetaAPIsApi* | [**getReturnReasonsPost**](docs/SellerAppMetaAPIsApi.md#getReturnReasonsPost) | **POST** /get_return_reasons | 
-*OndcProtocolApiForRetailGroceryFb.SellerMetaAPIsApi* | [**getFeedbackCategoriesPost**](docs/SellerMetaAPIsApi.md#getFeedbackCategoriesPost) | **POST** /get_feedback_categories | 
+*OndcProtocolApiForRetailGroceryFb.BuyerAppMetaAPIsApi* | [**cancellationReasonsPOST**](docs/BuyerAppMetaAPIsApi.md#cancellationReasonsPOST) | **POST** /cancellation_reasons | 
+*OndcProtocolApiForRetailGroceryFb.BuyerAppMetaAPIsApi* | [**feedbackCategoriesPOST**](docs/BuyerAppMetaAPIsApi.md#feedbackCategoriesPOST) | **POST** /feedback_categories | 
+*OndcProtocolApiForRetailGroceryFb.BuyerAppMetaAPIsApi* | [**feedbackFormPOST**](docs/BuyerAppMetaAPIsApi.md#feedbackFormPOST) | **POST** /feedback_form | 
+*OndcProtocolApiForRetailGroceryFb.BuyerAppMetaAPIsApi* | [**ratingCategoriesPOST**](docs/BuyerAppMetaAPIsApi.md#ratingCategoriesPOST) | **POST** /rating_categories | 
+*OndcProtocolApiForRetailGroceryFb.BuyerAppMetaAPIsApi* | [**returnReasonsPOST**](docs/BuyerAppMetaAPIsApi.md#returnReasonsPOST) | **POST** /return_reasons | 
+*OndcProtocolApiForRetailGroceryFb.ONDCBuyerAppApi* | [**onCancelPOST**](docs/ONDCBuyerAppApi.md#onCancelPOST) | **POST** /on_cancel | 
+*OndcProtocolApiForRetailGroceryFb.ONDCBuyerAppApi* | [**onConfirmPOST**](docs/ONDCBuyerAppApi.md#onConfirmPOST) | **POST** /on_confirm | 
+*OndcProtocolApiForRetailGroceryFb.ONDCBuyerAppApi* | [**onInitPOST**](docs/ONDCBuyerAppApi.md#onInitPOST) | **POST** /on_init | 
+*OndcProtocolApiForRetailGroceryFb.ONDCBuyerAppApi* | [**onRatingPOST**](docs/ONDCBuyerAppApi.md#onRatingPOST) | **POST** /on_rating | 
+*OndcProtocolApiForRetailGroceryFb.ONDCBuyerAppApi* | [**onSearchPOST**](docs/ONDCBuyerAppApi.md#onSearchPOST) | **POST** /on_search | 
+*OndcProtocolApiForRetailGroceryFb.ONDCBuyerAppApi* | [**onSelectPOST**](docs/ONDCBuyerAppApi.md#onSelectPOST) | **POST** /on_select | 
+*OndcProtocolApiForRetailGroceryFb.ONDCBuyerAppApi* | [**onStatusPOST**](docs/ONDCBuyerAppApi.md#onStatusPOST) | **POST** /on_status | 
+*OndcProtocolApiForRetailGroceryFb.ONDCBuyerAppApi* | [**onSupportPOST**](docs/ONDCBuyerAppApi.md#onSupportPOST) | **POST** /on_support | 
+*OndcProtocolApiForRetailGroceryFb.ONDCBuyerAppApi* | [**onTrackPOST**](docs/ONDCBuyerAppApi.md#onTrackPOST) | **POST** /on_track | 
+*OndcProtocolApiForRetailGroceryFb.ONDCBuyerAppApi* | [**onUpdatePOST**](docs/ONDCBuyerAppApi.md#onUpdatePOST) | **POST** /on_update | 
+*OndcProtocolApiForRetailGroceryFb.ONDCGatewayApi* | [**onSearchPOST**](docs/ONDCGatewayApi.md#onSearchPOST) | **POST** /on_search | 
+*OndcProtocolApiForRetailGroceryFb.ONDCGatewayApi* | [**searchPOST**](docs/ONDCGatewayApi.md#searchPOST) | **POST** /search | 
+*OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi* | [**cancelPOST**](docs/ONDCSellerAppApi.md#cancelPOST) | **POST** /cancel | 
+*OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi* | [**confirmPOST**](docs/ONDCSellerAppApi.md#confirmPOST) | **POST** /confirm | 
+*OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi* | [**initPOST**](docs/ONDCSellerAppApi.md#initPOST) | **POST** /init | 
+*OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi* | [**ratingPOST**](docs/ONDCSellerAppApi.md#ratingPOST) | **POST** /rating | 
+*OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi* | [**searchPOST**](docs/ONDCSellerAppApi.md#searchPOST) | **POST** /search | 
+*OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi* | [**selectPOST**](docs/ONDCSellerAppApi.md#selectPOST) | **POST** /select | 
+*OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi* | [**statusPOST**](docs/ONDCSellerAppApi.md#statusPOST) | **POST** /status | 
+*OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi* | [**supportPOST**](docs/ONDCSellerAppApi.md#supportPOST) | **POST** /support | 
+*OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi* | [**trackPOST**](docs/ONDCSellerAppApi.md#trackPOST) | **POST** /track | 
+*OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi* | [**updatePOST**](docs/ONDCSellerAppApi.md#updatePOST) | **POST** /update | 
+*OndcProtocolApiForRetailGroceryFb.SellerAppMetaAPIsApi* | [**getCancellationReasonsPOST**](docs/SellerAppMetaAPIsApi.md#getCancellationReasonsPOST) | **POST** /get_cancellation_reasons | 
+*OndcProtocolApiForRetailGroceryFb.SellerAppMetaAPIsApi* | [**getFeedbackFormPOST**](docs/SellerAppMetaAPIsApi.md#getFeedbackFormPOST) | **POST** /get_feedback_form | 
+*OndcProtocolApiForRetailGroceryFb.SellerAppMetaAPIsApi* | [**getRatingCategoriesPOST**](docs/SellerAppMetaAPIsApi.md#getRatingCategoriesPOST) | **POST** /get_rating_categories | 
+*OndcProtocolApiForRetailGroceryFb.SellerAppMetaAPIsApi* | [**getReturnReasonsPOST**](docs/SellerAppMetaAPIsApi.md#getReturnReasonsPOST) | **POST** /get_return_reasons | 
+*OndcProtocolApiForRetailGroceryFb.SellerMetaAPIsApi* | [**getFeedbackCategoriesPOST**](docs/SellerMetaAPIsApi.md#getFeedbackCategoriesPOST) | **POST** /get_feedback_categories | 
 
 ## Documentation for Models
 
  - [OndcProtocolApiForRetailGroceryFb.Ack](docs/Ack.md)
  - [OndcProtocolApiForRetailGroceryFb.AddOn](docs/AddOn.md)
+ - [OndcProtocolApiForRetailGroceryFb.AddOnId](docs/AddOnId.md)
  - [OndcProtocolApiForRetailGroceryFb.Address](docs/Address.md)
  - [OndcProtocolApiForRetailGroceryFb.Agent](docs/Agent.md)
  - [OndcProtocolApiForRetailGroceryFb.AllOfProviderLocationsItems](docs/AllOfProviderLocationsItems.md)
@@ -160,12 +161,16 @@ Class | Method | HTTP request | Description
  - [OndcProtocolApiForRetailGroceryFb.CancellationSelectedReason](docs/CancellationSelectedReason.md)
  - [OndcProtocolApiForRetailGroceryFb.Catalog](docs/Catalog.md)
  - [OndcProtocolApiForRetailGroceryFb.Category](docs/Category.md)
+ - [OndcProtocolApiForRetailGroceryFb.CategoryId](docs/CategoryId.md)
  - [OndcProtocolApiForRetailGroceryFb.Circle](docs/Circle.md)
  - [OndcProtocolApiForRetailGroceryFb.City](docs/City.md)
+ - [OndcProtocolApiForRetailGroceryFb.CityCode](docs/CityCode.md)
  - [OndcProtocolApiForRetailGroceryFb.ConfirmBody](docs/ConfirmBody.md)
  - [OndcProtocolApiForRetailGroceryFb.Contact](docs/Contact.md)
  - [OndcProtocolApiForRetailGroceryFb.Context](docs/Context.md)
  - [OndcProtocolApiForRetailGroceryFb.Country](docs/Country.md)
+ - [OndcProtocolApiForRetailGroceryFb.CountryCode](docs/CountryCode.md)
+ - [OndcProtocolApiForRetailGroceryFb.Currency](docs/Currency.md)
  - [OndcProtocolApiForRetailGroceryFb.DecimalValue](docs/DecimalValue.md)
  - [OndcProtocolApiForRetailGroceryFb.Descriptor](docs/Descriptor.md)
  - [OndcProtocolApiForRetailGroceryFb.Dimensions](docs/Dimensions.md)
@@ -178,11 +183,14 @@ Class | Method | HTTP request | Description
  - [OndcProtocolApiForRetailGroceryFb.FeedbackForm](docs/FeedbackForm.md)
  - [OndcProtocolApiForRetailGroceryFb.FeedbackFormBody](docs/FeedbackFormBody.md)
  - [OndcProtocolApiForRetailGroceryFb.FeedbackFormElement](docs/FeedbackFormElement.md)
+ - [OndcProtocolApiForRetailGroceryFb.FeedbackFormElementId](docs/FeedbackFormElementId.md)
  - [OndcProtocolApiForRetailGroceryFb.FeedbackUrl](docs/FeedbackUrl.md)
+ - [OndcProtocolApiForRetailGroceryFb.FeedbackUrlFeedbackId](docs/FeedbackUrlFeedbackId.md)
  - [OndcProtocolApiForRetailGroceryFb.FeedbackUrlParams](docs/FeedbackUrlParams.md)
  - [OndcProtocolApiForRetailGroceryFb.Fulfillment](docs/Fulfillment.md)
  - [OndcProtocolApiForRetailGroceryFb.FulfillmentCustomer](docs/FulfillmentCustomer.md)
  - [OndcProtocolApiForRetailGroceryFb.FulfillmentEnd](docs/FulfillmentEnd.md)
+ - [OndcProtocolApiForRetailGroceryFb.FulfillmentId](docs/FulfillmentId.md)
  - [OndcProtocolApiForRetailGroceryFb.FulfillmentStart](docs/FulfillmentStart.md)
  - [OndcProtocolApiForRetailGroceryFb.GetCancellationReasonsBody](docs/GetCancellationReasonsBody.md)
  - [OndcProtocolApiForRetailGroceryFb.GetFeedbackCategoriesBody](docs/GetFeedbackCategoriesBody.md)
@@ -198,6 +206,7 @@ Class | Method | HTTP request | Description
  - [OndcProtocolApiForRetailGroceryFb.InlineResponse200Message](docs/InlineResponse200Message.md)
  - [OndcProtocolApiForRetailGroceryFb.Intent](docs/Intent.md)
  - [OndcProtocolApiForRetailGroceryFb.Item](docs/Item.md)
+ - [OndcProtocolApiForRetailGroceryFb.ItemId](docs/ItemId.md)
  - [OndcProtocolApiForRetailGroceryFb.ItemOndcorgstatutoryReqsPackagedCommodities](docs/ItemOndcorgstatutoryReqsPackagedCommodities.md)
  - [OndcProtocolApiForRetailGroceryFb.ItemOndcorgstatutoryReqsPrepackagedFood](docs/ItemOndcorgstatutoryReqsPrepackagedFood.md)
  - [OndcProtocolApiForRetailGroceryFb.ItemQuantity](docs/ItemQuantity.md)
@@ -205,8 +214,10 @@ Class | Method | HTTP request | Description
  - [OndcProtocolApiForRetailGroceryFb.ItemQuantityMaximum](docs/ItemQuantityMaximum.md)
  - [OndcProtocolApiForRetailGroceryFb.Language](docs/Language.md)
  - [OndcProtocolApiForRetailGroceryFb.Location](docs/Location.md)
+ - [OndcProtocolApiForRetailGroceryFb.LocationId](docs/LocationId.md)
  - [OndcProtocolApiForRetailGroceryFb.Name](docs/Name.md)
  - [OndcProtocolApiForRetailGroceryFb.Offer](docs/Offer.md)
+ - [OndcProtocolApiForRetailGroceryFb.OfferId](docs/OfferId.md)
  - [OndcProtocolApiForRetailGroceryFb.OnCancelBody](docs/OnCancelBody.md)
  - [OndcProtocolApiForRetailGroceryFb.OnConfirmBody](docs/OnConfirmBody.md)
  - [OndcProtocolApiForRetailGroceryFb.OnInitBody](docs/OnInitBody.md)
@@ -232,8 +243,10 @@ Class | Method | HTTP request | Description
  - [OndcProtocolApiForRetailGroceryFb.Operator](docs/Operator.md)
  - [OndcProtocolApiForRetailGroceryFb.OperatorExperience](docs/OperatorExperience.md)
  - [OndcProtocolApiForRetailGroceryFb.Option](docs/Option.md)
+ - [OndcProtocolApiForRetailGroceryFb.OptionId](docs/OptionId.md)
  - [OndcProtocolApiForRetailGroceryFb.Order](docs/Order.md)
  - [OndcProtocolApiForRetailGroceryFb.OrderAddOns](docs/OrderAddOns.md)
+ - [OndcProtocolApiForRetailGroceryFb.OrderId](docs/OrderId.md)
  - [OndcProtocolApiForRetailGroceryFb.OrderItems](docs/OrderItems.md)
  - [OndcProtocolApiForRetailGroceryFb.OrderOffers](docs/OrderOffers.md)
  - [OndcProtocolApiForRetailGroceryFb.OrderOndcorglinkedOrders](docs/OrderOndcorglinkedOrders.md)
@@ -246,8 +259,10 @@ Class | Method | HTTP request | Description
  - [OndcProtocolApiForRetailGroceryFb.PaymentParams](docs/PaymentParams.md)
  - [OndcProtocolApiForRetailGroceryFb.Person](docs/Person.md)
  - [OndcProtocolApiForRetailGroceryFb.Policy](docs/Policy.md)
+ - [OndcProtocolApiForRetailGroceryFb.PolicyId](docs/PolicyId.md)
  - [OndcProtocolApiForRetailGroceryFb.Price](docs/Price.md)
  - [OndcProtocolApiForRetailGroceryFb.Provider](docs/Provider.md)
+ - [OndcProtocolApiForRetailGroceryFb.ProviderId](docs/ProviderId.md)
  - [OndcProtocolApiForRetailGroceryFb.Quotation](docs/Quotation.md)
  - [OndcProtocolApiForRetailGroceryFb.QuotationBreakup](docs/QuotationBreakup.md)
  - [OndcProtocolApiForRetailGroceryFb.Rateable](docs/Rateable.md)
@@ -255,6 +270,8 @@ Class | Method | HTTP request | Description
  - [OndcProtocolApiForRetailGroceryFb.RatingAck](docs/RatingAck.md)
  - [OndcProtocolApiForRetailGroceryFb.RatingBody](docs/RatingBody.md)
  - [OndcProtocolApiForRetailGroceryFb.RatingCategoriesBody](docs/RatingCategoriesBody.md)
+ - [OndcProtocolApiForRetailGroceryFb.RatingCategory](docs/RatingCategory.md)
+ - [OndcProtocolApiForRetailGroceryFb.RatingValue](docs/RatingValue.md)
  - [OndcProtocolApiForRetailGroceryFb.ReturnReasonsBody](docs/ReturnReasonsBody.md)
  - [OndcProtocolApiForRetailGroceryFb.Scalar](docs/Scalar.md)
  - [OndcProtocolApiForRetailGroceryFb.ScalarRange](docs/ScalarRange.md)
@@ -302,15 +319,3 @@ Class | Method | HTTP request | Description
 - **API key parameter name**: Authorization
 - **Location**: HTTP header
 
-# Self notes:
-## How to transpile
-We need to transpile the JS code so that we can run it using node. Without transpile, it can be run via browser only.
-```
-npm install babel
-npx babel src --out-dir dist
-```
-## How to run main.js using node
-Once its transpiled you can run the main.js file using following command:
-```
-node dist/main.js
-```

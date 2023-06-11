@@ -860,27 +860,27 @@ components:
             \ city e.g. for Bengaluru, city code is 'std:080'"
           enum:
           #(Bengaluru)
-        - std:080
-        #(New Delhi)
-        - std:011
-        #(Coimbatore)
-        - std:0422
-        # (Shillong)
-        - std:0364
-        # (Lucknow)
-        - std:0522
-        # (Bhopal)
-        - std:0755
-        # (Chennai)
-        - std:044
-        # (Mumbai)
-        - std:022
-        # (Pune)
-        - std:020
-        # (Hyderabad)
-        - std:040
-        # (Ajmer)
-        - std:0145
+          - std:080
+          #(New Delhi)
+          - std:011
+          #(Coimbatore)
+          - std:0422
+          # (Shillong)
+          - std:0364
+          # (Lucknow)
+          - std:0522
+          # (Bhopal)
+          - std:0755
+          # (Chennai)
+          - std:044
+          # (Mumbai)
+          - std:022
+          # (Pune)
+          - std:020
+          # (Hyderabad)
+          - std:040
+          # (Ajmer)
+          - std:0145
       description: Describes a city
     Contact:
       type: object
