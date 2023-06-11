@@ -32,7 +32,7 @@ process_client_folder "registry"
 process_client_folder "gateway"
 process_client_folder "buyer_app"
 # process_client_folder "seller_app/logistics"
-# process_client_folder "seller_app/retail"
+process_client_folder "seller_app/retail"
 
 # Step 5: Change directory back to root path
 cd $root
@@ -53,7 +53,7 @@ process_server_folder "registry"
 process_server_folder "gateway"
 process_server_folder "buyer_app"
 # process_server_folder "seller_app/logistics"
-# process_server_folder "seller_app/retail"
+process_server_folder "seller_app/retail"
 
 # Step 8: Change directory back to root path
 cd $root
