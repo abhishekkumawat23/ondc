@@ -1,6 +1,7 @@
 'use strict';
 
-var OndcGateway = require('../../../gateway/client/dist/index.js');
+const OndcGateway = require('../../../gateway/client/dist/index.js');
+const util = require('util');
 
 
 function searchbyproductPOST(callback) {
@@ -1537,11 +1538,11 @@ exports.onsearch = function (messageId) {
  * body Searchbyproductrequest 
  * returns searchbyproduct
  **/
-exports.searchbyproduct = function (body) {
+exports.searchbyproduct = async function (body) {
   console.log("I am in onsearch of buyer app server");
 
-  return new Promise(function (resolve, reject) {
-    /* var examples = {};
+  /*return new Promise(function (resolve, reject) {
+     var examples = {};
      examples['application/json'] = {
    "context" : {
      "domain" : "nic2004:52110",
@@ -1566,7 +1567,7 @@ exports.searchbyproduct = function (body) {
      } else {
        resolve();
      }
- */
+ 
     var callback = function (error, data, response) {
       if (error) {
         console.error(error);
@@ -1575,8 +1576,11 @@ exports.searchbyproduct = function (body) {
         console.log('API called successfully. Returned data: ' + data);
         resolve(data);
       }
-    }; 
-    searchbyproductPOST(callback);
-  });
+    }; */
+
+   let data = await util.promisify(searchbyproductPOST)();
+   console.log('API called successfully. Returned data: ' + JSON.stringify(data));
+   return data;
+  
 }
 
