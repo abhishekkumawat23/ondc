@@ -105,6 +105,7 @@ var ONDCGatewayApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = _InlineResponse.InlineResponse200;
+      console.log('hello 3');
       return this.apiClient.callApi('/search', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
   }]);

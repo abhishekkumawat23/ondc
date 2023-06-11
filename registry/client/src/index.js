@@ -72,7 +72,7 @@ import {ONDCNetworkParticipantOnboardingApi} from './api/ONDCNetworkParticipantO
 * @module index
 * @version 2.0.5
 */
-export default {
+export {
     /**
      * The ApiClient constructor.
      * @property {module:ApiClient}

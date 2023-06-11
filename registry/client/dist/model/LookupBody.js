@@ -42,7 +42,7 @@ var LookupBody = /*#__PURE__*/function () {
    */
   function LookupBody(subscriberId, country, city, domain, type) {
     _classCallCheck(this, LookupBody);
-    this.subscriberId = subscriberId;
+    this.subscriber_id = subscriberId;
     this.country = country;
     this.city = city;
     this.domain = domain;
