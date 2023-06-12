@@ -3,14 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** | This is the most unique identifier of a service item. An example of an Item ID could be the SKU of a product. | 
-**parentItemId** | [**Itempropertiesid**](Itempropertiesid.md) |  | [optional] 
+**id** | [**ItemId**](ItemId.md) |  | 
+**parentItemId** | [**ItemId**](ItemId.md) |  | [optional] 
 **descriptor** | [**Descriptor**](Descriptor.md) |  | 
 **price** | [**Price**](Price.md) |  | 
-**categoryId** | [**Categorypropertiesid**](Categorypropertiesid.md) |  | 
-**fulfillmentId** | [**Fulfillmentpropertiesid**](Fulfillmentpropertiesid.md) |  | 
-**rating** | [**Ratingpropertiesvalue**](Ratingpropertiesvalue.md) |  | [optional] 
-**locationId** | [**Locationpropertiesid**](Locationpropertiesid.md) |  | 
+**categoryId** | [**CategoryId**](CategoryId.md) |  | 
+**fulfillmentId** | [**FulfillmentId**](FulfillmentId.md) |  | 
+**rating** | [**RatingValue**](RatingValue.md) |  | [optional] 
+**locationId** | [**LocationId**](LocationId.md) |  | 
 **time** | [**Time**](Time.md) |  | [optional] 
 **rateable** | [**Rateable**](Rateable.md) |  | [optional] 
 **matched** | **Boolean** |  | 

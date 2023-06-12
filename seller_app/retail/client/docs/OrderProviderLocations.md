@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | [**Locationpropertiesid**](Locationpropertiesid.md) |  | 
+**id** | [**LocationId**](LocationId.md) |  | 

@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** | Id of the provider | 
+**id** | [**ProviderId**](ProviderId.md) |  | 
 **descriptor** | [**Descriptor**](Descriptor.md) |  | 
 **categoryId** | **String** | Category Id of the provider | [optional] 
 **ondcorgfssaiLicenseNo** | **String** | FSSAI license no. Mandatory for category_id \&quot;F&amp;B\&quot; | 
-**rating** | [**Ratingpropertiesvalue**](Ratingpropertiesvalue.md) |  | [optional] 
+**rating** | [**RatingValue**](RatingValue.md) |  | [optional] 
 **time** | [**Time**](Time.md) |  | [optional] 
 **categories** | [**[Category]**](Category.md) |  | [optional] 
 **fulfillments** | [**[Fulfillment]**](Fulfillment.md) |  | [optional] 

@@ -3,5 +3,5 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | [**Providerpropertiesid**](Providerpropertiesid.md) |  | [optional] 
+**id** | [**ProviderId**](ProviderId.md) |  | [optional] 
 **locations** | [**[OrderProviderLocations]**](OrderProviderLocations.md) |  | [optional] 

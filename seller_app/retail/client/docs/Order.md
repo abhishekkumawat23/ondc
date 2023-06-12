@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** | Unique identifier for Order across the network, Will be created by buyer app in confirm API | [optional] 
+**id** | [**OrderId**](OrderId.md) |  | [optional] 
 **state** | **String** |  | [optional] 
 **provider** | [**OrderProvider**](OrderProvider.md) |  | [optional] 
 **items** | [**[OrderItems]**](OrderItems.md) |  | [optional] 

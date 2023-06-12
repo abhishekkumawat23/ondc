@@ -1,18 +1,18 @@
 # OndcProtocolApiForRetailGroceryFb.BuyerAppMetaAPIsApi
 
-All URIs are relative to *https://virtserver.swaggerhub.com/ONDC/ONDC-Protocol-Hyperlocal/1.0.13*
+All URIs are relative to *http://localhost:9060/ONDC/ONDC-Protocol-Hyperlocal/1.0.13*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancellationReasonsPost**](BuyerAppMetaAPIsApi.md#cancellationReasonsPost) | **POST** /cancellation_reasons | 
-[**feedbackCategoriesPost**](BuyerAppMetaAPIsApi.md#feedbackCategoriesPost) | **POST** /feedback_categories | 
-[**feedbackFormPost**](BuyerAppMetaAPIsApi.md#feedbackFormPost) | **POST** /feedback_form | 
-[**ratingCategoriesPost**](BuyerAppMetaAPIsApi.md#ratingCategoriesPost) | **POST** /rating_categories | 
-[**returnReasonsPost**](BuyerAppMetaAPIsApi.md#returnReasonsPost) | **POST** /return_reasons | 
+[**cancellationReasonsPOST**](BuyerAppMetaAPIsApi.md#cancellationReasonsPOST) | **POST** /cancellation_reasons | 
+[**feedbackCategoriesPOST**](BuyerAppMetaAPIsApi.md#feedbackCategoriesPOST) | **POST** /feedback_categories | 
+[**feedbackFormPOST**](BuyerAppMetaAPIsApi.md#feedbackFormPOST) | **POST** /feedback_form | 
+[**ratingCategoriesPOST**](BuyerAppMetaAPIsApi.md#ratingCategoriesPOST) | **POST** /rating_categories | 
+[**returnReasonsPOST**](BuyerAppMetaAPIsApi.md#returnReasonsPOST) | **POST** /return_reasons | 
 
-<a name="cancellationReasonsPost"></a>
-# **cancellationReasonsPost**
-> InlineResponse200 cancellationReasonsPost(opts)
+<a name="cancellationReasonsPOST"></a>
+# **cancellationReasonsPOST**
+> InlineResponse200 cancellationReasonsPOST(opts)
 
 
 
@@ -45,7 +45,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.BuyerAppMetaAPIsApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.CancellationReasonsBody() // CancellationReasonsBody | List of cancellation reasons.
 };
-apiInstance.cancellationReasonsPost(opts, (error, data, response) => {
+apiInstance.cancellationReasonsPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -73,9 +73,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="feedbackCategoriesPost"></a>
-# **feedbackCategoriesPost**
-> InlineResponse200 feedbackCategoriesPost(opts)
+<a name="feedbackCategoriesPOST"></a>
+# **feedbackCategoriesPOST**
+> InlineResponse200 feedbackCategoriesPOST(opts)
 
 
 
@@ -108,7 +108,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.BuyerAppMetaAPIsApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.FeedbackCategoriesBody() // FeedbackCategoriesBody | Array of categories for which feedback can be given by the Buyer App
 };
-apiInstance.feedbackCategoriesPost(opts, (error, data, response) => {
+apiInstance.feedbackCategoriesPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -136,9 +136,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="feedbackFormPost"></a>
-# **feedbackFormPost**
-> InlineResponse200 feedbackFormPost(opts)
+<a name="feedbackFormPOST"></a>
+# **feedbackFormPOST**
+> InlineResponse200 feedbackFormPOST(opts)
 
 
 
@@ -171,7 +171,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.BuyerAppMetaAPIsApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.FeedbackFormBody() // FeedbackFormBody | Feedback form sent by the Buyer App
 };
-apiInstance.feedbackFormPost(opts, (error, data, response) => {
+apiInstance.feedbackFormPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -199,9 +199,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ratingCategoriesPost"></a>
-# **ratingCategoriesPost**
-> InlineResponse200 ratingCategoriesPost(opts)
+<a name="ratingCategoriesPOST"></a>
+# **ratingCategoriesPOST**
+> InlineResponse200 ratingCategoriesPOST(opts)
 
 
 
@@ -234,7 +234,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.BuyerAppMetaAPIsApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.RatingCategoriesBody() // RatingCategoriesBody | Array of categories which can be rated
 };
-apiInstance.ratingCategoriesPost(opts, (error, data, response) => {
+apiInstance.ratingCategoriesPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -262,9 +262,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="returnReasonsPost"></a>
-# **returnReasonsPost**
-> InlineResponse200 returnReasonsPost(opts)
+<a name="returnReasonsPOST"></a>
+# **returnReasonsPOST**
+> InlineResponse200 returnReasonsPOST(opts)
 
 
 
@@ -297,7 +297,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.BuyerAppMetaAPIsApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.ReturnReasonsBody() // ReturnReasonsBody | List of return reasons
 };
-apiInstance.returnReasonsPost(opts, (error, data, response) => {
+apiInstance.returnReasonsPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

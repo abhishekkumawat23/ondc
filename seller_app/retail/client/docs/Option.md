@@ -3,5 +3,5 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] 
+**id** | [**OptionId**](OptionId.md) |  | [optional] 
 **descriptor** | [**Descriptor**](Descriptor.md) |  | [optional] 

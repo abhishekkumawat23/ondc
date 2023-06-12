@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | [**Optionpropertiesid**](Optionpropertiesid.md) |  | [optional] 
+**id** | [**OptionId**](OptionId.md) |  | [optional] 

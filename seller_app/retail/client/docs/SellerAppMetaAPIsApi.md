@@ -1,17 +1,17 @@
 # OndcProtocolApiForRetailGroceryFb.SellerAppMetaAPIsApi
 
-All URIs are relative to *https://virtserver.swaggerhub.com/ONDC/ONDC-Protocol-Hyperlocal/1.0.13*
+All URIs are relative to *http://localhost:9060/ONDC/ONDC-Protocol-Hyperlocal/1.0.13*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCancellationReasonsPost**](SellerAppMetaAPIsApi.md#getCancellationReasonsPost) | **POST** /get_cancellation_reasons | 
-[**getFeedbackFormPost**](SellerAppMetaAPIsApi.md#getFeedbackFormPost) | **POST** /get_feedback_form | 
-[**getRatingCategoriesPost**](SellerAppMetaAPIsApi.md#getRatingCategoriesPost) | **POST** /get_rating_categories | 
-[**getReturnReasonsPost**](SellerAppMetaAPIsApi.md#getReturnReasonsPost) | **POST** /get_return_reasons | 
+[**getCancellationReasonsPOST**](SellerAppMetaAPIsApi.md#getCancellationReasonsPOST) | **POST** /get_cancellation_reasons | 
+[**getFeedbackFormPOST**](SellerAppMetaAPIsApi.md#getFeedbackFormPOST) | **POST** /get_feedback_form | 
+[**getRatingCategoriesPOST**](SellerAppMetaAPIsApi.md#getRatingCategoriesPOST) | **POST** /get_rating_categories | 
+[**getReturnReasonsPOST**](SellerAppMetaAPIsApi.md#getReturnReasonsPOST) | **POST** /get_return_reasons | 
 
-<a name="getCancellationReasonsPost"></a>
-# **getCancellationReasonsPost**
-> InlineResponse200 getCancellationReasonsPost(opts)
+<a name="getCancellationReasonsPOST"></a>
+# **getCancellationReasonsPOST**
+> InlineResponse200 getCancellationReasonsPOST(opts)
 
 
 
@@ -44,7 +44,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.SellerAppMetaAPIsApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.GetCancellationReasonsBody() // GetCancellationReasonsBody | Context header is sent as the request
 };
-apiInstance.getCancellationReasonsPost(opts, (error, data, response) => {
+apiInstance.getCancellationReasonsPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -72,9 +72,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getFeedbackFormPost"></a>
-# **getFeedbackFormPost**
-> InlineResponse200 getFeedbackFormPost(opts)
+<a name="getFeedbackFormPOST"></a>
+# **getFeedbackFormPOST**
+> InlineResponse200 getFeedbackFormPOST(opts)
 
 
 
@@ -107,7 +107,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.SellerAppMetaAPIsApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.GetFeedbackFormBody() // GetFeedbackFormBody | The rating value and category is sent by the Buyer App
 };
-apiInstance.getFeedbackFormPost(opts, (error, data, response) => {
+apiInstance.getFeedbackFormPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -135,9 +135,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getRatingCategoriesPost"></a>
-# **getRatingCategoriesPost**
-> InlineResponse200 getRatingCategoriesPost(opts)
+<a name="getRatingCategoriesPOST"></a>
+# **getRatingCategoriesPOST**
+> InlineResponse200 getRatingCategoriesPOST(opts)
 
 
 
@@ -170,7 +170,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.SellerAppMetaAPIsApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.GetRatingCategoriesBody() // GetRatingCategoriesBody | Context header is sent as the request
 };
-apiInstance.getRatingCategoriesPost(opts, (error, data, response) => {
+apiInstance.getRatingCategoriesPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -198,9 +198,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getReturnReasonsPost"></a>
-# **getReturnReasonsPost**
-> InlineResponse200 getReturnReasonsPost(opts)
+<a name="getReturnReasonsPOST"></a>
+# **getReturnReasonsPOST**
+> InlineResponse200 getReturnReasonsPOST(opts)
 
 
 
@@ -233,7 +233,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.SellerAppMetaAPIsApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.GetReturnReasonsBody() // GetReturnReasonsBody | Context header is sent as the request
 };
-apiInstance.getReturnReasonsPost(opts, (error, data, response) => {
+apiInstance.getReturnReasonsPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

@@ -4,4 +4,4 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **context** | [**Context**](Context.md) |  | [optional] 
-**ratingCategories** | [**[RatingpropertiesratingCategory]**](RatingpropertiesratingCategory.md) |  | [optional] 
+**ratingCategories** | [**[RatingCategory]**](RatingCategory.md) |  | [optional] 
