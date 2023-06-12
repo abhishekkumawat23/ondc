@@ -14,6 +14,7 @@
  */
 import superagent from "superagent";
 import querystring from "querystring";
+import { copyFileSync } from "fs";
 
 /**
 * @module ApiClient
@@ -420,7 +421,7 @@ export class ApiClient {
         } else if (!request.header['Content-Type']) {
             request.type('application/json');
         }
-
+        console.log('hello 4');
         if (contentType === 'application/x-www-form-urlencoded') {
             request.send(querystring.stringify(this.normalizeParams(formParams)));
         } else if (contentType == 'multipart/form-data') {

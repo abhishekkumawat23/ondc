@@ -31,7 +31,7 @@ export class LookupBody {
    * @param type {String} BAP or BPP
    */
   constructor(subscriberId, country, city, domain, type) {
-    this.subscriberId = subscriberId;
+    this.subscriber_id = subscriberId;
     this.country = country;
     this.city = city;
     this.domain = domain;

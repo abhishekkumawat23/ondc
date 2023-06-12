@@ -116,7 +116,7 @@ export class ONDCGatewayApi {
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = InlineResponse200;
-
+      console.log('hello 3');
       return this.apiClient.callApi(
         '/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

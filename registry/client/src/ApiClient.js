@@ -32,9 +32,9 @@ export class ApiClient {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
-         * @default http://localhost:8080/ONDC/ONDC-Registry-Onboarding/2.0.5
+         * @default http://localhost:9070/ONDC/ONDC-Registry-Onboarding/2.0.5
          */
-        this.basePath = 'http://localhost:8080/ONDC/ONDC-Registry-Onboarding/2.0.5'.replace(/\/+$/, '');
+        this.basePath = 'http://localhost:9070/ONDC/ONDC-Registry-Onboarding/2.0.5'.replace(/\/+$/, '');
 
         /**
          * The authentication methods to be included for all API calls.

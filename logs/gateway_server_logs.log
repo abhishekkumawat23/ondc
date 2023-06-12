@@ -3,7 +3,7 @@
 > npm install
 
 
-up to date, audited 153 packages in 875ms
+up to date, audited 153 packages in 2s
 
 11 packages are looking for funding
   run `npm fund` for details
@@ -31,3 +31,11 @@ Swagger-ui is available on http://localhost:9080/docs
 [0mGET /docs/swagger-ui.css [32m200[0m 36.849 ms - 154240[0m
 [0mGET /docs/swagger-ui-standalone-preset.js [32m200[0m 8.893 ms - 329622[0m
 [0mGET /docs/swagger-ui-bundle.js [32m200[0m 24.893 ms - 962278[0m
+in search post body
+gateway 0.0
+gateway 0.1
+gateway 0
+gateway 1
+gateway 2
+API called successfully. Returned data: [{"subscriberId":"https://sit.grab.in/ondc","ukId":"22a8a67a-76d9-459b-867c-085dda2939ec","brId":"22a8a67a-76d9-459b-867c-085dda2939ec","country":"IND","city":"std:080","domain":"nic2004:52110","signingPublicKey":"QSax2KT4UiTUWUqoVUaEcWhBcGTTNu+Sf8EMDRY1GaE=","encrPublicKey":"O74ukMymk4KZnVs3sZhU2U7RXpaZ/qiOUMk5NWt6rbI=","validFrom":"2022-04-05T05:56:52.470618Z3","validUntil":"2026-04-05T05:56:52.470618Z7","created":"2026-04-05T05:56:52.470618Z7","updated":"2026-04-05T05:56:52.470618Z7"},{"subscriberId":"https://sit.grab.in/ondc","ukId":"22a8a67a-76d9-459b-867c-085dda2939ec","brId":"22a8a67a-76d9-459b-867c-085dda2939ec","country":"IND","city":"std:080","domain":"nic2004:52110","signingPublicKey":"QSax2KT4UiTUWUqoVUaEcWhBcGTTNu+Sf8EMDRY1GaE=","encrPublicKey":"O74ukMymk4KZnVs3sZhU2U7RXpaZ/qiOUMk5NWt6rbI=","validFrom":"2022-04-05T05:56:52.470618Z3","validUntil":"2026-04-05T05:56:52.470618Z7","created":"2026-04-05T05:56:52.470618Z7","updated":"2026-04-05T05:56:52.470618Z7"}]
+[0mPOST /gateway/search [32m200[0m 75.574 ms - -[0m
