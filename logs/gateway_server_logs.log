@@ -21,6 +21,16 @@ Run `npm audit` for details.
   Mock mode: disabled
 Your server is listening on port 9080 (http://localhost:9080)
 Swagger-ui is available on http://localhost:9080/docs
+[0mGET /docs/ [36m304[0m 10.834 ms - -[0m
+[0mGET /docs/swagger-ui.css [36m304[0m 9.789 ms - -[0m
+[0mGET /docs/swagger-ui-standalone-preset.js [36m304[0m 2.371 ms - -[0m
+[0mGET /docs/swagger-ui-bundle.js [36m304[0m 3.078 ms - -[0m
+[0mHEAD /docs/ [36m304[0m 6.398 ms - -[0m
+[0mGET /api-docs [32m200[0m 0.880 ms - -[0m
+[0mGET /api-docs [32m200[0m 0.125 ms - -[0m
+[0mGET /docs/swagger-ui.css [32m200[0m 36.849 ms - 154240[0m
+[0mGET /docs/swagger-ui-standalone-preset.js [32m200[0m 8.893 ms - 329622[0m
+[0mGET /docs/swagger-ui-bundle.js [32m200[0m 24.893 ms - 962278[0m
 in search post body
 gateway 0.0
 gateway 0.1
