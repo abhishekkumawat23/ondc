@@ -41,7 +41,19 @@ export class ONDCSellerAppApi {
     e} if unspecified.
     */
     constructor(apiClient) {
+      if (apiClient) {
+        console.log('APi client is present');
+      } else {
+        console.log('Api client is not presenet');
+      }
+      
         this.apiClient = apiClient || ApiClient.instance;
+
+        if (this.apiClient) {
+          console.log('APi client is present - 2');
+        } else {
+          console.log('Api client is not presenet - 2');
+        }
     }
 
     /**
@@ -253,6 +265,12 @@ export class ONDCSellerAppApi {
       let accepts = ['application/json'];
       let returnType = InlineResponse200;
 
+      if (this.apiClient) {
+        console.log('confirming afain rthat api client is there.');
+      } else 
+      {
+        console.log('confirming afain rthat api client is not there.');
+      }
       return this.apiClient.callApi(
         '/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

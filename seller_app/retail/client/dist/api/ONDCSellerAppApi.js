@@ -51,7 +51,17 @@ var ONDCSellerAppApi = /*#__PURE__*/function () {
   */
   function ONDCSellerAppApi(apiClient) {
     _classCallCheck(this, ONDCSellerAppApi);
+    if (apiClient) {
+      console.log('APi client is present');
+    } else {
+      console.log('Api client is not presenet');
+    }
     this.apiClient = apiClient || _ApiClient.ApiClient.instance;
+    if (this.apiClient) {
+      console.log('APi client is present - 2');
+    } else {
+      console.log('Api client is not presenet - 2');
+    }
   }
 
   /**
@@ -202,6 +212,11 @@ var ONDCSellerAppApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = _InlineResponse.InlineResponse200;
+      if (this.apiClient) {
+        console.log('confirming afain rthat api client is there.');
+      } else {
+        console.log('confirming afain rthat api client is not there.');
+      }
       return this.apiClient.callApi('/search', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
     /**
