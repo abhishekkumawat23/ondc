@@ -3,5 +3,5 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ratingValue** | [**Ratingpropertiesvalue**](Ratingpropertiesvalue.md) |  | [optional] 
-**ratingCategory** | [**RatingpropertiesratingCategory**](RatingpropertiesratingCategory.md) |  | [optional] 
+**ratingValue** | [**RatingValue**](RatingValue.md) |  | [optional] 
+**ratingCategory** | [**RatingCategory**](RatingCategory.md) |  | [optional] 

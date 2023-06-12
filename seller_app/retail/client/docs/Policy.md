@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] 
+**id** | [**PolicyId**](PolicyId.md) |  | [optional] 
 **descriptor** | [**Descriptor**](Descriptor.md) |  | [optional] 
-**parentPolicyId** | [**Policypropertiesid**](Policypropertiesid.md) |  | [optional] 
+**parentPolicyId** | [**PolicyId**](PolicyId.md) |  | [optional] 
 **time** | [**Time**](Time.md) |  | [optional] 

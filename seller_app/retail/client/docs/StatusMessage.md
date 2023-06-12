@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**orderId** | [**Orderpropertiesid**](Orderpropertiesid.md) |  | 
+**orderId** | [**OrderId**](OrderId.md) |  | 

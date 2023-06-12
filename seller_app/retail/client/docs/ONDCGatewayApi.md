@@ -1,15 +1,15 @@
 # OndcProtocolApiForRetailGroceryFb.ONDCGatewayApi
 
-All URIs are relative to *https://virtserver.swaggerhub.com/ONDC/ONDC-Protocol-Hyperlocal/1.0.13*
+All URIs are relative to *http://localhost:9060/ONDC/ONDC-Protocol-Hyperlocal/1.0.13*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**onSearchPost**](ONDCGatewayApi.md#onSearchPost) | **POST** /on_search | 
-[**searchPost**](ONDCGatewayApi.md#searchPost) | **POST** /search | 
+[**onSearchPOST**](ONDCGatewayApi.md#onSearchPOST) | **POST** /on_search | 
+[**searchPOST**](ONDCGatewayApi.md#searchPOST) | **POST** /search | 
 
-<a name="onSearchPost"></a>
-# **onSearchPost**
-> InlineResponse2001 onSearchPost(opts)
+<a name="onSearchPOST"></a>
+# **onSearchPOST**
+> InlineResponse2001 onSearchPOST(opts)
 
 
 
@@ -42,7 +42,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.ONDCGatewayApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.OnSearchBody() // OnSearchBody | Sellers provide their catalog in response to buyer search
 };
-apiInstance.onSearchPost(opts, (error, data, response) => {
+apiInstance.onSearchPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -70,9 +70,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="searchPost"></a>
-# **searchPost**
-> InlineResponse200 searchPost(opts)
+<a name="searchPOST"></a>
+# **searchPOST**
+> InlineResponse200 searchPOST(opts)
 
 
 
@@ -105,7 +105,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.ONDCGatewayApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.SearchBody() // SearchBody | Buyer searches for products and services
 };
-apiInstance.searchPost(opts, (error, data, response) => {
+apiInstance.searchPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

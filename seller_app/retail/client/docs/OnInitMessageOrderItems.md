@@ -3,5 +3,5 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | [**Itempropertiesid**](Itempropertiesid.md) |  | [optional] 
-**quantity** | [**ItemQuantitypropertiesselected**](ItemQuantitypropertiesselected.md) |  | [optional] 
+**id** | [**ItemId**](ItemId.md) |  | [optional] 
+**quantity** | [**ItemQuantityAllocated**](ItemQuantityAllocated.md) |  | [optional] 

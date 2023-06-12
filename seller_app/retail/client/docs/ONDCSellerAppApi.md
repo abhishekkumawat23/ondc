@@ -1,23 +1,23 @@
 # OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi
 
-All URIs are relative to *https://virtserver.swaggerhub.com/ONDC/ONDC-Protocol-Hyperlocal/1.0.13*
+All URIs are relative to *http://localhost:9060/ONDC/ONDC-Protocol-Hyperlocal/1.0.13*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancelPost**](ONDCSellerAppApi.md#cancelPost) | **POST** /cancel | 
-[**confirmPost**](ONDCSellerAppApi.md#confirmPost) | **POST** /confirm | 
-[**initPost**](ONDCSellerAppApi.md#initPost) | **POST** /init | 
-[**ratingPost**](ONDCSellerAppApi.md#ratingPost) | **POST** /rating | 
-[**searchPost**](ONDCSellerAppApi.md#searchPost) | **POST** /search | 
-[**selectPost**](ONDCSellerAppApi.md#selectPost) | **POST** /select | 
-[**statusPost**](ONDCSellerAppApi.md#statusPost) | **POST** /status | 
-[**supportPost**](ONDCSellerAppApi.md#supportPost) | **POST** /support | 
-[**trackPost**](ONDCSellerAppApi.md#trackPost) | **POST** /track | 
-[**updatePost**](ONDCSellerAppApi.md#updatePost) | **POST** /update | 
+[**cancelPOST**](ONDCSellerAppApi.md#cancelPOST) | **POST** /cancel | 
+[**confirmPOST**](ONDCSellerAppApi.md#confirmPOST) | **POST** /confirm | 
+[**initPOST**](ONDCSellerAppApi.md#initPOST) | **POST** /init | 
+[**ratingPOST**](ONDCSellerAppApi.md#ratingPOST) | **POST** /rating | 
+[**searchPOST**](ONDCSellerAppApi.md#searchPOST) | **POST** /search | 
+[**selectPOST**](ONDCSellerAppApi.md#selectPOST) | **POST** /select | 
+[**statusPOST**](ONDCSellerAppApi.md#statusPOST) | **POST** /status | 
+[**supportPOST**](ONDCSellerAppApi.md#supportPOST) | **POST** /support | 
+[**trackPOST**](ONDCSellerAppApi.md#trackPOST) | **POST** /track | 
+[**updatePOST**](ONDCSellerAppApi.md#updatePOST) | **POST** /update | 
 
-<a name="cancelPost"></a>
-# **cancelPost**
-> InlineResponse200 cancelPost(opts)
+<a name="cancelPOST"></a>
+# **cancelPOST**
+> InlineResponse200 cancelPOST(opts)
 
 
 
@@ -50,7 +50,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.CancelBody() // CancelBody | Buyer cancels an order
 };
-apiInstance.cancelPost(opts, (error, data, response) => {
+apiInstance.cancelPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -78,9 +78,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="confirmPost"></a>
-# **confirmPost**
-> InlineResponse200 confirmPost(opts)
+<a name="confirmPOST"></a>
+# **confirmPOST**
+> InlineResponse200 confirmPOST(opts)
 
 
 
@@ -113,7 +113,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.ConfirmBody() // ConfirmBody | Buyer confirms an order
 };
-apiInstance.confirmPost(opts, (error, data, response) => {
+apiInstance.confirmPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -141,9 +141,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="initPost"></a>
-# **initPost**
-> InlineResponse200 initPost(opts)
+<a name="initPOST"></a>
+# **initPOST**
+> InlineResponse200 initPOST(opts)
 
 
 
@@ -176,7 +176,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.InitBody() // InitBody | Buyer initializes order checkout
 };
-apiInstance.initPost(opts, (error, data, response) => {
+apiInstance.initPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -204,9 +204,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="ratingPost"></a>
-# **ratingPost**
-> InlineResponse200 ratingPost(opts)
+<a name="ratingPOST"></a>
+# **ratingPOST**
+> InlineResponse200 ratingPOST(opts)
 
 
 
@@ -239,7 +239,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.RatingBody() // RatingBody | Buyer rates for one or more rating categories
 };
-apiInstance.ratingPost(opts, (error, data, response) => {
+apiInstance.ratingPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -267,9 +267,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="searchPost"></a>
-# **searchPost**
-> InlineResponse200 searchPost(opts)
+<a name="searchPOST"></a>
+# **searchPOST**
+> InlineResponse200 searchPOST(opts)
 
 
 
@@ -302,7 +302,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.SearchBody() // SearchBody | Buyer searches for products and services
 };
-apiInstance.searchPost(opts, (error, data, response) => {
+apiInstance.searchPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -330,9 +330,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="selectPost"></a>
-# **selectPost**
-> InlineResponse200 selectPost(opts)
+<a name="selectPOST"></a>
+# **selectPOST**
+> InlineResponse200 selectPOST(opts)
 
 
 
@@ -365,7 +365,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.SelectBody() // SelectBody | Buyer selects one or more catalog items
 };
-apiInstance.selectPost(opts, (error, data, response) => {
+apiInstance.selectPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -393,9 +393,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="statusPost"></a>
-# **statusPost**
-> InlineResponse200 statusPost(opts)
+<a name="statusPOST"></a>
+# **statusPOST**
+> InlineResponse200 statusPOST(opts)
 
 
 
@@ -428,7 +428,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.StatusBody() // StatusBody | Buyer checks for status of order
 };
-apiInstance.statusPost(opts, (error, data, response) => {
+apiInstance.statusPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -456,9 +456,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="supportPost"></a>
-# **supportPost**
-> InlineResponse200 supportPost(opts)
+<a name="supportPOST"></a>
+# **supportPOST**
+> InlineResponse200 supportPOST(opts)
 
 
 
@@ -491,7 +491,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.SupportBody() // SupportBody | Buyer searches for Support Contact details
 };
-apiInstance.supportPost(opts, (error, data, response) => {
+apiInstance.supportPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -519,9 +519,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="trackPost"></a>
-# **trackPost**
-> InlineResponse200 trackPost(opts)
+<a name="trackPOST"></a>
+# **trackPOST**
+> InlineResponse200 trackPOST(opts)
 
 
 
@@ -554,7 +554,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.TrackBody() // TrackBody | Buyer tracks fulfillment of an order
 };
-apiInstance.trackPost(opts, (error, data, response) => {
+apiInstance.trackPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -582,9 +582,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="updatePost"></a>
-# **updatePost**
-> InlineResponse200 updatePost(opts)
+<a name="updatePOST"></a>
+# **updatePOST**
+> InlineResponse200 updatePOST(opts)
 
 
 
@@ -617,7 +617,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.UpdateBody() // UpdateBody | Buyer updates an order
 };
-apiInstance.updatePost(opts, (error, data, response) => {
+apiInstance.updatePOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

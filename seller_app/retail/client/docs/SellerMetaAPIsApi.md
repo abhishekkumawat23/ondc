@@ -1,14 +1,14 @@
 # OndcProtocolApiForRetailGroceryFb.SellerMetaAPIsApi
 
-All URIs are relative to *https://virtserver.swaggerhub.com/ONDC/ONDC-Protocol-Hyperlocal/1.0.13*
+All URIs are relative to *http://localhost:9060/ONDC/ONDC-Protocol-Hyperlocal/1.0.13*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getFeedbackCategoriesPost**](SellerMetaAPIsApi.md#getFeedbackCategoriesPost) | **POST** /get_feedback_categories | 
+[**getFeedbackCategoriesPOST**](SellerMetaAPIsApi.md#getFeedbackCategoriesPOST) | **POST** /get_feedback_categories | 
 
-<a name="getFeedbackCategoriesPost"></a>
-# **getFeedbackCategoriesPost**
-> InlineResponse200 getFeedbackCategoriesPost(opts)
+<a name="getFeedbackCategoriesPOST"></a>
+# **getFeedbackCategoriesPOST**
+> InlineResponse200 getFeedbackCategoriesPOST(opts)
 
 
 
@@ -41,7 +41,7 @@ let apiInstance = new OndcProtocolApiForRetailGroceryFb.SellerMetaAPIsApi();
 let opts = { 
   'body': new OndcProtocolApiForRetailGroceryFb.GetFeedbackCategoriesBody() // GetFeedbackCategoriesBody | Context header is sent as the request
 };
-apiInstance.getFeedbackCategoriesPost(opts, (error, data, response) => {
+apiInstance.getFeedbackCategoriesPOST(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

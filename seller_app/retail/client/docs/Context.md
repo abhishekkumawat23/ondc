@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **domain** | [**Domain**](Domain.md) |  | 
-**country** | [**Countrypropertiescode**](Countrypropertiescode.md) |  | 
-**city** | [**Citypropertiescode**](Citypropertiescode.md) |  | 
+**country** | [**CountryCode**](CountryCode.md) |  | 
+**city** | [**CityCode**](CityCode.md) |  | 
 **action** | **String** | Defines the ONDC API call. Any actions other than the enumerated actions are not supported by ONDC Protocol | 
 **coreVersion** | **String** | Version of ONDC core API specification being used | 
 **bapId** | **String** | Unique id of the Buyer App. By default it is the fully qualified domain name of the Buyer App | 

@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | [**Offerpropertiesid**](Offerpropertiesid.md) |  | [optional] 
+**id** | [**OfferId**](OfferId.md) |  | [optional] 
