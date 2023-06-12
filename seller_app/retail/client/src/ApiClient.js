@@ -28,13 +28,17 @@ import querystring from "querystring";
 * @class
 */
 export class ApiClient {
-    constructor() {
+    constructor(baseUrl) {
+        if (!baseUrl) {
+            baseUrl = 'http://localhost:9060/ONDC/ONDC-Protocol-Hyperlocal/1.0.13'
+        }
+
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
          * @default http://localhost:9060/ONDC/ONDC-Protocol-Hyperlocal/1.0.13
          */
-        this.basePath = 'http://localhost:9060/ONDC/ONDC-Protocol-Hyperlocal/1.0.13'.replace(/\/+$/, '');
+        this.basePath = baseUrl.replace(/\/+$/, '');
 
         /**
          * The authentication methods to be included for all API calls.

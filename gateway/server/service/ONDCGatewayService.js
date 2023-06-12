@@ -1,32 +1,31 @@
 'use strict';
 
+const { subscribe } = require('diagnostics_channel');
+var OndcProtocolApiForRetailGroceryFb = require('../../../seller_app/retail/client/dist/index.js');
 const OndcRegistryClient = require('../../../registry/client/dist/index.js')
 const util = require('util');
 
-function lookupPost(callback) {
-  console.log('gateway 0.0')
+function lookupPost(searchRequest, callback) {
+  console.log('Body which came in lookup post is: ' + JSON.stringify(searchRequest.context));
   var apiClient = new OndcRegistryClient.ApiClient();
   apiClient.authentications = {
     "bearer": {
         "type": "oauth2",
         "accessToken": "1234qwer"
     }
-}
+  }
 
   var api = new OndcRegistryClient.ONDCNetworkParticipantOnboardingApi(apiClient);
-  console.log('gateway 0.1')
   let subscriberId = 'http://localhost:9090'; //seems URL of Buyer App
   let  country = 'IND';
   let city = 'std:080';
   let domain = 'nic2004:52110' ; //Retail,nic2004:52110
   let type='BPP';
-  console.log('gateway 0')
+  // TODO: get subscriberId from request body
   var opts = { 
-    'body': new  OndcRegistryClient.LookupBody(subscriberId, country, city, domain, type)
+    'body': new  OndcRegistryClient.LookupBody(subscriberId, searchRequest.context.country, searchRequest.context.city, searchRequest.context.domain, type)
   };
- console.log('gateway 1')
-  api.lookupPost(opts,callback) 
-  console.log('gateway 2')
+  api.lookupPost(opts ,callback) 
 }
 /**
  * Send catalog
@@ -100,12 +99,55 @@ exports.on_searchPOST = function(body) {
 //   });
 // }
 
+async function searchOnSubscriber(subscriberDetails, searchRequest) {
+  console.log('Subscriber details are: ' + JSON.stringify(subscriberDetails));
+  let subscriberUrl = subscriberDetails.subscriberId;
+
+  // Create seller retail api client.
+  var apiClient = new OndcProtocolApiForRetailGroceryFb.ApiClient(subscriberUrl);
+  var GatewaySubscriberAuth = apiClient.authentications['GatewaySubscriberAuth'];
+  GatewaySubscriberAuth.apiKey = "YOUR API KEY";
+  var GatewaySubscriberAuthNew = apiClient.authentications['GatewaySubscriberAuthNew'];
+  GatewaySubscriberAuthNew.apiKey = "YOUR API KEY";
+  var SubscriberAuth = apiClient.authentications['SubscriberAuth'];
+  SubscriberAuth.apiKey = "YOUR API KEY";
+
+  var api = new OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi(apiClient);
+  // TODO: Do we need to create the body again or can we pass it directly?
+  var opts = { 
+    'body': new OndcProtocolApiForRetailGroceryFb.SearchBody(searchRequest.context, searchRequest.message)
+  };
+  const sellerResponse = await util.promisify(api.searchPOST)(opts);
+  console.log('Seller response which I got is: ' + JSON.stringify(sellerResponse));
+}
+
+async function processSearchRequest(searchRequest) {
+  // TODO: Use request body
+  const subscriberLookupArray = await util.promisify(lookupPost)(searchRequest);
+  subscriberLookupArray.forEach(subscriberDetails => {
+    searchOnSubscriber(subscriberDetails, searchRequest);
+  });
+
+  console.log('lookup API called successfully. Returned lookup data: ' + JSON.stringify(subscriberLookupArray));
+}
+
 exports.searchPOST =  async function(body) {
-  console.log('in search post body')
+  // Process request by calling registtry and then seller API.
+  processSearchRequest(body);
 
-
-    const data = await util.promisify(lookupPost)();
-    console.log('API called successfully. Returned data: ' + JSON.stringify(data));
-    return data;
-
+  // Send ack.
+  let ackResponse = {
+    "message" : {
+      "ack" : {
+        "status" : "ACK"
+      }
+    },
+    "error" : {
+      "path" : "path",
+      "code" : "code",
+      "type" : "CONTEXT-ERROR",
+      "message" : "message"
+    }
+  };
+  return ackResponse;
 }

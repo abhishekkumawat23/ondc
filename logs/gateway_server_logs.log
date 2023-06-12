@@ -3,7 +3,7 @@
 > npm install
 
 
-up to date, audited 153 packages in 2s
+up to date, audited 153 packages in 560ms
 
 11 packages are looking for funding
   run `npm fund` for details
@@ -21,21 +21,12 @@ Run `npm audit` for details.
   Mock mode: disabled
 Your server is listening on port 9080 (http://localhost:9080)
 Swagger-ui is available on http://localhost:9080/docs
-[0mGET /docs/ [36m304[0m 10.834 ms - -[0m
-[0mGET /docs/swagger-ui.css [36m304[0m 9.789 ms - -[0m
-[0mGET /docs/swagger-ui-standalone-preset.js [36m304[0m 2.371 ms - -[0m
-[0mGET /docs/swagger-ui-bundle.js [36m304[0m 3.078 ms - -[0m
-[0mHEAD /docs/ [36m304[0m 6.398 ms - -[0m
-[0mGET /api-docs [32m200[0m 0.880 ms - -[0m
-[0mGET /api-docs [32m200[0m 0.125 ms - -[0m
-[0mGET /docs/swagger-ui.css [32m200[0m 36.849 ms - 154240[0m
-[0mGET /docs/swagger-ui-standalone-preset.js [32m200[0m 8.893 ms - 329622[0m
-[0mGET /docs/swagger-ui-bundle.js [32m200[0m 24.893 ms - 962278[0m
-in search post body
-gateway 0.0
-gateway 0.1
-gateway 0
-gateway 1
-gateway 2
-API called successfully. Returned data: [{"subscriberId":"https://sit.grab.in/ondc","ukId":"22a8a67a-76d9-459b-867c-085dda2939ec","brId":"22a8a67a-76d9-459b-867c-085dda2939ec","country":"IND","city":"std:080","domain":"nic2004:52110","signingPublicKey":"QSax2KT4UiTUWUqoVUaEcWhBcGTTNu+Sf8EMDRY1GaE=","encrPublicKey":"O74ukMymk4KZnVs3sZhU2U7RXpaZ/qiOUMk5NWt6rbI=","validFrom":"2022-04-05T05:56:52.470618Z3","validUntil":"2026-04-05T05:56:52.470618Z7","created":"2026-04-05T05:56:52.470618Z7","updated":"2026-04-05T05:56:52.470618Z7"},{"subscriberId":"https://sit.grab.in/ondc","ukId":"22a8a67a-76d9-459b-867c-085dda2939ec","brId":"22a8a67a-76d9-459b-867c-085dda2939ec","country":"IND","city":"std:080","domain":"nic2004:52110","signingPublicKey":"QSax2KT4UiTUWUqoVUaEcWhBcGTTNu+Sf8EMDRY1GaE=","encrPublicKey":"O74ukMymk4KZnVs3sZhU2U7RXpaZ/qiOUMk5NWt6rbI=","validFrom":"2022-04-05T05:56:52.470618Z3","validUntil":"2026-04-05T05:56:52.470618Z7","created":"2026-04-05T05:56:52.470618Z7","updated":"2026-04-05T05:56:52.470618Z7"}]
-[0mPOST /gateway/search [32m200[0m 75.574 ms - -[0m
+Body which came in lookup post is: {"domain":"nic2004:52110","country":"IND","city":"std:080","action":"search","core_version":"0.9.3","bap_id":"buyer-app.ondc.org","bap_uri":"https://buyer-app.ondc.org/protocol/v1","transaction_id":"3e6802dc-055b-4a57-bcd4-d60d00213d8b","message_id":"c4b71e62-f51d-425a-892b-539920e945ca","timestamp":"2022-06-29T04:21:08.921Z"}
+[0mPOST /gateway/search [32m200[0m 29.484 ms - -[0m
+Subscriber details are: {"subscriberId":"https://sit.grab.in/ondc","ukId":"22a8a67a-76d9-459b-867c-085dda2939ec","brId":"22a8a67a-76d9-459b-867c-085dda2939ec","country":"IND","city":"std:080","domain":"nic2004:52110","signingPublicKey":"QSax2KT4UiTUWUqoVUaEcWhBcGTTNu+Sf8EMDRY1GaE=","encrPublicKey":"O74ukMymk4KZnVs3sZhU2U7RXpaZ/qiOUMk5NWt6rbI=","validFrom":"2022-04-05T05:56:52.470618Z3","validUntil":"2026-04-05T05:56:52.470618Z7","created":"2026-04-05T05:56:52.470618Z7","updated":"2026-04-05T05:56:52.470618Z7"}
+APi client is present
+APi client is present - 2
+Subscriber details are: {"subscriberId":"https://sit.grab.in/ondc","ukId":"22a8a67a-76d9-459b-867c-085dda2939ec","brId":"22a8a67a-76d9-459b-867c-085dda2939ec","country":"IND","city":"std:080","domain":"nic2004:52110","signingPublicKey":"QSax2KT4UiTUWUqoVUaEcWhBcGTTNu+Sf8EMDRY1GaE=","encrPublicKey":"O74ukMymk4KZnVs3sZhU2U7RXpaZ/qiOUMk5NWt6rbI=","validFrom":"2022-04-05T05:56:52.470618Z3","validUntil":"2026-04-05T05:56:52.470618Z7","created":"2026-04-05T05:56:52.470618Z7","updated":"2026-04-05T05:56:52.470618Z7"}
+APi client is present
+APi client is present - 2
+lookup API called successfully. Returned lookup data: [{"subscriberId":"https://sit.grab.in/ondc","ukId":"22a8a67a-76d9-459b-867c-085dda2939ec","brId":"22a8a67a-76d9-459b-867c-085dda2939ec","country":"IND","city":"std:080","domain":"nic2004:52110","signingPublicKey":"QSax2KT4UiTUWUqoVUaEcWhBcGTTNu+Sf8EMDRY1GaE=","encrPublicKey":"O74ukMymk4KZnVs3sZhU2U7RXpaZ/qiOUMk5NWt6rbI=","validFrom":"2022-04-05T05:56:52.470618Z3","validUntil":"2026-04-05T05:56:52.470618Z7","created":"2026-04-05T05:56:52.470618Z7","updated":"2026-04-05T05:56:52.470618Z7"},{"subscriberId":"https://sit.grab.in/ondc","ukId":"22a8a67a-76d9-459b-867c-085dda2939ec","brId":"22a8a67a-76d9-459b-867c-085dda2939ec","country":"IND","city":"std:080","domain":"nic2004:52110","signingPublicKey":"QSax2KT4UiTUWUqoVUaEcWhBcGTTNu+Sf8EMDRY1GaE=","encrPublicKey":"O74ukMymk4KZnVs3sZhU2U7RXpaZ/qiOUMk5NWt6rbI=","validFrom":"2022-04-05T05:56:52.470618Z3","validUntil":"2026-04-05T05:56:52.470618Z7","created":"2026-04-05T05:56:52.470618Z7","updated":"2026-04-05T05:56:52.470618Z7"}]

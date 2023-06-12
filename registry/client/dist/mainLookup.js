@@ -1,7 +1,6 @@
 "use strict";
 
 var _index = _interopRequireDefault(require("./index.js"));
-var _Context = require("./model/Context.js");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 var api = new _index["default"].ONDCNetworkParticipantOnboardingApi();
 var subscriberId = 'http:localhost:9090'; //seems URL of Buyer App
