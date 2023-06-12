@@ -7,7 +7,7 @@ const util = require('util');
 
 function lookupPost(searchRequest, callback) {
   console.log('Body which came in lookup post is: ' + JSON.stringify(searchRequest.context));
-  var apiClient = new OndcRegistryClient.ApiClient();
+  let apiClient = new OndcRegistryClient.ApiClient();
   apiClient.authentications = {
     "bearer": {
         "type": "oauth2",
@@ -101,10 +101,16 @@ exports.on_searchPOST = function(body) {
 
 async function searchOnSubscriber(subscriberDetails, searchRequest) {
   console.log('Subscriber details are: ' + JSON.stringify(subscriberDetails));
+
+  const sellerResponse = await util.promisify(apiSearchPost)(subscriberDetails, searchRequest);
+  console.log('Seller response which I got is: ' + JSON.stringify(sellerResponse));
+}
+
+function apiSearchPost(subscriberDetails, searchRequest,callback){
   let subscriberUrl = subscriberDetails.subscriberId;
 
   // Create seller retail api client.
-  var apiClient = new OndcProtocolApiForRetailGroceryFb.ApiClient(subscriberUrl);
+  let apiClient = new OndcProtocolApiForRetailGroceryFb.ApiClient();
   var GatewaySubscriberAuth = apiClient.authentications['GatewaySubscriberAuth'];
   GatewaySubscriberAuth.apiKey = "YOUR API KEY";
   var GatewaySubscriberAuthNew = apiClient.authentications['GatewaySubscriberAuthNew'];
@@ -117,8 +123,8 @@ async function searchOnSubscriber(subscriberDetails, searchRequest) {
   var opts = { 
     'body': new OndcProtocolApiForRetailGroceryFb.SearchBody(searchRequest.context, searchRequest.message)
   };
-  const sellerResponse = await util.promisify(api.searchPOST)(opts);
-  console.log('Seller response which I got is: ' + JSON.stringify(sellerResponse));
+
+  api.searchPOST(opts, callback);
 }
 
 async function processSearchRequest(searchRequest) {

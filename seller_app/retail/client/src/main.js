@@ -1,5 +1,6 @@
 var OndcProtocolApiForRetailGroceryFb = require('./index.js');
-var apiClient = new OndcProtocolApiForRetailGroceryFb.ApiClient()
+var apiClient = new OndcProtocolApiForRetailGroceryFb.ApiClient('http://localhost:9060/ONDC/ONDC-Protocol-Hyperlocal/1.0.13')
+const util = require('util');
 
 // Configure API key authorization: GatewaySubscriberAuth
 var GatewaySubscriberAuth = apiClient.authentications['GatewaySubscriberAuth'];
@@ -1292,4 +1293,5 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + JSON.stringify(data));
   }
 };
-api.searchPOST(opts, callback);
+let data = util.promisify(api.searchPOST)(opts);
+console.log('API called successfully. Returned data: ' + JSON.stringify(data));
