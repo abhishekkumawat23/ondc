@@ -7,7 +7,7 @@ externalDocs:
     \ details in spec)"
   url: https://docs.google.com/document/d/12oMC4A05jT5rjCbY-M7j4T2oekr9bqcvSOpTI0jFEgE/edit
 servers:
-- url: http://localhost:8080/gateway
+- url: http://localhost:9080/gateway
 security:
 - SubscriberAuth: []
 - GatewaySubscriberAuth: []

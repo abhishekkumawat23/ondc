@@ -3,7 +3,7 @@
 > npm install
 
 
-up to date, audited 153 packages in 1s
+up to date, audited 153 packages in 499ms
 
 11 packages are looking for funding
   run `npm fund` for details
@@ -18,9 +18,20 @@ Run `npm audit` for details.
 > sandbox-client-sdk@1.0 start
 > node index.js
 
+Tue, 13 Jun 2023 17:45:38 GMT body-parser deprecated undefined extended: provide extended option at node_modules/oas3-tools/dist/middleware/express.app.config.js:22:33
   Mock mode: disabled
 Your server is listening on port 9090 (http://localhost:9090)
 Swagger-ui is available on http://localhost:9090/docs
+[0mGET /docs/ [36m304[0m 1.333 ms - -[0m
+[0mGET /docs/swagger-ui.css [36m304[0m 0.991 ms - -[0m
+[0mGET /docs/swagger-ui-bundle.js [36m304[0m 0.672 ms - -[0m
+[0mGET /docs/swagger-ui-standalone-preset.js [36m304[0m 0.313 ms - -[0m
+[0mHEAD /docs/ [36m304[0m 1.422 ms - -[0m
+[0mGET /docs/favicon-32x32.png [36m304[0m 1.154 ms - -[0m
+[0mGET /api-docs [32m200[0m 1.465 ms - -[0m
+[0mGET /api-docs [32m200[0m 5.042 ms - -[0m
+[0mGET /docs/favicon-32x32.png [36m304[0m 2.091 ms - -[0m
+[0mGET /docs/favicon-32x32.png [36m304[0m 0.462 ms - -[0m
 request{"context":{},"message":{"criteria":{"search_string":"coffee","delivery_location":"12.974002,77.613458"}}}
 I am in onsearch of buyer app server
 in searchbyproductPOSTt 
@@ -30,4 +41,14 @@ hello 4
 hello2
 API called successfully. Returned data: {"message":{"ack":{"status":"ACK"}},"error":{"type":"CONTEXT-ERROR","code":"code","path":"path","message":"message"}}
 in searchbyproduct controller:{"message":{"ack":{"status":"ACK"}},"error":{"type":"CONTEXT-ERROR","code":"code","path":"path","message":"message"}}
-[0mPOST /v1/search [32m200[0m 116.944 ms - -[0m
+[0mPOST /v1/search [32m200[0m 94.839 ms - -[0m
+request{"context":{},"message":{"criteria":{"search_string":"coffee","delivery_location":"12.974002,77.613458"}}}
+I am in onsearch of buyer app server
+in searchbyproductPOSTt 
+hello1
+hello 3
+hello 4
+hello2
+API called successfully. Returned data: {"message":{"ack":{"status":"ACK"}},"error":{"type":"CONTEXT-ERROR","code":"code","path":"path","message":"message"}}
+in searchbyproduct controller:{"message":{"ack":{"status":"ACK"}},"error":{"type":"CONTEXT-ERROR","code":"code","path":"path","message":"message"}}
+[0mPOST /v1/search [32m200[0m 25.419 ms - -[0m

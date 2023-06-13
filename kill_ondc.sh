@@ -7,8 +7,10 @@ ports[0]=9090
 ports[1]=9080
 # "registry"
 ports[2]=9070
-# "seller_app/retail"
+# "seller_app/retail1"
 ports[3]=9060
+# "seller_app/retail2"
+ports[4]=9050
 
 processTermination() {
   port="$1"

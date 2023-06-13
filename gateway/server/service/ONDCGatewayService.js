@@ -1,7 +1,7 @@
 'use strict';
 
 const { subscribe } = require('diagnostics_channel');
-var OndcProtocolApiForRetailGroceryFb = require('../../../seller_app/retail/client/dist/index.js');
+var OndcProtocolRetailSellerApi = require('../../../seller_app/retail_client/dist/index.js');
 const OndcRegistryClient = require('../../../registry/client/dist/index.js')
 const util = require('util');
 
@@ -99,18 +99,42 @@ exports.on_searchPOST = function(body) {
 //   });
 // }
 
+// async function searchOnSubscriber(subscriberDetails, searchRequest) {
+//   console.log('Subscriber details are: ' + JSON.stringify(subscriberDetails));
+
+//   const sellerResponse = await util.promisify(apiSearchPost)(subscriberDetails, searchRequest);
+//   console.log('Seller response which I got is: ' + JSON.stringify(sellerResponse));
+// }
+
+// function apiSearchPost(subscriberDetails, searchRequest,callback){
+//   let subscriberUrl = subscriberDetails.subscriberId;
+
+//   // Create seller retail api client.
+//   let apiClient = new OndcProtocolRetailSellerApi.ApiClient();
+//   var GatewaySubscriberAuth = apiClient.authentications['GatewaySubscriberAuth'];
+//   GatewaySubscriberAuth.apiKey = "YOUR API KEY";
+//   var GatewaySubscriberAuthNew = apiClient.authentications['GatewaySubscriberAuthNew'];
+//   GatewaySubscriberAuthNew.apiKey = "YOUR API KEY";
+//   var SubscriberAuth = apiClient.authentications['SubscriberAuth'];
+//   SubscriberAuth.apiKey = "YOUR API KEY";
+
+//   var api = new OndcProtocolRetailSellerApi.ONDCSellerAppApi(apiClient);
+//   // TODO: Do we need to create the body again or can we pass it directly?
+//   var opts = { 
+//     'body': new OndcProtocolRetailSellerApi.SearchBody(searchRequest.context, searchRequest.message)
+//   };
+
+//   api.searchPOST(opts, callback);
+// }
+
 async function searchOnSubscriber(subscriberDetails, searchRequest) {
   console.log('Subscriber details are: ' + JSON.stringify(subscriberDetails));
 
-  const sellerResponse = await util.promisify(apiSearchPost)(subscriberDetails, searchRequest);
-  console.log('Seller response which I got is: ' + JSON.stringify(sellerResponse));
-}
-
-function apiSearchPost(subscriberDetails, searchRequest,callback){
   let subscriberUrl = subscriberDetails.subscriberId;
+  console.log('Subscribe url is ' + subscriberUrl);
 
   // Create seller retail api client.
-  let apiClient = new OndcProtocolApiForRetailGroceryFb.ApiClient();
+  let apiClient = new OndcProtocolRetailSellerApi.ApiClient(subscriberUrl);
   var GatewaySubscriberAuth = apiClient.authentications['GatewaySubscriberAuth'];
   GatewaySubscriberAuth.apiKey = "YOUR API KEY";
   var GatewaySubscriberAuthNew = apiClient.authentications['GatewaySubscriberAuthNew'];
@@ -118,13 +142,14 @@ function apiSearchPost(subscriberDetails, searchRequest,callback){
   var SubscriberAuth = apiClient.authentications['SubscriberAuth'];
   SubscriberAuth.apiKey = "YOUR API KEY";
 
-  var api = new OndcProtocolApiForRetailGroceryFb.ONDCSellerAppApi(apiClient);
+  var api = new OndcProtocolRetailSellerApi.ONDCSellerAppApi(apiClient);
   // TODO: Do we need to create the body again or can we pass it directly?
   var opts = { 
-    'body': new OndcProtocolApiForRetailGroceryFb.SearchBody(searchRequest.context, searchRequest.message)
+    'body': new OndcProtocolRetailSellerApi.SearchBody(searchRequest.context, searchRequest.message)
   };
 
-  api.searchPOST(opts, callback);
+  const sellerResponse = await util.promisify(api.searchPOST).bind(api)(opts);
+  console.log('Seller response which I got is: ' + JSON.stringify(sellerResponse));
 }
 
 async function processSearchRequest(searchRequest) {

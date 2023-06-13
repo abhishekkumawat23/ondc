@@ -12,8 +12,10 @@ ports[2]="gateway"
 ports[3]=9080
 ports[4]="registry"
 ports[5]=9070
-ports[4]="seller_app/retail"
+ports[4]="seller_app/retail1"
 ports[5]=9060
+ports[6]="seller_app/retail2"
+ports[7]=9050
 
 echo $name
 for ((i = 0; i < ${#ports[@]}; i += 2)); do
@@ -39,7 +41,7 @@ cd ${name}/server
 log_current_directory
 
 mkdir -p "${root}/logs"
-npm start > $root/logs/${name}_server_logs.log &
+npm start > $root/logs/${name}_server_logs.log 2>&1 &
 
 cd $root
 log_current_directory

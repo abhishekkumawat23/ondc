@@ -3,7 +3,7 @@
 > npm install
 
 
-up to date, audited 153 packages in 1s
+up to date, audited 153 packages in 459ms
 
 11 packages are looking for funding
   run `npm fund` for details
@@ -18,19 +18,38 @@ Run `npm audit` for details.
 > ondc-gateway@1.0.0 start
 > node index.js
 
+Tue, 13 Jun 2023 17:45:38 GMT body-parser deprecated undefined extended: provide extended option at node_modules/oas3-tools/dist/middleware/express.app.config.js:22:33
   Mock mode: disabled
+WARN: Using default URL as no retail seller URL was provided.
 Your server is listening on port 9080 (http://localhost:9080)
 Swagger-ui is available on http://localhost:9080/docs
 Body which came in lookup post is: {"domain":"nic2004:52110","country":"IND","city":"std:080","action":"search","core_version":"0.9.3","bap_id":"buyer-app.ondc.org","bap_uri":"https://buyer-app.ondc.org/protocol/v1","transaction_id":"3e6802dc-055b-4a57-bcd4-d60d00213d8b","message_id":"c4b71e62-f51d-425a-892b-539920e945ca","timestamp":"2022-06-29T04:21:08.921Z"}
-[0mPOST /gateway/search [32m200[0m 41.734 ms - -[0m
-Subscriber details are: {"subscriberId":"https://sit.grab.in/ondc","ukId":"22a8a67a-76d9-459b-867c-085dda2939ec","brId":"22a8a67a-76d9-459b-867c-085dda2939ec","country":"IND","city":"std:080","domain":"nic2004:52110","signingPublicKey":"QSax2KT4UiTUWUqoVUaEcWhBcGTTNu+Sf8EMDRY1GaE=","encrPublicKey":"O74ukMymk4KZnVs3sZhU2U7RXpaZ/qiOUMk5NWt6rbI=","validFrom":"2022-04-05T05:56:52.470618Z3","validUntil":"2026-04-05T05:56:52.470618Z7","created":"2026-04-05T05:56:52.470618Z7","updated":"2026-04-05T05:56:52.470618Z7"}
+[0mPOST /gateway/search [32m200[0m 31.054 ms - -[0m
+Subscriber details are: {"subscriberId":"http://localhost:9060/ONDC/ONDC-Protocol-Hyperlocal/1.0.13","ukId":"22a8a67a-76d9-459b-867c-085dda2939ec","brId":"22a8a67a-76d9-459b-867c-085dda2939ec","country":"IND","city":"std:080","domain":"nic2004:52110","signingPublicKey":"QSax2KT4UiTUWUqoVUaEcWhBcGTTNu+Sf8EMDRY1GaE=","encrPublicKey":"O74ukMymk4KZnVs3sZhU2U7RXpaZ/qiOUMk5NWt6rbI=","validFrom":"2022-04-05T05:56:52.470618Z3","validUntil":"2026-04-05T05:56:52.470618Z7","created":"2026-04-05T05:56:52.470618Z7","updated":"2026-04-05T05:56:52.470618Z7"}
+Subscribe url is http://localhost:9060/ONDC/ONDC-Protocol-Hyperlocal/1.0.13
 APi client is present
 APi client is present - 2
 confirming afain rthat api client is there.
-Subscriber details are: {"subscriberId":"https://sit.grab.in/ondc","ukId":"22a8a67a-76d9-459b-867c-085dda2939ec","brId":"22a8a67a-76d9-459b-867c-085dda2939ec","country":"IND","city":"std:080","domain":"nic2004:52110","signingPublicKey":"QSax2KT4UiTUWUqoVUaEcWhBcGTTNu+Sf8EMDRY1GaE=","encrPublicKey":"O74ukMymk4KZnVs3sZhU2U7RXpaZ/qiOUMk5NWt6rbI=","validFrom":"2022-04-05T05:56:52.470618Z3","validUntil":"2026-04-05T05:56:52.470618Z7","created":"2026-04-05T05:56:52.470618Z7","updated":"2026-04-05T05:56:52.470618Z7"}
+Subscriber details are: {"subscriberId":"http://localhost:9050/ONDC/ONDC-Protocol-Hyperlocal/1.0.13","ukId":"22a8a67a-76d9-459b-867c-085dda2939ec","brId":"22a8a67a-76d9-459b-867c-085dda2939ec","country":"IND","city":"std:080","domain":"nic2004:52110","signingPublicKey":"QSax2KT4UiTUWUqoVUaEcWhBcGTTNu+Sf8EMDRY1GaE=","encrPublicKey":"O74ukMymk4KZnVs3sZhU2U7RXpaZ/qiOUMk5NWt6rbI=","validFrom":"2022-04-05T05:56:52.470618Z3","validUntil":"2026-04-05T05:56:52.470618Z7","created":"2026-04-05T05:56:52.470618Z7","updated":"2026-04-05T05:56:52.470618Z7"}
+Subscribe url is http://localhost:9050/ONDC/ONDC-Protocol-Hyperlocal/1.0.13
 APi client is present
 APi client is present - 2
 confirming afain rthat api client is there.
-lookup API called successfully. Returned lookup data: [{"subscriberId":"https://sit.grab.in/ondc","ukId":"22a8a67a-76d9-459b-867c-085dda2939ec","brId":"22a8a67a-76d9-459b-867c-085dda2939ec","country":"IND","city":"std:080","domain":"nic2004:52110","signingPublicKey":"QSax2KT4UiTUWUqoVUaEcWhBcGTTNu+Sf8EMDRY1GaE=","encrPublicKey":"O74ukMymk4KZnVs3sZhU2U7RXpaZ/qiOUMk5NWt6rbI=","validFrom":"2022-04-05T05:56:52.470618Z3","validUntil":"2026-04-05T05:56:52.470618Z7","created":"2026-04-05T05:56:52.470618Z7","updated":"2026-04-05T05:56:52.470618Z7"},{"subscriberId":"https://sit.grab.in/ondc","ukId":"22a8a67a-76d9-459b-867c-085dda2939ec","brId":"22a8a67a-76d9-459b-867c-085dda2939ec","country":"IND","city":"std:080","domain":"nic2004:52110","signingPublicKey":"QSax2KT4UiTUWUqoVUaEcWhBcGTTNu+Sf8EMDRY1GaE=","encrPublicKey":"O74ukMymk4KZnVs3sZhU2U7RXpaZ/qiOUMk5NWt6rbI=","validFrom":"2022-04-05T05:56:52.470618Z3","validUntil":"2026-04-05T05:56:52.470618Z7","created":"2026-04-05T05:56:52.470618Z7","updated":"2026-04-05T05:56:52.470618Z7"}]
-Seller response which I got is: {"message":{"ack":{"status":"ACK"}},"error":{"type":"CONTEXT-ERROR","code":"code","path":"path","message":"message"}}
-Seller response which I got is: {"message":{"ack":{"status":"ACK"}},"error":{"type":"CONTEXT-ERROR","code":"code","path":"path","message":"message"}}
+lookup API called successfully. Returned lookup data: [{"subscriberId":"http://localhost:9060/ONDC/ONDC-Protocol-Hyperlocal/1.0.13","ukId":"22a8a67a-76d9-459b-867c-085dda2939ec","brId":"22a8a67a-76d9-459b-867c-085dda2939ec","country":"IND","city":"std:080","domain":"nic2004:52110","signingPublicKey":"QSax2KT4UiTUWUqoVUaEcWhBcGTTNu+Sf8EMDRY1GaE=","encrPublicKey":"O74ukMymk4KZnVs3sZhU2U7RXpaZ/qiOUMk5NWt6rbI=","validFrom":"2022-04-05T05:56:52.470618Z3","validUntil":"2026-04-05T05:56:52.470618Z7","created":"2026-04-05T05:56:52.470618Z7","updated":"2026-04-05T05:56:52.470618Z7"},{"subscriberId":"http://localhost:9050/ONDC/ONDC-Protocol-Hyperlocal/1.0.13","ukId":"22a8a67a-76d9-459b-867c-085dda2939ec","brId":"22a8a67a-76d9-459b-867c-085dda2939ec","country":"IND","city":"std:080","domain":"nic2004:52110","signingPublicKey":"QSax2KT4UiTUWUqoVUaEcWhBcGTTNu+Sf8EMDRY1GaE=","encrPublicKey":"O74ukMymk4KZnVs3sZhU2U7RXpaZ/qiOUMk5NWt6rbI=","validFrom":"2022-04-05T05:56:52.470618Z3","validUntil":"2026-04-05T05:56:52.470618Z7","created":"2026-04-05T05:56:52.470618Z7","updated":"2026-04-05T05:56:52.470618Z7"}]
+Seller response which I got is: {"message":{"ack":{"status":"ACK"}},"error":{"type":"CONTEXT-ERROR","code":"code","path":"path","message":"message from retail1"}}
+Seller response which I got is: {"message":{"ack":{"status":"ACK"}},"error":{"type":"CONTEXT-ERROR","code":"code","path":"path","message":"message from retail2"}}
+Body which came in lookup post is: {"domain":"nic2004:52110","country":"IND","city":"std:080","action":"search","core_version":"0.9.3","bap_id":"buyer-app.ondc.org","bap_uri":"https://buyer-app.ondc.org/protocol/v1","transaction_id":"3e6802dc-055b-4a57-bcd4-d60d00213d8b","message_id":"c4b71e62-f51d-425a-892b-539920e945ca","timestamp":"2022-06-29T04:21:08.921Z"}
+[0mPOST /gateway/search [32m200[0m 6.462 ms - -[0m
+Subscriber details are: {"subscriberId":"http://localhost:9060/ONDC/ONDC-Protocol-Hyperlocal/1.0.13","ukId":"22a8a67a-76d9-459b-867c-085dda2939ec","brId":"22a8a67a-76d9-459b-867c-085dda2939ec","country":"IND","city":"std:080","domain":"nic2004:52110","signingPublicKey":"QSax2KT4UiTUWUqoVUaEcWhBcGTTNu+Sf8EMDRY1GaE=","encrPublicKey":"O74ukMymk4KZnVs3sZhU2U7RXpaZ/qiOUMk5NWt6rbI=","validFrom":"2022-04-05T05:56:52.470618Z3","validUntil":"2026-04-05T05:56:52.470618Z7","created":"2026-04-05T05:56:52.470618Z7","updated":"2026-04-05T05:56:52.470618Z7"}
+Subscribe url is http://localhost:9060/ONDC/ONDC-Protocol-Hyperlocal/1.0.13
+APi client is present
+APi client is present - 2
+confirming afain rthat api client is there.
+Subscriber details are: {"subscriberId":"http://localhost:9050/ONDC/ONDC-Protocol-Hyperlocal/1.0.13","ukId":"22a8a67a-76d9-459b-867c-085dda2939ec","brId":"22a8a67a-76d9-459b-867c-085dda2939ec","country":"IND","city":"std:080","domain":"nic2004:52110","signingPublicKey":"QSax2KT4UiTUWUqoVUaEcWhBcGTTNu+Sf8EMDRY1GaE=","encrPublicKey":"O74ukMymk4KZnVs3sZhU2U7RXpaZ/qiOUMk5NWt6rbI=","validFrom":"2022-04-05T05:56:52.470618Z3","validUntil":"2026-04-05T05:56:52.470618Z7","created":"2026-04-05T05:56:52.470618Z7","updated":"2026-04-05T05:56:52.470618Z7"}
+Subscribe url is http://localhost:9050/ONDC/ONDC-Protocol-Hyperlocal/1.0.13
+APi client is present
+APi client is present - 2
+confirming afain rthat api client is there.
+lookup API called successfully. Returned lookup data: [{"subscriberId":"http://localhost:9060/ONDC/ONDC-Protocol-Hyperlocal/1.0.13","ukId":"22a8a67a-76d9-459b-867c-085dda2939ec","brId":"22a8a67a-76d9-459b-867c-085dda2939ec","country":"IND","city":"std:080","domain":"nic2004:52110","signingPublicKey":"QSax2KT4UiTUWUqoVUaEcWhBcGTTNu+Sf8EMDRY1GaE=","encrPublicKey":"O74ukMymk4KZnVs3sZhU2U7RXpaZ/qiOUMk5NWt6rbI=","validFrom":"2022-04-05T05:56:52.470618Z3","validUntil":"2026-04-05T05:56:52.470618Z7","created":"2026-04-05T05:56:52.470618Z7","updated":"2026-04-05T05:56:52.470618Z7"},{"subscriberId":"http://localhost:9050/ONDC/ONDC-Protocol-Hyperlocal/1.0.13","ukId":"22a8a67a-76d9-459b-867c-085dda2939ec","brId":"22a8a67a-76d9-459b-867c-085dda2939ec","country":"IND","city":"std:080","domain":"nic2004:52110","signingPublicKey":"QSax2KT4UiTUWUqoVUaEcWhBcGTTNu+Sf8EMDRY1GaE=","encrPublicKey":"O74ukMymk4KZnVs3sZhU2U7RXpaZ/qiOUMk5NWt6rbI=","validFrom":"2022-04-05T05:56:52.470618Z3","validUntil":"2026-04-05T05:56:52.470618Z7","created":"2026-04-05T05:56:52.470618Z7","updated":"2026-04-05T05:56:52.470618Z7"}]
+Seller response which I got is: {"message":{"ack":{"status":"ACK"}},"error":{"type":"CONTEXT-ERROR","code":"code","path":"path","message":"message from retail2"}}
+Seller response which I got is: {"message":{"ack":{"status":"ACK"}},"error":{"type":"CONTEXT-ERROR","code":"code","path":"path","message":"message from retail1"}}
