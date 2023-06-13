@@ -3,7 +3,7 @@
 > npm install
 
 
-up to date, audited 153 packages in 569ms
+up to date, audited 153 packages in 1s
 
 11 packages are looking for funding
   run `npm fund` for details
@@ -30,38 +30,4 @@ hello 4
 hello2
 API called successfully. Returned data: {"message":{"ack":{"status":"ACK"}},"error":{"type":"CONTEXT-ERROR","code":"code","path":"path","message":"message"}}
 in searchbyproduct controller:{"message":{"ack":{"status":"ACK"}},"error":{"type":"CONTEXT-ERROR","code":"code","path":"path","message":"message"}}
-[0mPOST /v1/search [32m200[0m 82.840 ms - -[0m
-[0mGET /docs/ [36m304[0m 3.370 ms - -[0m
-[0mGET /docs/swagger-ui.css [36m304[0m 2.566 ms - -[0m
-[0mGET /docs/swagger-ui-bundle.js [36m304[0m 2.953 ms - -[0m
-[0mGET /docs/swagger-ui-standalone-preset.js [36m304[0m 1.224 ms - -[0m
-[0mHEAD /docs/ [36m304[0m 1.511 ms - -[0m
-[0mGET /docs/favicon-32x32.png [36m304[0m 1.601 ms - -[0m
-[0mGET /api-docs [32m200[0m 3.763 ms - -[0m
-[0mGET /docs/favicon-32x32.png [36m304[0m 7.761 ms - -[0m
-[0mGET /api-docs [32m200[0m 3.326 ms - -[0m
-[0mGET /docs/favicon-32x32.png [36m304[0m 1.496 ms - -[0m
-request{"context":{},"message":{"criteria":{"search_string":"coffee","delivery_location":"12.974002,77.613458"}}}
-I am in onsearch of buyer app server
-in searchbyproductPOSTt 
-hello1
-hello 3
-hello 4
-hello2
-[0mPOST /v1/search [32m200[0m 13.945 ms - -[0m
-request{"context":{},"message":{"criteria":{"search_string":"coffee","delivery_location":"12.974002,77.613458"}}}
-I am in onsearch of buyer app server
-in searchbyproductPOSTt 
-hello1
-hello 3
-hello 4
-hello2
-[0mPOST /v1/search [32m200[0m 6.715 ms - -[0m
-request{"context":{},"message":{"criteria":{"search_string":"coffee","delivery_location":"12.974002,77.613458"}}}
-I am in onsearch of buyer app server
-in searchbyproductPOSTt 
-hello1
-hello 3
-hello 4
-hello2
-[0mPOST /v1/search [32m200[0m 2.561 ms - -[0m
+[0mPOST /v1/search [32m200[0m 116.944 ms - -[0m

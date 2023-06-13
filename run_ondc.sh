@@ -4,10 +4,10 @@ mkdir logs
 mkdir logs/seller_app
 
 # Kill all ports(if in use) before starting
-bash '/Users/akumawat/Desktop/ondc/kill_ondc.sh'
+bash '/Users/vinaykumawat/Desktop/ondc/kill_ondc.sh'
 
 # Set the root path
-root="${1:-/Users/akumawat/Desktop/ondc}"
+root="${1:-/Users/vinaykumawat/Desktop/ondc}"
 
 # Log current directory function
 log_current_directory() {
