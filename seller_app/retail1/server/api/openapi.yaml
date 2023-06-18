@@ -1179,7 +1179,7 @@ components:
           description: fulfillment turnaround time in ISO8601 durations format e.g.
             'PT24H' indicates 24 hour TAT
         provider_id:
-          $ref: '#/components/schemas/Provider/properties/id'
+          $ref: '#/components/schemas/ProviderId'
         '@ondc/org/provider_name':
           type: string
         rating:

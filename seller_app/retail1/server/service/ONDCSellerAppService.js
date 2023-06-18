@@ -1,5 +1,33 @@
 'use strict';
+const ONDCBuyerAppClient = require('../../../../buyer_app/client/dist/index.js')
+async function searchCatalog(body){
+  var apiClient = new ONDCBuyerAppClient.ApiClient();
+  apiClient.authentications = {
+      "bearer": {
+          "type": "oauth2",
+          "accessToken": "1234qwer"
+      }
+  } 
+  var searchApi = new BuyerApp.SearchApi(apiClient);
+  
+}
 
+async function acknowledge(){
+  var examples = {};
+  return {
+    "message" : {
+      "ack" : {
+        "status" : "ACK"
+      }
+    },
+    "error" : {
+      "path" : "path",
+      "code" : "code",
+      "type" : "CONTEXT-ERROR",
+      "message" : "message from retail1"
+    }
+  };
+}
 
 /**
  * Cancel an order
@@ -131,28 +159,13 @@ exports.ratingPOST = function(body) {
  * body Search_body Buyer searches for products and services (optional)
  * returns inline_response_200
  **/
-exports.searchPOST = function(body) {
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "message" : {
-    "ack" : {
-      "status" : "ACK"
-    }
-  },
-  "error" : {
-    "path" : "path",
-    "code" : "code",
-    "type" : "CONTEXT-ERROR",
-    "message" : "message from retail1"
-  }
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
-  });
+exports.searchPOST = async function(body) {
+  ackData = await acknowledge();
+  searchCatalog(body);
+  return ackData;
+
+
+
 }
 
 

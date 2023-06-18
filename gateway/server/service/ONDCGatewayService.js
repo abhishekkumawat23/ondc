@@ -163,8 +163,11 @@ async function processSearchRequest(searchRequest) {
 }
 
 exports.searchPOST =  async function(body) {
+  console.log(`in searchPOST ${ JSON.stringify(body) }`)
   // Process request by calling registtry and then seller API.
   processSearchRequest(body);
+
+
 
   // Send ack.
   let ackResponse = {
