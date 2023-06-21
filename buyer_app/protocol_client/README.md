@@ -105,7 +105,7 @@ api.cancellationReasonsPOST(opts, callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost:9060/ONDC/ONDC-Protocol-Hyperlocal/1.0.13*
+All URIs are relative to *http://localhost:9050/v1/protocol*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

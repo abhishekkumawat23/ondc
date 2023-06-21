@@ -46,7 +46,7 @@ var ApiClient = /*#__PURE__*/function () {
      * @type {String}
      * @default http://localhost:9090/v1/
      */
-    this.basePath = 'http://localhost:9090/v1/'.replace(/\/+$/, '');
+    this.basePath = 'http://localhost:9040/v1/protocol/'.replace(/\/+$/, '');
 
     /**
      * The authentication methods to be included for all API calls.

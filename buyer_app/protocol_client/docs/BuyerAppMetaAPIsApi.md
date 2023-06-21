@@ -1,6 +1,6 @@
 # OndcProtocolApiForRetailGroceryFb.BuyerAppMetaAPIsApi
 
-All URIs are relative to *http://localhost:9060/ONDC/ONDC-Protocol-Hyperlocal/1.0.13*
+All URIs are relative to *http://localhost:9050/v1/protocol*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
