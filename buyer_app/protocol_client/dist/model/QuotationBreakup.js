@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.QuotationBreakup = void 0;
 var _ApiClient = require("../ApiClient");
 var _ItemId = require("./ItemId");
-var _ItemQuantitypropertiesselected = require("./ItemQuantitypropertiesselected");
+var _ItemQuantityAllocated = require("./ItemQuantityAllocated");
 var _Price = require("./Price");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -55,7 +55,7 @@ var QuotationBreakup = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new QuotationBreakup();
         if (data.hasOwnProperty('@ondc/org/item_id')) obj.ondcorgitemId = _ItemId.ItemId.constructFromObject(data['@ondc/org/item_id']);
-        if (data.hasOwnProperty('@ondc/org/item_quantity')) obj.ondcorgitemQuantity = _ItemQuantitypropertiesselected.ItemQuantitypropertiesselected.constructFromObject(data['@ondc/org/item_quantity']);
+        if (data.hasOwnProperty('@ondc/org/item_quantity')) obj.ondcorgitemQuantity = _ItemQuantityAllocated.ItemQuantityAllocated.constructFromObject(data['@ondc/org/item_quantity']);
         if (data.hasOwnProperty('@ondc/org/title_type')) obj.ondcorgtitleType = _ApiClient.ApiClient.convertToType(data['@ondc/org/title_type'], 'String');
         if (data.hasOwnProperty('title')) obj.title = _ApiClient.ApiClient.convertToType(data['title'], 'String');
         if (data.hasOwnProperty('price')) obj.price = _Price.Price.constructFromObject(data['price']);
@@ -72,7 +72,7 @@ exports.QuotationBreakup = QuotationBreakup;
 QuotationBreakup.prototype.ondcorgitemId = undefined;
 
 /**
- * @member {module:model/ItemQuantitypropertiesselected} ondcorgitemQuantity
+ * @member {module:model/ItemQuantityAllocated} ondcorgitemQuantity
  */
 QuotationBreakup.prototype.ondcorgitemQuantity = undefined;
 

@@ -3,7 +3,7 @@
 > npm install
 
 
-up to date, audited 153 packages in 1s
+up to date, audited 153 packages in 4s
 
 11 packages are looking for funding
   run `npm fund` for details
@@ -18,8 +18,7 @@ Run `npm audit` for details.
 > ondc-registry@2.0.5 start
 > node index.js
 
-Sun, 18 Jun 2023 08:40:09 GMT body-parser deprecated undefined extended: provide extended option at node_modules/oas3-tools/dist/middleware/express.app.config.js:22:33
+Tue, 20 Jun 2023 16:41:05 GMT body-parser deprecated undefined extended: provide extended option at node_modules/oas3-tools/dist/middleware/express.app.config.js:22:33
   Mock mode: disabled
 Your server is listening on port 9070 (http://localhost:9070)
 Swagger-ui is available on http://localhost:9070/docs
-[0mPOST /ONDC/ONDC-Registry-Onboarding/2.0.5/lookup [32m200[0m 20.504 ms - -[0m

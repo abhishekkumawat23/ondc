@@ -32,9 +32,9 @@ export class ApiClient {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
-         * @default http://localhost:9060/ONDC/ONDC-Protocol-Hyperlocal/1.0.13
+         * @default http://localhost:9090/v1/
          */
-        this.basePath = 'http://localhost:9060/ONDC/ONDC-Protocol-Hyperlocal/1.0.13'.replace(/\/+$/, '');
+        this.basePath = 'http://localhost:9090/v1/'.replace(/\/+$/, '');
 
         /**
          * The authentication methods to be included for all API calls.

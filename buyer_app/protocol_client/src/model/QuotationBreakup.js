@@ -14,7 +14,7 @@
  */
 import {ApiClient} from '../ApiClient';
 import {ItemId} from './ItemId';
-import {ItemQuantitypropertiesselected} from './ItemQuantitypropertiesselected';
+import {ItemQuantityAllocated} from './ItemQuantityAllocated';
 import {Price} from './Price';
 
 /**
@@ -44,7 +44,7 @@ export class QuotationBreakup {
       if (data.hasOwnProperty('@ondc/org/item_id'))
         obj.ondcorgitemId = ItemId.constructFromObject(data['@ondc/org/item_id']);
       if (data.hasOwnProperty('@ondc/org/item_quantity'))
-        obj.ondcorgitemQuantity = ItemQuantitypropertiesselected.constructFromObject(data['@ondc/org/item_quantity']);
+        obj.ondcorgitemQuantity = ItemQuantityAllocated.constructFromObject(data['@ondc/org/item_quantity']);
       if (data.hasOwnProperty('@ondc/org/title_type'))
         obj.ondcorgtitleType = ApiClient.convertToType(data['@ondc/org/title_type'], 'String');
       if (data.hasOwnProperty('title'))
@@ -62,7 +62,7 @@ export class QuotationBreakup {
 QuotationBreakup.prototype.ondcorgitemId = undefined;
 
 /**
- * @member {module:model/ItemQuantitypropertiesselected} ondcorgitemQuantity
+ * @member {module:model/ItemQuantityAllocated} ondcorgitemQuantity
  */
 QuotationBreakup.prototype.ondcorgitemQuantity = undefined;
 

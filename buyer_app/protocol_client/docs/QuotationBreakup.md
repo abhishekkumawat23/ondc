@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ondcorgitemId** | [**ItemId**](ItemId.md) |  | [optional] 
-**ondcorgitemQuantity** | [**ItemQuantitypropertiesselected**](ItemQuantitypropertiesselected.md) |  | [optional] 
+**ondcorgitemQuantity** | [**ItemQuantityAllocated**](ItemQuantityAllocated.md) |  | [optional] 
 **ondcorgtitleType** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **price** | [**Price**](Price.md) |  | [optional] 

@@ -24,6 +24,7 @@ import {Rateable} from './Rateable';
 import {RatingValue} from './RatingValue';
 import {Tags} from './Tags';
 import {Time} from './Time';
+import {AllOfProviderLocationsItems} from './AllOfProviderLocationsItems';
 
 /**
  * The Provider model module.

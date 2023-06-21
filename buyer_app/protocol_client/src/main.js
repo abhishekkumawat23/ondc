@@ -1,14 +1,31 @@
 const BuyerApp = require('./index.js');
 
 var apiClient = new BuyerApp.ApiClient();
-apiClient.authentications = {
-    "bearer": {
-        "type": "oauth2",
-        "accessToken": "1234qwer"
-    }
-}
+// apiClient.authentications = {
+//     "bearer": {
+//         "type": "oauth2",
+//         "accessToken": "1234qwer"
+//     }
+// }
+// Configure API key authorization: GatewaySubscriberAuth
+var GatewaySubscriberAuth = apiClient.authentications['GatewaySubscriberAuth'];
+GatewaySubscriberAuth.apiKey = "YOUR API KEY";
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//GatewaySubscriberAuth.apiKeyPrefix['Proxy-Authorization'] = "Token"
+
+// Configure API key authorization: GatewaySubscriberAuthNew
+var GatewaySubscriberAuthNew = apiClient.authentications['GatewaySubscriberAuthNew'];
+GatewaySubscriberAuthNew.apiKey = "YOUR API KEY";
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//GatewaySubscriberAuthNew.apiKeyPrefix['X-Gateway-Authorization'] = "Token"
+
+// Configure API key authorization: SubscriberAuth
+var SubscriberAuth = apiClient.authentications['SubscriberAuth'];
+SubscriberAuth.apiKey = "YOUR API KEY";
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//SubscriberAuth.apiKeyPrefix['Authorization'] = "Token"
 let onSearchBodyExample = {
-  "context": {
+  'context': {
       "domain": "local_retail",
       "country": "IND",
       "city": "std:080",
@@ -20,7 +37,7 @@ let onSearchBodyExample = {
       "message_id": "123793824",
       "timestamp": "2021-06-23T09:53:38.872Z"
   },
-  "message": {
+  'message': {
       "catalog": {
           "bpp/descriptor": {
               "name": "Shop EZ"
@@ -65,7 +82,7 @@ let onSearchBodyExample = {
       }
   }
 };
-var onSearchApi = new BuyerApp.SearchApi(apiClient);
+var onSearchApi = new BuyerApp.ONDCBuyerAppApi(apiClient);
 var onSearchBody = new BuyerApp.OnSearchBody.constructFromObject(onSearchBodyExample);
 
 var callback = function(error, data, response) {
@@ -75,4 +92,4 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + JSON.stringify(data));
   }
 };
-onSearchApi.onSearchPost(onSearchBody, callback);
+onSearchApi.onSearchPOST(onSearchBody, callback);

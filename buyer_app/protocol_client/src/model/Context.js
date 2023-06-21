@@ -45,10 +45,10 @@ export class Context {
     this.city = city;
     this.action = action;
     this.coreVersion = coreVersion;
-    this.bapId = bapId;
-    this.bapUri = bapUri;
-    this.transactionId = transactionId;
-    this.messageId = messageId;
+    this.bap_id = bapId;
+    this.bap_uri = bapUri;
+    this.transaction_id = transactionId;
+    this.message_id = messageId;
     this.timestamp = timestamp;
   }
 
@@ -71,19 +71,19 @@ export class Context {
       if (data.hasOwnProperty('action'))
         obj.action = ApiClient.convertToType(data['action'], 'String');
       if (data.hasOwnProperty('core_version'))
-        obj.coreVersion = ApiClient.convertToType(data['core_version'], 'String');
+        obj.core_version = ApiClient.convertToType(data['core_version'], 'String');
       if (data.hasOwnProperty('bap_id'))
-        obj.bapId = ApiClient.convertToType(data['bap_id'], 'String');
+        obj.bap_id = ApiClient.convertToType(data['bap_id'], 'String');
       if (data.hasOwnProperty('bap_uri'))
-        obj.bapUri = ApiClient.convertToType(data['bap_uri'], 'String');
+        obj.bap_uri = ApiClient.convertToType(data['bap_uri'], 'String');
       if (data.hasOwnProperty('bpp_id'))
-        obj.bppId = ApiClient.convertToType(data['bpp_id'], 'String');
+        obj.bpp_id = ApiClient.convertToType(data['bpp_id'], 'String');
       if (data.hasOwnProperty('bpp_uri'))
-        obj.bppUri = ApiClient.convertToType(data['bpp_uri'], 'String');
+        obj.bpp_uri = ApiClient.convertToType(data['bpp_uri'], 'String');
       if (data.hasOwnProperty('transaction_id'))
-        obj.transactionId = ApiClient.convertToType(data['transaction_id'], 'String');
+        obj.transaction_id = ApiClient.convertToType(data['transaction_id'], 'String');
       if (data.hasOwnProperty('message_id'))
-        obj.messageId = ApiClient.convertToType(data['message_id'], 'String');
+        obj.message_id = ApiClient.convertToType(data['message_id'], 'String');
       if (data.hasOwnProperty('timestamp'))
         obj.timestamp = ApiClient.convertToType(data['timestamp'], 'Date');
       if (data.hasOwnProperty('key'))

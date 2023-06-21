@@ -14,7 +14,7 @@
  */
 import {ApiClient} from '../ApiClient';
 import {ItemId} from './ItemId';
-import {ItemQuantitypropertiesselected} from './ItemQuantitypropertiesselected';
+import {ItemQuantityAllocated} from './ItemQuantityAllocated';
 
 /**
  * The OnInitMessageOrderItems model module.
@@ -43,7 +43,7 @@ export class OnInitMessageOrderItems {
       if (data.hasOwnProperty('id'))
         obj.id = ItemId.constructFromObject(data['id']);
       if (data.hasOwnProperty('quantity'))
-        obj.quantity = ItemQuantitypropertiesselected.constructFromObject(data['quantity']);
+        obj.quantity = ItemQuantityAllocated.constructFromObject(data['quantity']);
     }
     return obj;
   }
@@ -55,7 +55,7 @@ export class OnInitMessageOrderItems {
 OnInitMessageOrderItems.prototype.id = undefined;
 
 /**
- * @member {module:model/ItemQuantitypropertiesselected} quantity
+ * @member {module:model/ItemQuantityAllocated} quantity
  */
 OnInitMessageOrderItems.prototype.quantity = undefined;
 

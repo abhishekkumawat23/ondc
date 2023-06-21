@@ -16,6 +16,7 @@ var _Rateable = require("./Rateable");
 var _RatingValue = require("./RatingValue");
 var _Tags = require("./Tags");
 var _Time = require("./Time");
+var _AllOfProviderLocationsItems = require("./AllOfProviderLocationsItems");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -80,7 +81,7 @@ var Provider = /*#__PURE__*/function () {
         if (data.hasOwnProperty('categories')) obj.categories = _ApiClient.ApiClient.convertToType(data['categories'], [_Category.Category]);
         if (data.hasOwnProperty('fulfillments')) obj.fulfillments = _ApiClient.ApiClient.convertToType(data['fulfillments'], [_Fulfillment.Fulfillment]);
         if (data.hasOwnProperty('payments')) obj.payments = _ApiClient.ApiClient.convertToType(data['payments'], [_Payment.Payment]);
-        if (data.hasOwnProperty('locations')) obj.locations = _ApiClient.ApiClient.convertToType(data['locations'], [AllOfProviderLocationsItems]);
+        if (data.hasOwnProperty('locations')) obj.locations = _ApiClient.ApiClient.convertToType(data['locations'], [_AllOfProviderLocationsItems.AllOfProviderLocationsItems]);
         if (data.hasOwnProperty('offers')) obj.offers = _ApiClient.ApiClient.convertToType(data['offers'], [_Offer.Offer]);
         if (data.hasOwnProperty('items')) obj.items = _ApiClient.ApiClient.convertToType(data['items'], [_Item.Item]);
         if (data.hasOwnProperty('ttl')) obj.ttl = _ApiClient.ApiClient.convertToType(data['ttl'], 'String');
