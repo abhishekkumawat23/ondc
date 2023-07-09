@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the root path
-root="${1:-/Users/akumawat/Desktop/ondc}"
+root="${1:-/Users/vinaykumawat/Desktop/ondc}"
 name="${2:-buyer_app}"
 
 # Declare the map
@@ -23,8 +23,8 @@ for ((i = 0; i < ${#ports[@]}; i += 2)); do
     port="${ports[$((i + 1))]}"
     echo $port
     # Kill the port
-    echo "Calling '/Users/akumawat/Desktop/ondc/kill_ondc.sh' $port"
-    bash '/Users/akumawat/Desktop/ondc/kill_ondc.sh' $port
+    echo "Calling '/Users/vinaykumawat/Desktop/ondc/kill_ondc.sh' $port"
+    bash '/Users/vinaykumawat/Desktop/ondc/kill_ondc.sh' $port
     break
   fi
 done

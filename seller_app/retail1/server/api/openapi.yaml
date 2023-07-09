@@ -1179,7 +1179,7 @@ components:
           description: fulfillment turnaround time in ISO8601 durations format e.g.
             'PT24H' indicates 24 hour TAT
         provider_id:
-          $ref: '#/components/schemas/Provider/properties/id'
+          $ref: '#/components/schemas/ProviderId'
         '@ondc/org/provider_name':
           type: string
         rating:
@@ -2264,7 +2264,7 @@ components:
         id:
           $ref: '#/components/schemas/ItemId'
         quantity:
-          $ref: '#/components/schemas/ItemQuantity/properties/selected'
+          $ref: '#/components/schemas/ItemQuantity_allocated'
     on_init_message_order_add_ons:
       type: object
       properties:
@@ -2724,7 +2724,7 @@ components:
         id:
           $ref: '#/components/schemas/ItemId'
         quantity:
-          $ref: '#/components/schemas/ItemQuantity/properties/selected'
+          $ref: '#/components/schemas/ItemQuantity_allocated'
     Order_add_ons:
       required:
       - id
@@ -2815,7 +2815,7 @@ components:
         '@ondc/org/item_id':
           $ref: '#/components/schemas/ItemId'
         '@ondc/org/item_quantity':
-          $ref: '#/components/schemas/ItemQuantity/properties/selected'
+          $ref: '#/components/schemas/ItemQuantity_allocated'
         '@ondc/org/title_type':
           type: string
           enum:

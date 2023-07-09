@@ -34,8 +34,8 @@ var contextExample = {
   city: "std:080",
   action: "search",
   core_version: "0.9.3",
-  bap_id: "buyer-app.ondc.org",
-  bap_uri: "https://buyer-app.ondc.org/protocol/v1",
+  bap_id: "localhost:9090",
+  bap_uri: "http://localhost:9090/v1",
   transaction_id: "3e6802dc-055b-4a57-bcd4-d60d00213d8b",
   message_id: "c4b71e62-f51d-425a-892b-539920e945ca",
   timestamp: "2022-06-29T04:21:08.921Z"

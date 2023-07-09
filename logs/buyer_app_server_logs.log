@@ -3,7 +3,7 @@
 > npm install
 
 
-up to date, audited 153 packages in 499ms
+up to date, audited 153 packages in 3s
 
 11 packages are looking for funding
   run `npm fund` for details
@@ -18,37 +18,22 @@ Run `npm audit` for details.
 > sandbox-client-sdk@1.0 start
 > node index.js
 
-Tue, 13 Jun 2023 17:45:38 GMT body-parser deprecated undefined extended: provide extended option at node_modules/oas3-tools/dist/middleware/express.app.config.js:22:33
+Tue, 20 Jun 2023 16:41:04 GMT body-parser deprecated undefined extended: provide extended option at node_modules/oas3-tools/dist/middleware/express.app.config.js:22:33
   Mock mode: disabled
 Your server is listening on port 9090 (http://localhost:9090)
 Swagger-ui is available on http://localhost:9090/docs
-[0mGET /docs/ [36m304[0m 1.333 ms - -[0m
-[0mGET /docs/swagger-ui.css [36m304[0m 0.991 ms - -[0m
-[0mGET /docs/swagger-ui-bundle.js [36m304[0m 0.672 ms - -[0m
-[0mGET /docs/swagger-ui-standalone-preset.js [36m304[0m 0.313 ms - -[0m
-[0mHEAD /docs/ [36m304[0m 1.422 ms - -[0m
-[0mGET /docs/favicon-32x32.png [36m304[0m 1.154 ms - -[0m
-[0mGET /api-docs [32m200[0m 1.465 ms - -[0m
-[0mGET /api-docs [32m200[0m 5.042 ms - -[0m
-[0mGET /docs/favicon-32x32.png [36m304[0m 2.091 ms - -[0m
-[0mGET /docs/favicon-32x32.png [36m304[0m 0.462 ms - -[0m
-request{"context":{},"message":{"criteria":{"search_string":"coffee","delivery_location":"12.974002,77.613458"}}}
-I am in onsearch of buyer app server
-in searchbyproductPOSTt 
-hello1
-hello 3
-hello 4
-hello2
-API called successfully. Returned data: {"message":{"ack":{"status":"ACK"}},"error":{"type":"CONTEXT-ERROR","code":"code","path":"path","message":"message"}}
-in searchbyproduct controller:{"message":{"ack":{"status":"ACK"}},"error":{"type":"CONTEXT-ERROR","code":"code","path":"path","message":"message"}}
-[0mPOST /v1/search [32m200[0m 94.839 ms - -[0m
-request{"context":{},"message":{"criteria":{"search_string":"coffee","delivery_location":"12.974002,77.613458"}}}
-I am in onsearch of buyer app server
-in searchbyproductPOSTt 
-hello1
-hello 3
-hello 4
-hello2
-API called successfully. Returned data: {"message":{"ack":{"status":"ACK"}},"error":{"type":"CONTEXT-ERROR","code":"code","path":"path","message":"message"}}
-in searchbyproduct controller:{"message":{"ack":{"status":"ACK"}},"error":{"type":"CONTEXT-ERROR","code":"code","path":"path","message":"message"}}
-[0mPOST /v1/search [32m200[0m 25.419 ms - -[0m
+[0mGET /docs [36m301[0m 4.499 ms - 175[0m
+[0mGET /docs/ [32m200[0m 3.203 ms - 1930[0m
+[0mGET /docs/swagger-ui.css [36m304[0m 2.391 ms - -[0m
+[0mGET /docs/swagger-ui-standalone-preset.js [36m304[0m 0.700 ms - -[0m
+[0mGET /docs/swagger-ui-bundle.js [36m304[0m 0.646 ms - -[0m
+[0mHEAD /docs/ [32m200[0m 0.584 ms - 1930[0m
+[0mGET /apple-touch-icon-precomposed.png [33m404[0m 10.944 ms - 101[0m
+[0mGET /apple-touch-icon.png [33m404[0m 3.322 ms - 89[0m
+[0mGET /api-docs [32m200[0m 0.511 ms - -[0m
+[0mGET /api-docs [32m200[0m 0.559 ms - -[0m
+[0mGET /docs/favicon-16x16.png [36m304[0m 0.769 ms - -[0m
+[0mGET /docs/favicon-32x32.png [32m200[0m 3.060 ms - 628[0m
+[0mGET /v1/on_search?messageId=c4b71e62-f51d-425a-892b-539920e945ca [32m200[0m 70.513 ms - -[0m
+[0mPOST /v1/on_search/on_search [33m404[0m 0.556 ms - 91[0m
+[0mPOST /v1/on_search [33m405[0m 0.593 ms - 109[0m
